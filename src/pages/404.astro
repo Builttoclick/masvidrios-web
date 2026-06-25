@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site';
+import { servicios } from '../data/servicios';
+---
+<Base title="Página no encontrada" description="La página que buscás no existe. Volvé al inicio de MÁS VIDRIOS." noindex={true}>
+  <section style="text-align:center">
+    <div class="wrap-narrow">
+      <div style="font-size:90px;font-weight:800;letter-spacing:-4px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1">404</div>
+      <h1 style="font-size:30px;margin:10px 0 12px">No encontramos esta página</h1>
+      <p class="sec-sub" style="margin:0 auto 28px">Puede que el enlace esté roto o que la página se haya movido. Probá con alguno de estos:</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a class="btn btn-primary" href="/">Volver al inicio</a>
+        <a class="btn btn-ghost" href={site.whatsapp} target="_blank" rel="noopener">Contactanos</a>
+      </div>
+      <div class="chips" style="justify-content:center;margin-top:36px">
+        {servicios.map((s) => <a class="chip" href={`/servicios/${s.slug}/`}>{s.nombre}</a>)}
+      </div>
+    </div>
+  </section>
+</Base>

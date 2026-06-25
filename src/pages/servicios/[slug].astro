@@ -1,0 +1,132 @@
+---
+import Base from '../../layouts/Base.astro';
+import { site } from '../../data/site';
+import { servicios, getServicio } from '../../data/servicios';
+import { zonas } from '../../data/zonas';
+
+export function getStaticPaths() {
+  return servicios.map((s) => ({ params: { slug: s.slug } }));
+}
+
+const { slug } = Astro.params;
+const s = getServicio(slug!)!;
+
+// servicios relacionados (los demás, hasta 4) para interlinking
+const relacionados = servicios.filter((x) => x.slug !== s.slug).slice(0, 4);
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: s.faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: s.categoria,
+  provider: { '@id': `${site.url}/#masvidrios` },
+  areaServed: zonas.map((z) => z.nombre),
+  name: `${s.categoria} en ${site.city}`,
+  description: s.metaDesc,
+};
+---
+<Base title={s.metaTitle} titleTail={s.titleTail} description={s.metaDesc} schema={[serviceSchema, faqSchema]}>
+  <section class="phero">
+    <div class="wrap">
+      <div class="crumbs"><a href="/">Inicio</a> › <a href="/servicios/">Servicios</a> › {s.nombre}</div>
+      <h1>{s.categoria} en <span class="hl">{site.city}</span></h1>
+      <p>{s.hero}</p>
+      <div class="hero-actions" style="display:flex;gap:14px;flex-wrap:wrap;margin-top:24px">
+        <a class="btn btn-primary" href={site.whatsapp} target="_blank" rel="noopener">Pedir presupuesto</a>
+        <a class="btn btn-ghost" href="/proyectos/">Ver proyectos</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap svc-grid">
+      <div class="prose">
+        {s.intro.map((p) => <p>{p}</p>)}
+        {s.bloques.map((b) => (
+          <>
+            <h2>{b.h2}</h2>
+            {b.parrafos?.map((p) => <p>{p}</p>)}
+            {b.lista && <ul>{b.lista.map((li) => <li>{li}</li>)}</ul>}
+          </>
+        ))}
+
+        <h2>Lo pedimos en toda la Gran Asunción</h2>
+        <p>Hacemos {s.nombre.toLowerCase()} en <a href="/areas/san-lorenzo/">San Lorenzo</a>, <a href="/areas/asuncion/">Asunción</a>, <a href="/areas/luque/">Luque</a> y toda la Gran Asunción. La visita para tomar medidas y presupuestar es sin cargo.</p>
+      </div>
+
+      <aside class="svc-aside">
+        <figure class="svc-foto"><img src={s.foto} alt={s.fotoAlt} loading="lazy" /></figure>
+        <div class="svc-box">
+          <h3>{s.nombre} incluye</h3>
+          <ul>{s.destacados.map((d) => <li>{d}</li>)}</ul>
+          <a class="btn btn-primary" style="width:100%;justify-content:center;margin-top:6px" href={site.whatsapp} target="_blank" rel="noopener">Contactanos</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="padding-top:0">
+    <div class="wrap-narrow">
+      <h2 class="sec" style="text-align:center">Preguntas frecuentes</h2>
+      <div class="faq" style="margin-top:30px">
+        {s.faqs.map((f) => (
+          <details>
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Interlinking servicios -->
+  <section style="padding-top:0">
+    <div class="wrap center">
+      <span class="eyebrow">También hacemos</span>
+      <h2 class="sec">Otros servicios</h2>
+      <div class="cards" style="margin-top:38px">
+        {relacionados.map((r) => (
+          <a class="card" href={`/servicios/${r.slug}/`}>
+            <div class="ic"><svg viewBox="0 0 24 24" set:html={r.icon}></svg></div>
+            <h3>{r.nombre}</h3>
+            <p>{r.hero}</p>
+            <span class="more">Ver servicio</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="ctaband">
+        <h2>Pedí tu presupuesto de {s.nombre.toLowerCase()}</h2>
+        <p>Sin compromiso. Vamos a tu obra o domicilio en {site.city} y la Gran Asunción.</p>
+        <a class="btn btn-white" href={site.whatsapp} target="_blank" rel="noopener">Contactanos ahora</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .svc-grid{display:grid;grid-template-columns:1fr 340px;gap:44px;align-items:start}
+  @media(max-width:880px){.svc-grid{grid-template-columns:1fr}}
+  .svc-aside{position:sticky;top:96px;display:flex;flex-direction:column;gap:20px}
+  @media(max-width:880px){.svc-aside{position:static}}
+  .svc-foto{border-radius:16px;overflow:hidden;box-shadow:var(--shadow-sm)}
+  .svc-foto img{width:100%;height:240px;object-fit:cover}
+  .svc-box{background:var(--bg2);border:1px solid var(--linea);border-radius:16px;padding:24px}
+  .svc-box h3{font-size:17px;font-weight:700;margin-bottom:12px}
+  .svc-box ul{list-style:none;margin-bottom:18px}
+  .svc-box li{position:relative;padding:6px 0 6px 24px;font-size:14.5px;color:var(--tinta)}
+  .svc-box li::before{content:"✓";position:absolute;left:0;top:6px;color:var(--azul);font-weight:800}
+</style>

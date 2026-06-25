@@ -1,0 +1,73 @@
+backend:
+  name: github
+  repo: Builttoclick/masvidrios-web
+  branch: main
+
+media_folder: "public/fotos/proyectos"
+public_folder: "/fotos/proyectos"
+
+collections:
+  - name: proyectos
+    label: Proyectos
+    label_singular: Proyecto
+    folder: src/content/proyectos
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: titulo, label: Título (H1), widget: string }
+      - { name: zona, label: Zona, widget: string, hint: "Ej. San Lorenzo, Asunción, Gran Asunción" }
+      - name: tipo
+        label: Tipo de trabajo
+        widget: select
+        options: ["Cerramiento", "Mampara", "Divisiones de oficina", "Aberturas", "Baranda", "Vidriera / Fachada", "Mobiliario en vidrio", "Cielo raso", "Policarbonato", "Otro"]
+      - { name: resumen, label: Resumen (texto de la tarjeta), widget: text }
+      - { name: anio, label: Año, widget: number, required: false, value_type: int }
+      - { name: destacado, label: Destacar, widget: boolean, default: false }
+      - { name: orden, label: Orden, widget: number, default: 0, value_type: int }
+
+      - { name: cliente, label: Cliente, widget: string, required: false, hint: "Ej. Privado, Familia X" }
+      - { name: ciudad, label: Ciudad, widget: string, required: false }
+      - name: estado
+        label: Estado
+        widget: select
+        required: false
+        options: ["Terminada", "En obra"]
+      - name: servicios
+        label: Servicios aplicados
+        widget: select
+        multiple: true
+        required: false
+        options: ["Vidrio templado", "Cerramientos & galerías", "Mamparas de baño", "Divisorias de oficina", "Aberturas de aluminio", "Cielo raso & Durlock", "Barandas vidriadas", "Policarbonato"]
+
+      - name: materiales
+        label: Materiales / terminaciones
+        widget: list
+        required: false
+        field: { name: material, label: Material, widget: string }
+      - name: destacados
+        label: Lo que lo hace (destacados)
+        widget: list
+        required: false
+        field: { name: punto, label: Punto, widget: string }
+
+      - { name: portada, label: Foto de portada, widget: image, required: false }
+      - { name: portada_alt, label: Alt de la portada, widget: string, required: false }
+      - name: galeria
+        label: Galería
+        widget: list
+        required: false
+        fields:
+          - { name: src, label: Imagen, widget: image }
+          - { name: alt, label: Texto alternativo, widget: string, required: false }
+
+      - name: faqs
+        label: Preguntas frecuentes
+        widget: list
+        required: false
+        fields:
+          - { name: pregunta, label: Pregunta, widget: string }
+          - { name: respuesta, label: Respuesta, widget: text }
+
+      - { name: metaTitle, label: "SEO · Título", widget: string, required: false }
+      - { name: metaDescription, label: "SEO · Descripción", widget: text, required: false }
+      - { name: body, label: Descripción larga, widget: markdown, required: false }

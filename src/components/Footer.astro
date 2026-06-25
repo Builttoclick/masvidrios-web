@@ -1,0 +1,65 @@
+---
+import { site } from '../data/site';
+import { servicios } from '../data/servicios';
+import { zonas } from '../data/zonas';
+const year = new Date().getFullYear();
+---
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-grid">
+      <!-- Marca + NAP + mapa -->
+      <div>
+        <img class="logo" src="/brand/logo-white.png" alt="MÁS VIDRIOS" width="180" height="40" />
+        <p class="ft-about">{site.tagline}. Vidrio templado, aluminio, cerramientos y divisorios. Empresa familiar en {site.city} desde {site.founded}.</p>
+        <div class="ft-nap" style="margin-top:16px">
+          <b>MÁS VIDRIOS</b><br />
+          {site.addressFull}<br />
+          <a href={`tel:+${site.phoneIntl}`}><b>{site.phone}</b></a> · <a href={`mailto:${site.email}`}>{site.email}</a>
+        </div>
+        <iframe
+          class="ft-map"
+          src={site.gbpEmbed}
+          loading="lazy"
+          title="Ubicación de MÁS VIDRIOS en Google Maps"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </div>
+
+      <!-- Servicios -->
+      <div>
+        <h5>Servicios</h5>
+        <ul>
+          {servicios.map((s) => <li><a href={`/servicios/${s.slug}/`}>{s.nombre}</a></li>)}
+          <li><a href="/servicios/"><b>Ver todos →</b></a></li>
+        </ul>
+      </div>
+
+      <!-- Zonas -->
+      <div>
+        <h5>Zonas que cubrimos</h5>
+        <ul>
+          {zonas.map((z) => <li><a href={`/areas/${z.slug}/`}>Vidriería en {z.nombre}</a></li>)}
+          <li><a href="/areas/"><b>Ver zonas →</b></a></li>
+        </ul>
+      </div>
+
+      <!-- Empresa + contacto -->
+      <div>
+        <h5>Empresa</h5>
+        <ul>
+          <li><a href="/sobre-nosotros/">Sobre nosotros</a></li>
+          <li><a href="/proyectos/">Proyectos</a></li>
+          <li><a href="/contacto/">Contacto</a></li>
+          <li><a href={site.whatsapp} target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href={site.facebook} target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+        <a class="btn btn-primary" style="margin-top:14px" href={site.whatsapp} target="_blank" rel="noopener">Escribinos</a>
+      </div>
+    </div>
+
+    <div class="ft-bot">
+      <span>© {year} {site.name}. Todos los derechos reservados.</span>
+      <span>Hecho por <a href="https://builttoclick.com" target="_blank" rel="noopener" style="color:#9aa3b2">Built to Click</a></span>
+    </div>
+  </div>
+</footer>

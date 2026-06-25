@@ -1,0 +1,143 @@
+---
+import Base from '../../layouts/Base.astro';
+import { site } from '../../data/site';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const proyectos = await getCollection('proyectos');
+  return proyectos.map((p) => ({ params: { slug: p.id }, props: { p } }));
+}
+
+const { p } = Astro.props;
+const d = p.data;
+const { Content } = await render(p);
+
+const otros = (await getCollection('proyectos'))
+  .filter((x) => x.id !== p.id)
+  .sort((a, b) => a.data.orden - b.data.orden)
+  .slice(0, 3);
+
+const fotos = [
+  ...(d.portada ? [{ src: d.portada, alt: d.portada_alt ?? d.titulo }] : []),
+  ...d.galeria,
+];
+
+const faqSchema = d.faqs.length ? {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: d.faqs.map((f) => ({ '@type': 'Question', name: f.pregunta, acceptedAnswer: { '@type': 'Answer', text: f.respuesta } })),
+} : null;
+const schema = faqSchema ? [faqSchema] : undefined;
+---
+<Base
+  title={d.metaTitle ?? d.titulo}
+  titleTail={`${d.tipo.toLowerCase()} en vidrio y aluminio en ${d.zona}`}
+  description={d.metaDescription ?? d.resumen}
+  image={d.portada ?? '/brand/logo.png'}
+  schema={schema}>
+  <section class="phero">
+    <div class="wrap">
+      <div class="crumbs"><a href="/">Inicio</a> › <a href="/proyectos/">Proyectos</a> › {d.titulo}</div>
+      <h1>{d.titulo}</h1>
+      <p>{d.resumen}</p>
+      <div class="proj-meta">
+        <span><b>Zona:</b> {d.zona}</span>
+        {d.anio && <span><b>Año:</b> {d.anio}</span>}
+        {d.estado && <span><b>Estado:</b> {d.estado}</span>}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap proj-detail">
+      <div>
+        {fotos.length > 0 && (
+          <div class="grid-gal" style="grid-auto-rows:230px">
+            {fotos.map((f, i) => (
+              <figure class={i === 0 ? 'wide' : ''}>
+                <img src={f.src} alt={f.alt ?? d.titulo} loading={i === 0 ? 'eager' : 'lazy'} />
+              </figure>
+            ))}
+          </div>
+        )}
+        <div class="prose" style="margin-top:36px">
+          <Content />
+        </div>
+
+        {d.faqs.length > 0 && (
+          <div class="faq" style="margin-top:36px">
+            <h2 style="font-size:24px;font-weight:800;margin-bottom:18px">Preguntas frecuentes</h2>
+            {d.faqs.map((f) => (
+              <details><summary>{f.pregunta}</summary><p>{f.respuesta}</p></details>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <aside class="proj-aside">
+        {d.servicios.length > 0 && (
+          <div class="proj-box">
+            <h3>Servicios aplicados</h3>
+            <div class="chips">{d.servicios.map((s) => <span class="chip">{s}</span>)}</div>
+          </div>
+        )}
+        {d.materiales.length > 0 && (
+          <div class="proj-box">
+            <h3>Materiales</h3>
+            <ul>{d.materiales.map((m) => <li>{m}</li>)}</ul>
+          </div>
+        )}
+        {d.destacados.length > 0 && (
+          <div class="proj-box">
+            <h3>Lo que lo hace</h3>
+            <ul>{d.destacados.map((x) => <li>{x}</li>)}</ul>
+          </div>
+        )}
+        <a class="btn btn-primary" style="width:100%;justify-content:center" href={site.whatsapp} target="_blank" rel="noopener">Quiero algo así</a>
+      </aside>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap center">
+      <span class="eyebrow">Más trabajos</span>
+      <h2 class="sec">Otros proyectos</h2>
+      <div class="proj-grid" style="margin-top:38px">
+        {otros.map((o) => (
+          <a class="proj-card" href={`/proyectos/${o.id}/`}>
+            <div class="proj-img">
+              {o.data.portada && <img src={o.data.portada} alt={o.data.portada_alt ?? o.data.titulo} loading="lazy" />}
+              <span class="proj-tag">{o.data.tipo}</span>
+            </div>
+            <div class="proj-body"><h3>{o.data.titulo}</h3><span class="proj-zona">{o.data.zona}</span></div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .proj-meta{display:flex;gap:22px;flex-wrap:wrap;margin-top:20px;font-size:14.5px;color:var(--gris)}
+  .proj-meta b{color:var(--negro)}
+  .proj-detail{display:grid;grid-template-columns:1fr 320px;gap:44px;align-items:start}
+  @media(max-width:880px){.proj-detail{grid-template-columns:1fr}}
+  .proj-aside{position:sticky;top:96px;display:flex;flex-direction:column;gap:18px}
+  @media(max-width:880px){.proj-aside{position:static}}
+  .proj-box{background:var(--bg2);border:1px solid var(--linea);border-radius:16px;padding:22px}
+  .proj-box h3{font-size:16px;font-weight:700;margin-bottom:12px}
+  .proj-box ul{list-style:none}
+  .proj-box li{position:relative;padding:5px 0 5px 22px;font-size:14.5px}
+  .proj-box li::before{content:"✓";position:absolute;left:0;top:5px;color:var(--azul);font-weight:800}
+  .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  @media(max-width:860px){.proj-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.proj-grid{grid-template-columns:1fr}}
+  .proj-card{background:#fff;border:1px solid var(--linea);border-radius:18px;overflow:hidden;transition:.2s}
+  .proj-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:transparent}
+  .proj-img{position:relative;aspect-ratio:4/3;overflow:hidden;background:#eef}
+  .proj-img img{width:100%;height:100%;object-fit:cover}
+  .proj-tag{position:absolute;top:12px;left:12px;background:rgba(26,26,26,.78);color:#fff;font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px}
+  .proj-body{padding:18px 20px}
+  .proj-body h3{font-size:16.5px;font-weight:700;margin-bottom:6px}
+  .proj-zona{font-size:12.5px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--azul)}
+</style>

@@ -1,0 +1,94 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site';
+import { servicios } from '../data/servicios';
+
+const title = 'Sobre nosotros';
+const titleTail = 'empresa familiar de vidrio templado y aluminio en San Lorenzo';
+const desc = 'MÁS VIDRIOS es una empresa familiar de San Lorenzo fundada en 2009. Vidrio templado, aluminio y cerramientos con honestidad, responsabilidad, seriedad y puntualidad. Conocé nuestra historia.';
+---
+<Base title={title} titleTail={titleTail} description={desc}>
+  <section class="phero">
+    <div class="wrap">
+      <div class="crumbs"><a href="/">Inicio</a> › Sobre nosotros</div>
+      <h1>Una empresa <span class="hl">familiar</span> del rubro del vidrio</h1>
+      <p>Desde {site.founded} en San Lorenzo, instalando seguridad, confort y belleza en cada obra.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap-narrow prose">
+      <p><strong>MÁS VIDRIOS</strong> nació en {site.founded} como fruto de la experiencia acumulada por nuestra familia en el rubro del vidrio. Lo que empezó como un oficio se transformó en una empresa que hoy ofrece soluciones completas en vidrio templado, aluminio y construcción en seco para toda la Gran Asunción.</p>
+      <p>Nuestro rubro principal es la provisión e instalación de aberturas de vidrio templado, que complementamos con aberturas de aluminio, mamparas, cielo raso, barandas, divisiones de oficina y más. Venimos trabajando con una premisa simple desde el primer día: cumplir con nuestros clientes en tiempo y en forma. Esos son los pilares de nuestro trabajo.</p>
+
+      <h2>Misión</h2>
+      <p>Instalar seguridad, confort, belleza e innovación, para percibir y vivir mejor el entorno, en el rubro del vidrio templado, cielo raso y afines — con calidad, responsabilidad, honestidad y seriedad.</p>
+
+      <h2>Visión</h2>
+      <p>Ser la empresa instaladora de vidrio templado y afines con mejor prestigio en cuanto a puntualidad, responsabilidad y calidad de trabajo, avalada por la referencia de nuestros clientes.</p>
+
+      <h2>Nuestros valores</h2>
+      <ul>
+        <li><strong>Honestidad</strong> — te recomendamos la solución justa, no la más cara.</li>
+        <li><strong>Responsabilidad</strong> — cuidamos tu obra y tu inversión como si fuera nuestra.</li>
+        <li><strong>Seriedad</strong> — cumplimos lo que prometemos.</li>
+        <li><strong>Puntualidad</strong> — respetamos los plazos acordados.</li>
+      </ul>
+
+      <h2>Trabajos que nos enorgullecen</h2>
+      <p>A lo largo de estos años realizamos una amplia variedad de trabajos en residencias y oficinas, públicas y privadas, y en lugares de acceso público. Entre los más destacados están <strong>los palcos VIP del Estadio Manuel Ferreira del Club Olimpia</strong> y <strong>la fachada del Sindicato de Trabajadores de la ANDE (SITRANDE)</strong>, sobre la calle Tte. Fariña en Asunción.</p>
+      <p>Con nuestros clientes nos unen los lazos formados durante la realización de los trabajos que nos confían. Esa cartera de clientes, construida con el tiempo, es nuestra verdadera esencia.</p>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="stats">
+        <div class="stat reveal"><b data-count-to={site.yearsExp} data-post="+">0</b><span>años de experiencia</span></div>
+        <div class="stat reveal"><b data-count-to={servicios.length}>0</b><span>servicios especializados</span></div>
+        <div class="stat reveal"><b data-count-to="2">0</b><span>obras emblemáticas</span></div>
+        <div class="stat reveal"><b data-count-to="100" data-post="%">0</b><span>trabajos a medida</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipo -->
+  <section style="padding-top:0">
+    <div class="wrap center">
+      <span class="eyebrow">El equipo</span>
+      <h2 class="sec">Las personas detrás de MÁS VIDRIOS</h2>
+      <div class="team">
+        <div class="person reveal">
+          <div class="ph"><img src="/fotos/equipo/jose.jpg" alt="José — Fundador y Director de MÁS VIDRIOS" loading="lazy" /></div>
+          <div class="body"><h4>José</h4><div class="role">Fundador &amp; Director</div></div>
+        </div>
+        <div class="person reveal">
+          <div class="ph"><img src="/fotos/equipo/erika.jpg" alt="Erika — Administración de MÁS VIDRIOS" loading="lazy" /></div>
+          <div class="body"><h4>Erika</h4><div class="role">Administración &amp; Atención al Cliente</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="ctaband">
+        <h2>Trabajemos juntos</h2>
+        <p>Contanos tu proyecto. Te asesoramos y vamos a tu obra o domicilio, sin compromiso.</p>
+        <a class="btn btn-white" href={site.whatsapp} target="_blank" rel="noopener">Contactanos</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .team{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:40px;max-width:720px;margin-left:auto;margin-right:auto}
+  .person{background:#fff;border:1px solid var(--linea);border-radius:20px;overflow:hidden;text-align:center;transition:.2s}
+  .person:hover{box-shadow:var(--shadow);transform:translateY(-4px)}
+  .person .ph{aspect-ratio:1/1;overflow:hidden;background:#222}
+  .person .ph img{width:100%;height:100%;object-fit:cover;object-position:center}
+  .person .body{padding:20px}
+  .person h4{font-size:19px;font-weight:700}
+  .person .role{font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--azul);margin-top:3px}
+</style>

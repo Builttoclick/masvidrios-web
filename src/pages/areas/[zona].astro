@@ -1,0 +1,98 @@
+---
+import Base from '../../layouts/Base.astro';
+import { site } from '../../data/site';
+import { zonas, getZona } from '../../data/zonas';
+import { servicios } from '../../data/servicios';
+
+export function getStaticPaths() {
+  return zonas.map((z) => ({ params: { zona: z.slug } }));
+}
+
+const { zona } = Astro.params;
+const z = getZona(zona!)!;
+
+// servicios destacados para interlinking en la página de zona
+const destacados = servicios.slice(0, 6);
+const otrasZonas = zonas.filter((x) => x.slug !== z.slug);
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: z.faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+---
+<Base title={z.metaTitle} titleTail={z.titleTail} description={z.metaDesc} schema={faqSchema}>
+  <section class="phero">
+    <div class="wrap">
+      <div class="crumbs"><a href="/">Inicio</a> › <a href="/areas/">Zonas</a> › {z.nombre}</div>
+      <h1>Vidriería en <span class="hl">{z.nombre}</span></h1>
+      <p>{z.hero}</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:24px">
+        <a class="btn btn-primary" href={site.whatsapp} target="_blank" rel="noopener">Pedir presupuesto</a>
+        <a class="btn btn-ghost" href="/servicios/">Ver servicios</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap-narrow prose">
+      {z.intro.map((p) => <p>{p}</p>)}
+
+      <h2>Nuestros servicios en {z.nombre}</h2>
+      <p>En {z.nombre} hacemos <a href="/servicios/vidrio-templado/">vidrio templado</a>, <a href="/servicios/cerramientos-de-vidrio/">cerramientos de galería</a>, <a href="/servicios/mamparas-de-bano/">mamparas de baño</a>, <a href="/servicios/divisorias-de-oficina/">divisorias de oficina</a>, <a href="/servicios/aberturas-de-aluminio/">aberturas de aluminio</a> y más. Estos son los servicios que más nos piden en la zona:</p>
+      <div class="chips" style="margin:6px 0 24px">
+        {destacados.map((s) => <a class="chip" href={`/servicios/${s.slug}/`}>{s.nombre}</a>)}
+      </div>
+
+      {z.local.map((p) => <p>{p}</p>)}
+
+      <h2>¿Por qué elegirnos en {z.nombre}?</h2>
+      <ul>
+        <li>Empresa familiar con {site.yearsExp}+ años de experiencia en el rubro del vidrio.</li>
+        <li>Vamos a tu obra o domicilio en {z.nombre} a tomar medidas, sin cargo.</li>
+        <li>Vidrio templado de seguridad y aluminio de las mejores líneas del mercado.</li>
+        <li>Respaldo de obras como los palcos VIP del Olimpia y la fachada de la ANDE.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="padding-top:0">
+    <div class="wrap-narrow">
+      <h2 class="sec" style="text-align:center">Preguntas frecuentes — {z.nombre}</h2>
+      <div class="faq" style="margin-top:30px">
+        {z.faqs.map((f) => (
+          <details>
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Otras zonas -->
+  <section style="padding-top:0">
+    <div class="wrap center">
+      <span class="eyebrow">También cubrimos</span>
+      <h2 class="sec">Otras zonas</h2>
+      <div class="chips" style="justify-content:center;margin-top:22px">
+        {otrasZonas.map((x) => <a class="chip" href={`/areas/${x.slug}/`}>{x.nombre}</a>)}
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="ctaband">
+        <h2>¿Tenés un proyecto en {z.nombre}?</h2>
+        <p>Contanos qué necesitás y te asesoramos sin compromiso.</p>
+        <a class="btn btn-white" href={site.whatsapp} target="_blank" rel="noopener">Contactanos ahora</a>
+      </div>
+    </div>
+  </section>
+</Base>

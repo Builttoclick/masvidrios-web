@@ -1,0 +1,126 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site';
+import { zonas } from '../data/zonas';
+
+const title = 'Contacto';
+const titleTail = 'pedí tu presupuesto de vidrio y aluminio en San Lorenzo y Gran Asunción';
+const desc = 'Contactá a MÁS VIDRIOS en San Lorenzo. WhatsApp 0984 452 749, email y formulario. Presupuesto sin compromiso de vidrio templado, cerramientos y aluminio. Vamos a tu obra.';
+---
+<Base title={title} titleTail={titleTail} description={desc}>
+  <section class="phero">
+    <div class="wrap">
+      <div class="crumbs"><a href="/">Inicio</a> › Contacto</div>
+      <h1>Hablemos de tu <span class="hl">proyecto</span></h1>
+      <p>Escribinos por WhatsApp o dejanos tus datos. Vamos a tu obra o domicilio en {site.city} y la Gran Asunción para tomar medidas, sin cargo.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap contact-grid">
+      <!-- Métodos de contacto + form -->
+      <div>
+        <div class="cmethods">
+          <a class="cmethod" href={site.whatsapp} target="_blank" rel="noopener">
+            <span class="cm-ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Z"/></svg>
+            </span>
+            <div><b>WhatsApp</b><span>{site.phone}</span></div>
+          </a>
+          <a class="cmethod" href={`tel:+${site.phoneIntl}`}>
+            <span class="cm-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="22" height="22"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+            <div><b>Teléfono</b><span>{site.phone}</span></div>
+          </a>
+          <a class="cmethod" href={`mailto:${site.email}`}>
+            <span class="cm-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="22" height="22"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+            <div><b>Email</b><span>{site.email}</span></div>
+          </a>
+          <a class="cmethod" href={site.facebook} target="_blank" rel="noopener">
+            <span class="cm-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z"/></svg></span>
+            <div><b>Facebook</b><span>MÁS VIDRIOS</span></div>
+          </a>
+        </div>
+
+        <form class="cform" id="cform">
+          <h3>Dejanos tu consulta</h3>
+          <div class="row">
+            <label>Nombre<input type="text" name="nombre" required placeholder="Tu nombre" /></label>
+            <label>Teléfono<input type="tel" name="tel" placeholder="09xx xxx xxx" /></label>
+          </div>
+          <label>¿Qué necesitás?<textarea name="msg" rows="4" required placeholder="Ej: quiero cerrar mi galería con vidrio, mide aprox. 4x3m..."></textarea></label>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Enviar por WhatsApp</button>
+          <p class="cform-note">Al enviar se abre WhatsApp con tu mensaje listo para mandar.</p>
+        </form>
+      </div>
+
+      <!-- Mapa + NAP -->
+      <aside class="contact-aside">
+        <div class="cnap">
+          <h3>MÁS VIDRIOS</h3>
+          <p class="muted-line">{site.tagline}</p>
+          <ul>
+            <li><b>Zona:</b> {site.city} y Gran Asunción</li>
+            <li><b>WhatsApp:</b> {site.phone}</li>
+            <li><b>Email:</b> {site.email}</li>
+            <li><b>Horario:</b> Lun a Vie 7:30–17:30 · Sáb 7:30–12:00</li>
+          </ul>
+        </div>
+        <iframe
+          class="cmap"
+          src={site.gbpEmbed}
+          loading="lazy"
+          title="Ubicación de MÁS VIDRIOS en Google Maps"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+        <div class="czonas">
+          <b>Zonas que cubrimos:</b>
+          <div class="chips" style="margin-top:10px">
+            {zonas.map((z) => <a class="chip" href={`/areas/${z.slug}/`}>{z.nombre}</a>)}
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <script is:inline define:vars={{ phoneIntl: site.phoneIntl }}>
+    (function () {
+      var f = document.getElementById('cform');
+      if (!f) return;
+      f.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var d = new FormData(f);
+        var txt = 'Hola MÁS VIDRIOS! Soy ' + (d.get('nombre') || '') +
+          (d.get('tel') ? ' (tel: ' + d.get('tel') + ')' : '') + '. ' + (d.get('msg') || '');
+        window.open('https://wa.me/' + phoneIntl + '?text=' + encodeURIComponent(txt), '_blank');
+      });
+    })();
+  </script>
+</Base>
+
+<style>
+  .contact-grid{display:grid;grid-template-columns:1fr 380px;gap:44px;align-items:start}
+  @media(max-width:900px){.contact-grid{grid-template-columns:1fr}}
+  .cmethods{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:30px}
+  @media(max-width:520px){.cmethods{grid-template-columns:1fr}}
+  .cmethod{display:flex;align-items:center;gap:14px;padding:16px;border:1px solid var(--linea);border-radius:14px;background:#fff;transition:.18s}
+  .cmethod:hover{border-color:var(--azul);transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+  .cm-ic{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,rgba(36,120,252,.12),rgba(84,228,228,.18));display:flex;align-items:center;justify-content:center;color:var(--azul);flex:0 0 auto}
+  .cmethod b{display:block;font-size:15px;color:var(--negro)}
+  .cmethod span{font-size:13.5px;color:var(--gris)}
+  .cform{background:var(--bg2);border:1px solid var(--linea);border-radius:18px;padding:28px}
+  .cform h3{font-size:19px;font-weight:700;margin-bottom:18px}
+  .cform .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:520px){.cform .row{grid-template-columns:1fr}}
+  .cform label{display:block;font-size:14px;font-weight:600;color:var(--tinta);margin-bottom:14px}
+  .cform input,.cform textarea{width:100%;margin-top:6px;padding:12px 14px;border:1px solid var(--linea);border-radius:10px;font-family:inherit;font-size:15px;background:#fff;color:var(--tinta)}
+  .cform input:focus,.cform textarea:focus{outline:none;border-color:var(--azul)}
+  .cform-note{font-size:12.5px;color:var(--gris);text-align:center;margin-top:12px}
+  .contact-aside{display:flex;flex-direction:column;gap:20px}
+  .cnap{background:var(--negro);color:#c4ccd8;border-radius:18px;padding:24px}
+  .cnap h3{color:#fff;font-size:18px}
+  .cnap .muted-line{color:#9aa3b2;font-size:14px;margin-bottom:14px}
+  .cnap ul{list-style:none;font-size:14.5px;line-height:1.9}
+  .cnap b{color:#fff}
+  .cmap{border:0;width:100%;height:260px;border-radius:18px}
+  .czonas{background:#fff;border:1px solid var(--linea);border-radius:18px;padding:20px;font-size:14px}
+</style>

@@ -1,0 +1,54 @@
+---
+import Base from '../../layouts/Base.astro';
+import { site } from '../../data/site';
+import { servicios } from '../../data/servicios';
+import { zonas } from '../../data/zonas';
+
+const title = 'Servicios de vidriería en San Lorenzo';
+const titleTail = 'vidrio templado, cerramientos, mamparas, divisorias y aberturas de aluminio cerca tuyo';
+const desc = 'Todos los servicios de MÁS VIDRIOS en San Lorenzo y Gran Asunción: vidrio templado, cerramientos, mamparas de baño, divisorias de oficina, aberturas de aluminio, cielo raso, barandas y policarbonato.';
+---
+<Base title={title} titleTail={titleTail} description={desc}>
+  <section class="phero">
+    <div class="wrap">
+      <div class="crumbs"><a href="/">Inicio</a> › Servicios</div>
+      <h1>Servicios de <span class="hl">vidrio y aluminio</span> en San Lorenzo</h1>
+      <p>Proveemos e instalamos a medida. Desde el vidrio templado de seguridad hasta la carpintería de aluminio, el cielo raso y el policarbonato — todo con la misma prolijidad.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="cards">
+        {servicios.map((s) => (
+          <a class="card reveal" href={`/servicios/${s.slug}/`}>
+            <div class="ic"><svg viewBox="0 0 24 24" set:html={s.icon}></svg></div>
+            <h3>{s.nombre}</h3>
+            <p>{s.hero}</p>
+            <span class="more">Ver servicio</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap center">
+      <span class="eyebrow">Dónde trabajamos</span>
+      <h2 class="sec">Llegamos a toda la Gran Asunción</h2>
+      <div class="chips" style="justify-content:center;margin-top:22px">
+        {zonas.map((z) => <a class="chip" href={`/areas/${z.slug}/`}>{z.nombre}</a>)}
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="ctaband">
+        <h2>¿No estás seguro de qué necesitás?</h2>
+        <p>Contanos tu proyecto y te asesoramos sin compromiso. Vamos a tu obra o domicilio.</p>
+        <a class="btn btn-white" href={site.whatsapp} target="_blank" rel="noopener">Contactanos</a>
+      </div>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,54 @@
+---
+import Base from '../../layouts/Base.astro';
+import { site } from '../../data/site';
+import { zonas } from '../../data/zonas';
+import { servicios } from '../../data/servicios';
+
+const title = 'Zonas que cubrimos desde San Lorenzo';
+const titleTail = 'vidriería en San Lorenzo, Asunción, Luque y toda la Gran Asunción';
+const desc = 'MÁS VIDRIOS cubre San Lorenzo, Asunción, Luque, Fernando de la Mora, Capiatá, Lambaré y toda la Gran Asunción. Vidrio templado, cerramientos y aluminio a medida. Visita sin cargo.';
+---
+<Base title={title} titleTail={titleTail} description={desc}>
+  <section class="phero">
+    <div class="wrap">
+      <div class="crumbs"><a href="/">Inicio</a> › Zonas</div>
+      <h1>Vidriería en toda la <span class="hl">Gran Asunción</span></h1>
+      <p>Con base en San Lorenzo, llegamos a tu casa, comercio u obra en toda la Gran Asunción. Elegí tu zona y conocé cómo trabajamos ahí.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="cards">
+        {zonas.map((z) => (
+          <a class="card reveal" href={`/areas/${z.slug}/`}>
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+            <h3>Vidriería en {z.nombre}</h3>
+            <p>{z.hero}</p>
+            <span class="more">Ver zona</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap center">
+      <span class="eyebrow">Nuestros servicios</span>
+      <h2 class="sec">Lo que hacemos en cada zona</h2>
+      <div class="chips" style="justify-content:center;margin-top:22px">
+        {servicios.map((s) => <a class="chip" href={`/servicios/${s.slug}/`}>{s.nombre}</a>)}
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="ctaband">
+        <h2>¿Estás en la Gran Asunción?</h2>
+        <p>Vamos a tu obra o domicilio a tomar medidas. Presupuesto sin compromiso.</p>
+        <a class="btn btn-white" href={site.whatsapp} target="_blank" rel="noopener">Contactanos</a>
+      </div>
+    </div>
+  </section>
+</Base>
