@@ -55,7 +55,7 @@ const negocio = {
   },
   geo: { '@type': 'GeoCoordinates', latitude: site.geo.lat, longitude: site.geo.lng },
   areaServed: [...zonas.map((z) => z.nombre), 'Gran Asunción', 'Paraguay'],
-  sameAs: [site.facebook],
+  sameAs: [site.facebook, site.instagram],
   openingHoursSpecification: [
     { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '07:30', closes: '17:30' },
     { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '07:30', closes: '12:00' },

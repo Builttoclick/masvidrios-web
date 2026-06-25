@@ -131,7 +131,8 @@ h2.sec{font-size:34px;font-weight:800;letter-spacing:-.8px;margin:8px 0 6px}
 .nav-in>a img{height:38px;width:auto}
 .nav ul{display:flex;gap:28px;list-style:none;font-size:15px;font-weight:500;align-items:center}
 .nav ul a{color:var(--tinta)}.nav ul a:hover{color:var(--azul)}
-.nav .cta{font-size:14px;padding:11px 20px}
+.nav .cta{font-size:14px;padding:11px 20px;box-shadow:0 2px 8px rgba(36,120,252,.22)}
+.nav .cta:hover{transform:none;box-shadow:0 4px 12px rgba(36,120,252,.32)}
 .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px}
 .nav-toggle svg{width:28px;height:28px;stroke:var(--negro)}
 @media(max-width:900px){

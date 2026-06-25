@@ -377,6 +377,51 @@ export const servicios: Servicio[] = [
       { q: '¿Incluye la estructura?', a: 'Sí, presupuestamos la cubierta completa: estructura de soporte, perfiles de sujeción y el policarbonato, todo instalado.' },
     ],
   },
+  {
+    slug: 'mantenimientos',
+    nombre: 'Mantenimientos',
+    categoria: 'Mantenimiento de vidrios y aluminio',
+    icon: '<circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1l2-1.6-2-3.4-2.4 1a7 7 0 0 0-1.7-1L14.5 3h-5L9 5a7 7 0 0 0-1.7 1l-2.4-1-2 3.4 2 1.6a7 7 0 0 0 0 2l-2 1.6 2 3.4 2.4-1a7 7 0 0 0 1.7 1l.5 2h5l.5-2a7 7 0 0 0 1.7-1l2.4 1 2-3.4-2-1.6a7 7 0 0 0 .1-1Z"/>',
+    foto: '/fotos/proyectos/puerta-vidrio-aluminio-salida-emergencia-cierrapuertas.jpg',
+    fotoAlt: 'Puerta de vidrio con aluminio, manijón de acero y brazo cierrapuertas — MÁS VIDRIOS',
+    metaTitle: 'Mantenimiento de vidrios y aluminio en San Lorenzo',
+    titleTail: 'reparación y service de puertas, ventanas, mamparas y herrajes cerca tuyo',
+    metaDesc: 'Mantenimiento y reparación de instalaciones de vidrio y aluminio en San Lorenzo y Gran Asunción: herrajes, ruedas, brazos cierrapuertas, sellos y cambio de vidrios. Presupuesto sin compromiso.',
+    hero: 'Reparamos y damos service a tus puertas, ventanas, mamparas y cerramientos de vidrio y aluminio.',
+    intro: [
+      'El vidrio y el aluminio duran décadas, pero los herrajes que los mueven —ruedas, cierres, brazos cierrapuertas, sellos— se desgastan con el uso. En MÁS VIDRIOS no solo instalamos: también mantenemos y reparamos lo que ya tenés, sea instalado por nosotros o por otros.',
+      'Un mantenimiento a tiempo evita que un problema chico (una puerta que cuesta correr, una mampara que filtra) se transforme en un cambio completo. Revisamos, ajustamos y reemplazamos lo justo para que todo vuelva a funcionar como el primer día.',
+    ],
+    bloques: [
+      {
+        h2: 'Qué reparamos',
+        lista: [
+          'Cambio de ruedas y ajuste de puertas y ventanas corredizas.',
+          'Reparación de herrajes, cerraduras y manijones.',
+          'Brazos cierrapuertas (puertas de vidrio comerciales).',
+          'Resellado de mamparas y cerramientos que filtran agua.',
+          'Reemplazo de vidrios rotos o rayados.',
+        ],
+      },
+      {
+        h2: 'Service para comercios y oficinas',
+        parrafos: [
+          'Las puertas de vidrio de locales y oficinas son de alto tránsito y necesitan mantenimiento periódico de sus brazos cierrapuertas y herrajes para seguir funcionando seguras. Coordinamos visitas de service para que tu local nunca tenga una puerta fuera de uso.',
+        ],
+      },
+    ],
+    destacados: [
+      'Ajuste y cambio de herrajes y ruedas',
+      'Brazos cierrapuertas y cerraduras',
+      'Resellado contra filtraciones',
+      'Reemplazo de vidrios rotos',
+    ],
+    faqs: [
+      { q: '¿Reparan trabajos que no instalaron ustedes?', a: 'Sí. Reparamos y damos mantenimiento a instalaciones de vidrio y aluminio sin importar quién las haya hecho.' },
+      { q: '¿Mi puerta corrediza cuesta correr, tiene arreglo?', a: 'Casi siempre sí. Generalmente es cuestión de cambiar las ruedas y limpiar/ajustar el riel, sin reemplazar la abertura entera.' },
+      { q: '¿Hacen contratos de mantenimiento para locales?', a: 'Sí, coordinamos visitas periódicas de service para comercios y oficinas con puertas de alto tránsito.' },
+    ],
+  },
 ];
 
 export const getServicio = (slug: string) => servicios.find((s) => s.slug === slug);

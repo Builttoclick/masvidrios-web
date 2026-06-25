@@ -6,6 +6,7 @@ import { nav } from '../data/site';
     <a href="/" aria-label="MÁS VIDRIOS inicio"><img src="/brand/logo.png" alt="MÁS VIDRIOS" width="170" height="38" /></a>
     <nav id="navmenu">
       <ul>
+        <li><a href="/">Inicio</a></li>
         {nav.map((n) => <li><a href={n.href}>{n.label}</a></li>)}
         <li><a class="btn btn-primary cta" href="/contacto/">Pedir presupuesto</a></li>
       </ul>
