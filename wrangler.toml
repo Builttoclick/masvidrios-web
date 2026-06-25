@@ -1,0 +1,7 @@
+name = "masvidrios-web"
+compatibility_date = "2025-06-01"
+
+# Sitio estático Astro: el build (npm run build) genera ./dist,
+# que Cloudflare sirve como assets (Worker sin script, solo assets).
+[assets]
+directory = "./dist"
