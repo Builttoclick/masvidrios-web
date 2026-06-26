@@ -20,7 +20,7 @@ export const zonas: Zona[] = [
     metaDesc: 'Vidriería en San Lorenzo: vidrio templado, cerramientos, mamparas, divisorias y aberturas de aluminio. Empresa familiar local con +15 años. Vamos a tu obra. Presupuesto sin compromiso.',
     hero: 'Somos de San Lorenzo. Acá nacimos en 2009 y acá tenemos nuestro taller.',
     intro: [
-      'MÁS VIDRIOS es una empresa sanlorenzana de pies a cabeza. Desde 2009 trabajamos el vidrio y el aluminio en San Lorenzo y desde acá salimos a toda la Gran Asunción. Conocemos los barrios, las calles y el tipo de obra de la zona — eso hace que llegar, medir y colocar sea más rápido y más prolijo.',
+      'MÁS VIDRIOS es una empresa sanlorenzana de pies a cabeza. Desde 2009 trabajamos el vidrio y el aluminio en San Lorenzo y desde acá salimos a toda la Gran Asunción. Conocemos los barrios, las calles y el tipo de obra de la zona, eso hace que llegar, medir y colocar sea más rápido y más prolijo.',
       'Si estás en San Lorenzo, somos literalmente tu vidriería de barrio: nos trasladamos a tu casa, comercio u obra sin costo para presupuestar, y coordinamos los trabajos con la cercanía de quien está a la vuelta.',
     ],
     local: [
@@ -63,7 +63,7 @@ export const zonas: Zona[] = [
     hero: 'Llegamos a Luque y alrededores con el mismo servicio de siempre.',
     intro: [
       'Luque está dentro de nuestra zona de trabajo habitual. Desde San Lorenzo llegamos sin problema para cerramientos de galería, mamparas de baño, ventanas de aluminio, barandas y trabajos de vidrio templado en viviendas y comercios.',
-      'El crecimiento residencial de Luque trajo muchas casas nuevas que buscan cerrar galerías y quinchos para aprovecharlos todo el año — uno de los trabajos que más hacemos en la zona.',
+      'El crecimiento residencial de Luque trajo muchas casas nuevas que buscan cerrar galerías y quinchos para aprovecharlos todo el año, uno de los trabajos que más hacemos en la zona.',
     ],
     local: [
       'Atendemos tanto las zonas residenciales de Luque como los barrios cercanos al centro y a las avenidas comerciales. Para las casas con jardín y piscina, los cerramientos de vidrio con aluminio negro son tendencia y quedan espectaculares; para los comercios, hacemos vidrieras y frentes.',
@@ -84,7 +84,7 @@ export const zonas: Zona[] = [
     hero: 'Fernando de la Mora, a pasos de nuestra base en San Lorenzo.',
     intro: [
       'Fernando de la Mora limita con San Lorenzo, así que es una de las zonas que atendemos con mayor rapidez. Hacemos mamparas, cerramientos, divisiones, ventanas de aluminio y todo tipo de trabajos de vidrio templado, tanto en viviendas como en comercios y oficinas.',
-      'La cercanía con nuestro taller hace que medir, fabricar y colocar en Fernando de la Mora sea ágil — ideal cuando necesitás resolver rápido.',
+      'La cercanía con nuestro taller hace que medir, fabricar y colocar en Fernando de la Mora sea ágil, ideal cuando necesitás resolver rápido.',
     ],
     local: [
       'Cubrimos tanto Fernando de la Mora Norte como Sur, atendiendo las zonas residenciales y los corredores comerciales sobre las avenidas principales. Para casas hacemos cerramientos y mamparas; para locales, vidrieras y frentes de aluminio y vidrio.',
@@ -105,7 +105,7 @@ export const zonas: Zona[] = [
     hero: 'Capiatá también está dentro de nuestra zona de cobertura.',
     intro: [
       'Capiatá forma parte del corredor donde trabajamos habitualmente desde San Lorenzo. Hacemos cerramientos de galería, aberturas de aluminio, mamparas, barandas y trabajos de vidrio templado para las viviendas y comercios de la zona.',
-      'Con el crecimiento de Capiatá, cada vez más casas buscan cerrar galerías y poner aberturas de aluminio de calidad — justo lo nuestro.',
+      'Con el crecimiento de Capiatá, cada vez más casas buscan cerrar galerías y poner aberturas de aluminio de calidad, justo lo nuestro.',
     ],
     local: [
       'Atendemos las zonas residenciales y los barrios sobre la Ruta 2 y avenidas principales de Capiatá. Para las viviendas hacemos cerramientos y mamparas; para los comercios, frentes y vidrieras.',

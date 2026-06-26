@@ -1,9 +1,9 @@
-// Datos centrales del negocio — fuente única de verdad para NAP, links y schema.
+// Datos centrales del negocio, fuente única de verdad para NAP, links y schema.
 export const site = {
   name: 'MÁS VIDRIOS',
   legalName: 'MÁS VIDRIOS',
   tagline: 'Soluciones en vidrio & mucho más',
-  url: 'https://masvidrios.builttoclick.com',
+  url: 'https://masvidrios.com.py',
   // NAP
   city: 'San Lorenzo',
   region: 'Central',

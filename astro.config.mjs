@@ -3,7 +3,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://masvidrios.builttoclick.com',
+  site: 'https://masvidrios.com.py',
   compressHTML: true,
   integrations: [
     sitemap({

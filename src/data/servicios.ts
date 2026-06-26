@@ -26,7 +26,7 @@ export const servicios: Servicio[] = [
     categoria: 'Vidrio templado',
     icon: '<rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 3v18"/>',
     foto: '/fotos/proyectos/puerta-corrediza-vidrio-aluminio-negro-estilo-industrial-cuadricula.jpg',
-    fotoAlt: 'Puerta corrediza de vidrio templado estilo industrial con aluminio negro — MÁS VIDRIOS',
+    fotoAlt: 'Puerta corrediza de vidrio templado estilo industrial con aluminio negro · MÁS VIDRIOS',
     metaTitle: 'Vidrio templado en San Lorenzo',
     titleTail: 'colocación, puertas, ventanas y tapas de vidrio templado cerca tuyo',
     metaDesc: 'Colocación e instalación de vidrio templado en San Lorenzo y Gran Asunción: puertas, ventanas, tapas de mesa y cerramientos. Empresa familiar con +15 años. Presupuesto sin compromiso.',
@@ -61,7 +61,7 @@ export const servicios: Servicio[] = [
       'Cobertura en San Lorenzo y toda la Gran Asunción',
     ],
     faqs: [
-      { q: '¿El vidrio templado se puede cortar después de templado?', a: 'No. El vidrio se corta y se procesa (perforaciones, pulido) antes del templado. Por eso es clave tomar bien las medidas en obra desde el principio — de eso nos encargamos nosotros.' },
+      { q: '¿El vidrio templado se puede cortar después de templado?', a: 'No. El vidrio se corta y se procesa (perforaciones, pulido) antes del templado. Por eso es clave tomar bien las medidas en obra desde el principio, de eso nos encargamos nosotros.' },
       { q: '¿Cuánto tarda un trabajo de vidrio templado?', a: 'Depende del tamaño y de la cola de fabricación, pero en general entre una y dos semanas desde que se aprueba el presupuesto y se toman las medidas definitivas. Te damos un plazo concreto al presupuestar.' },
       { q: '¿Hacen tapas de mesa de vidrio templado a medida?', a: 'Sí, con el espesor y el canto que prefieras (pulido recto, biselado, etc.). Tomamos el molde exacto de tu mesa para que calce perfecto.' },
     ],
@@ -72,13 +72,13 @@ export const servicios: Servicio[] = [
     categoria: 'Cerramientos de vidrio',
     icon: '<path d="M4 20V8l8-5 8 5v12"/><path d="M9 20v-6h6v6"/>',
     foto: '/fotos/proyectos/cerramiento-vidrio-quincho-aluminio-negro-exterior.jpg',
-    fotoAlt: 'Cerramiento de quincho con vidrio y aluminio negro, deck de madera — MÁS VIDRIOS',
+    fotoAlt: 'Cerramiento de quincho con vidrio y aluminio negro, deck de madera · MÁS VIDRIOS',
     metaTitle: 'Cerramientos de vidrio en San Lorenzo',
     titleTail: 'cerramiento de galerías, quinchos y patios con vidrio y aluminio cerca tuyo',
     metaDesc: 'Cerramientos de vidrio para galerías, quinchos y patios en San Lorenzo y Gran Asunción. Ganá un ambiente nuevo sin perder la vista. Vidrio templado y aluminio a medida. Presupuesto gratis.',
     hero: 'Convertí tu galería, quincho o patio en un ambiente que se usa todo el año, sin perder la vista al jardín.',
     intro: [
-      'Un cerramiento de vidrio es la forma más elegante de ganar metros útiles en tu casa. Cerrás la galería o el quincho con grandes paños de vidrio y perfilería de aluminio, y de golpe tenés un ambiente protegido del viento, la lluvia y el polvo — pero que sigue sintiéndose abierto, porque la vista al jardín queda intacta.',
+      'Un cerramiento de vidrio es la forma más elegante de ganar metros útiles en tu casa. Cerrás la galería o el quincho con grandes paños de vidrio y perfilería de aluminio, y de golpe tenés un ambiente protegido del viento, la lluvia y el polvo, pero que sigue sintiéndose abierto, porque la vista al jardín queda intacta.',
       'En MÁS VIDRIOS diseñamos cada cerramiento a medida del espacio: corredizos para abrir en los días lindos, paños fijos para maximizar la transparencia, y la combinación de aluminio (blanco, negro o símil madera) que mejor acompañe tu casa.',
     ],
     bloques: [
@@ -117,7 +117,7 @@ export const servicios: Servicio[] = [
     categoria: 'Mamparas de baño',
     icon: '<rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 4l9 8 9-8"/>',
     foto: '/fotos/proyectos/puerta-bambu-marco-madera-bano-marmol.jpg',
-    fotoAlt: 'Baño revestido en mármol con carpintería a medida — MÁS VIDRIOS',
+    fotoAlt: 'Baño revestido en mármol con carpintería a medida · MÁS VIDRIOS',
     metaTitle: 'Mamparas de baño en San Lorenzo',
     titleTail: 'mamparas de ducha en vidrio templado a medida cerca tuyo',
     metaDesc: 'Mamparas de baño en vidrio templado de seguridad en San Lorenzo y Gran Asunción. A medida, robustas y de durabilidad garantizada. Evitá salpicaduras con estilo. Presupuesto sin compromiso.',
@@ -130,7 +130,7 @@ export const servicios: Servicio[] = [
       {
         h2: 'Opciones de mampara',
         lista: [
-          'Mamparas fijas (paño único) — la opción más limpia y económica.',
+          'Mamparas fijas (paño único), la opción más limpia y económica.',
           'Mamparas con puerta de abrir o corrediza.',
           'Vidrio transparente, esmerilado/arenado o con diseño para más privacidad.',
           'Herrajes en acero inoxidable, negro mate o cromados.',
@@ -161,7 +161,7 @@ export const servicios: Servicio[] = [
     categoria: 'Divisorias de oficina en vidrio',
     icon: '<rect x="3" y="3" width="18" height="18" rx="1"/><path d="M12 3v18"/>',
     foto: '/fotos/proyectos/divisiones-oficina-vidrio-aluminio-blanco-interior.jpg',
-    fotoAlt: 'Divisiones de oficina en vidrio con aluminio blanco y puertas vidriadas — MÁS VIDRIOS',
+    fotoAlt: 'Divisiones de oficina en vidrio con aluminio blanco y puertas vidriadas · MÁS VIDRIOS',
     metaTitle: 'Divisorias de oficina en San Lorenzo',
     titleTail: 'divisiones de vidrio y aluminio para oficinas cerca tuyo',
     metaDesc: 'Divisorias de oficina en vidrio y aluminio en San Lorenzo y Gran Asunción. Aislamiento acústico y térmico, diseño a medida y look vanguardista para tu espacio de trabajo. Presupuesto gratis.',
@@ -184,7 +184,7 @@ export const servicios: Servicio[] = [
       {
         h2: 'Aluminio blanco o negro, a tu medida',
         parrafos: [
-          'La perfilería puede ir en blanco para un look limpio y luminoso, o en negro para una estética más corporativa y de tendencia. Nos adaptamos a tu presupuesto y ajustamos el diseño y la distribución de los espacios — para nosotros cada cliente es único.',
+          'La perfilería puede ir en blanco para un look limpio y luminoso, o en negro para una estética más corporativa y de tendencia. Nos adaptamos a tu presupuesto y ajustamos el diseño y la distribución de los espacios, para nosotros cada cliente es único.',
         ],
       },
     ],
@@ -206,14 +206,14 @@ export const servicios: Servicio[] = [
     categoria: 'Aberturas de aluminio',
     icon: '<rect x="2" y="6" width="20" height="12" rx="1"/><path d="M6 6v12M10 6v12M14 6v12M18 6v12"/>',
     foto: '/fotos/proyectos/ventana-corrediza-aluminio-simil-madera-mosquitero-ladrillo.jpg',
-    fotoAlt: 'Ventana corrediza de aluminio símil madera con mosquitero — MÁS VIDRIOS',
+    fotoAlt: 'Ventana corrediza de aluminio símil madera con mosquitero · MÁS VIDRIOS',
     metaTitle: 'Aberturas de aluminio en San Lorenzo',
     titleTail: 'ventanas y puertas de aluminio a medida cerca tuyo',
     metaDesc: 'Aberturas de aluminio en San Lorenzo y Gran Asunción: ventanas y puertas corredizas, líneas suprema y 25, símil madera y mosquiteros. A medida y bien instaladas. Presupuesto sin compromiso.',
-    hero: 'Ventanas y puertas de aluminio a medida — líneas suprema, 25, módulo práctico, símil madera y mosquiteros.',
+    hero: 'Ventanas y puertas de aluminio a medida, líneas suprema, 25, módulo práctico, símil madera y mosquiteros.',
     intro: [
       'El aluminio es el complemento natural del vidrio y una de nuestras especialidades. Es liviano, no se oxida, casi no necesita mantenimiento y permite armar ventanas y puertas de gran tamaño con marcos finos que dejan entrar la mayor cantidad de luz posible.',
-      'En MÁS VIDRIOS trabajamos las líneas más usadas del mercado — suprema, línea 25, módulo práctico — además de mosquiteros corredizos y la línea símil madera para quienes buscan la calidez de la madera sin su mantenimiento. Fabricamos y colocamos a medida, con el vidrio que corresponda en cada caso.',
+      'En MÁS VIDRIOS trabajamos las líneas más usadas del mercado, suprema, línea 25, módulo práctico, además de mosquiteros corredizos y la línea símil madera para quienes buscan la calidez de la madera sin su mantenimiento. Fabricamos y colocamos a medida, con el vidrio que corresponda en cada caso.',
     ],
     bloques: [
       {
@@ -242,7 +242,7 @@ export const servicios: Servicio[] = [
     faqs: [
       { q: '¿Qué línea de aluminio me conviene?', a: 'Depende del tamaño de la abertura, la exposición al viento y el presupuesto. La línea suprema es más robusta para grandes vanos; la línea 25 es ideal para aberturas estándar. Te asesoramos según tu caso.' },
       { q: '¿El aluminio símil madera se mantiene como la madera?', a: 'No requiere el mantenimiento de la madera real: no hay que barnizar ni se pudre. Da la estética cálida de la madera con la durabilidad del aluminio.' },
-      { q: '¿Incluye el vidrio y la colocación?', a: 'Sí. Presupuestamos la abertura completa — perfilería, vidrio, herrajes y colocación — para que no tengas que coordinar con varios proveedores.' },
+      { q: '¿Incluye el vidrio y la colocación?', a: 'Sí. Presupuestamos la abertura completa, perfilería, vidrio, herrajes y colocación, para que no tengas que coordinar con varios proveedores.' },
     ],
   },
   {
@@ -251,11 +251,11 @@ export const servicios: Servicio[] = [
     categoria: 'Cielo raso y Durlock',
     icon: '<path d="M3 12h18"/><path d="M3 6h18M3 18h18"/>',
     foto: '/fotos/proyectos/puerta-bambu-revestimiento-madera-detalle-marco.jpg',
-    fotoAlt: 'Detalle de revestimiento de madera en cielorraso con spots embutidos — MÁS VIDRIOS',
+    fotoAlt: 'Detalle de revestimiento de madera en cielorraso con spots embutidos · MÁS VIDRIOS',
     metaTitle: 'Cielo raso y Durlock en San Lorenzo',
     titleTail: 'cielo raso desmontable, PVC y tabiques de construcción en seco cerca tuyo',
     metaDesc: 'Cielo raso desmontable de yeso/cartón Durlock y PVC, y tabiques de construcción en seco en San Lorenzo y Gran Asunción. Prolijo, rápido y limpio. Presupuesto sin compromiso.',
-    hero: 'Cielo raso desmontable de Durlock y PVC, y tabiques de construcción en seco — prolijo, rápido y limpio.',
+    hero: 'Cielo raso desmontable de Durlock y PVC, y tabiques de construcción en seco, prolijo, rápido y limpio.',
     intro: [
       'Además del vidrio y el aluminio, en MÁS VIDRIOS completamos la terminación de tus ambientes con cielo raso y construcción en seco. Es la forma más rápida y limpia de renovar un techo, ocultar instalaciones, mejorar la aislación y darle a un ambiente esa terminación prolija y moderna que se nota.',
       'Trabajamos cielo raso desmontable de placa de yeso "Durlock" con perfilería de aluminio tipo "T", cielo raso de PVC, y tabiques de yeso para dividir ambientes sin la suciedad ni los tiempos de la obra húmeda.',
@@ -295,13 +295,13 @@ export const servicios: Servicio[] = [
     categoria: 'Barandas de vidrio',
     icon: '<path d="M4 18V9M9 18V5M14 18v-7M19 18V8"/><path d="M3 21h18"/>',
     foto: '/fotos/proyectos/muro-cortina-vidrio-fachada-edificio-ladrillo.jpg',
-    fotoAlt: 'Vidrio templado en altura sobre fachada de edificio — MÁS VIDRIOS',
+    fotoAlt: 'Vidrio templado en altura sobre fachada de edificio · MÁS VIDRIOS',
     metaTitle: 'Barandas de vidrio en San Lorenzo',
     titleTail: 'barandas vidriadas para escaleras, balcones y entrepisos cerca tuyo',
     metaDesc: 'Barandas de vidrio templado combinadas con aluminio y acero inoxidable en San Lorenzo y Gran Asunción. Seguras, elegantes y a medida para escaleras, balcones y entrepisos. Presupuesto gratis.',
     hero: 'Barandas de vidrio templado combinadas con aluminio y acero inoxidable: seguras y elegantes.',
     intro: [
-      'Una baranda de vidrio resuelve la seguridad de una escalera, un balcón o un entrepiso sin tapar la vista ni cortar la luz. Es la opción más elegante y contemporánea, y cuando se hace bien — con vidrio templado de seguridad y herrajes correctos — es tan segura como cualquier baranda tradicional.',
+      'Una baranda de vidrio resuelve la seguridad de una escalera, un balcón o un entrepiso sin tapar la vista ni cortar la luz. Es la opción más elegante y contemporánea, y cuando se hace bien, con vidrio templado de seguridad y herrajes correctos, es tan segura como cualquier baranda tradicional.',
       'En MÁS VIDRIOS combinamos el vidrio templado con aluminio y acero inoxidable para lograr barandas firmes, prolijas y a medida de cada proyecto, tanto en viviendas como en obras comerciales.',
     ],
     bloques: [
@@ -339,7 +339,7 @@ export const servicios: Servicio[] = [
     categoria: 'Techos de policarbonato',
     icon: '<path d="M3 7l9-4 9 4-9 4-9-4Z"/><path d="M3 7v6l9 4 9-4V7"/>',
     foto: '/fotos/proyectos/cerramiento-galeria-vidrio-marco-madera-exterior.jpg',
-    fotoAlt: 'Galería cubierta con estructura y cerramiento — MÁS VIDRIOS',
+    fotoAlt: 'Galería cubierta con estructura y cerramiento · MÁS VIDRIOS',
     metaTitle: 'Techos de policarbonato en San Lorenzo',
     titleTail: 'techos y cubiertas de policarbonato translúcido cerca tuyo',
     metaDesc: 'Techos y cubiertas de policarbonato en San Lorenzo y Gran Asunción: translúcidos, resistentes y livianos para galerías, patios y aberturas cenitales. Presupuesto sin compromiso.',
@@ -383,13 +383,13 @@ export const servicios: Servicio[] = [
     categoria: 'Mantenimiento de vidrios y aluminio',
     icon: '<circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1l2-1.6-2-3.4-2.4 1a7 7 0 0 0-1.7-1L14.5 3h-5L9 5a7 7 0 0 0-1.7 1l-2.4-1-2 3.4 2 1.6a7 7 0 0 0 0 2l-2 1.6 2 3.4 2.4-1a7 7 0 0 0 1.7 1l.5 2h5l.5-2a7 7 0 0 0 1.7-1l2.4 1 2-3.4-2-1.6a7 7 0 0 0 .1-1Z"/>',
     foto: '/fotos/proyectos/puerta-vidrio-aluminio-salida-emergencia-cierrapuertas.jpg',
-    fotoAlt: 'Puerta de vidrio con aluminio, manijón de acero y brazo cierrapuertas — MÁS VIDRIOS',
+    fotoAlt: 'Puerta de vidrio con aluminio, manijón de acero y brazo cierrapuertas · MÁS VIDRIOS',
     metaTitle: 'Mantenimiento de vidrios y aluminio en San Lorenzo',
     titleTail: 'reparación y service de puertas, ventanas, mamparas y herrajes cerca tuyo',
     metaDesc: 'Mantenimiento y reparación de instalaciones de vidrio y aluminio en San Lorenzo y Gran Asunción: herrajes, ruedas, brazos cierrapuertas, sellos y cambio de vidrios. Presupuesto sin compromiso.',
     hero: 'Reparamos y damos service a tus puertas, ventanas, mamparas y cerramientos de vidrio y aluminio.',
     intro: [
-      'El vidrio y el aluminio duran décadas, pero los herrajes que los mueven —ruedas, cierres, brazos cierrapuertas, sellos— se desgastan con el uso. En MÁS VIDRIOS no solo instalamos: también mantenemos y reparamos lo que ya tenés, sea instalado por nosotros o por otros.',
+      'El vidrio y el aluminio duran décadas, pero los herrajes que los mueven (ruedas, cierres, brazos cierrapuertas, sellos) se desgastan con el uso. En MÁS VIDRIOS no solo instalamos: también mantenemos y reparamos lo que ya tenés, sea instalado por nosotros o por otros.',
       'Un mantenimiento a tiempo evita que un problema chico (una puerta que cuesta correr, una mampara que filtra) se transforme en un cambio completo. Revisamos, ajustamos y reemplazamos lo justo para que todo vuelva a funcionar como el primer día.',
     ],
     bloques: [
