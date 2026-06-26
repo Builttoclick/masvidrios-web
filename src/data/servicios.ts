@@ -33,7 +33,7 @@ export const servicios: Servicio[] = [
     hero: 'Nuestro rubro principal: provisión y colocación de vidrio templado de seguridad, a medida y con terminación prolija.',
     intro: [
       'El vidrio templado es el corazón de lo que hacemos en MÁS VIDRIOS desde 2009. Es un vidrio sometido a un tratamiento térmico que lo vuelve hasta cinco veces más resistente que un vidrio común y que, ante un golpe extremo, se fragmenta en pedazos pequeños y sin filo en lugar de astillas peligrosas. Por eso es el material indicado para puertas, ventanas, mamparas, barandas y tapas de mesa donde la seguridad importa.',
-      'Trabajamos toda la cadena: te asesoramos sobre el espesor y el tipo de vidrio según el uso, tomamos las medidas en tu obra, y nos encargamos de la colocación con la perfilería y los herrajes correctos. En San Lorenzo y toda la Gran Asunción nos trasladamos a tu domicilio u obra para presupuestar sin compromiso.',
+      'Trabajamos toda la cadena: te asesoramos sobre el espesor y el tipo de vidrio según el uso, tomamos las medidas en tu obra, y nos encargamos de la colocación con la perfilería y los herrajes correctos. En San Lorenzo y toda Gran Asunción nos trasladamos a tu domicilio u obra para presupuestar sin compromiso.',
     ],
     bloques: [
       {
@@ -58,7 +58,7 @@ export const servicios: Servicio[] = [
       'Vidrio templado de seguridad, cortado y procesado a medida',
       'Asesoramiento de espesor y herrajes según el uso',
       'Medición en obra y colocación profesional',
-      'Cobertura en San Lorenzo y toda la Gran Asunción',
+      'Cobertura en San Lorenzo y toda Gran Asunción',
     ],
     faqs: [
       { q: '¿El vidrio templado se puede cortar después de templado?', a: 'No. El vidrio se corta y se procesa (perforaciones, pulido) antes del templado. Por eso es clave tomar bien las medidas en obra desde el principio, de eso nos encargamos nosotros.' },

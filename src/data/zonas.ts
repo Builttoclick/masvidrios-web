@@ -20,7 +20,7 @@ export const zonas: Zona[] = [
     metaDesc: 'Vidriería en San Lorenzo: vidrio templado, cerramientos, mamparas, divisorias y aberturas de aluminio. Empresa familiar local con +15 años. Vamos a tu obra. Presupuesto sin compromiso.',
     hero: 'Somos de San Lorenzo. Acá nacimos en 2009 y acá tenemos nuestro taller.',
     intro: [
-      'MÁS VIDRIOS es una empresa sanlorenzana de pies a cabeza. Desde 2009 trabajamos el vidrio y el aluminio en San Lorenzo y desde acá salimos a toda la Gran Asunción. Conocemos los barrios, las calles y el tipo de obra de la zona, eso hace que llegar, medir y colocar sea más rápido y más prolijo.',
+      'MÁS VIDRIOS es una empresa sanlorenzana de pies a cabeza. Desde 2009 trabajamos el vidrio y el aluminio en San Lorenzo y desde acá salimos a toda Gran Asunción. Conocemos los barrios, las calles y el tipo de obra de la zona, eso hace que llegar, medir y colocar sea más rápido y más prolijo.',
       'Si estás en San Lorenzo, somos literalmente tu vidriería de barrio: nos trasladamos a tu casa, comercio u obra sin costo para presupuestar, y coordinamos los trabajos con la cercanía de quien está a la vuelta.',
     ],
     local: [
@@ -30,7 +30,7 @@ export const zonas: Zona[] = [
     faqs: [
       { q: '¿Atienden en todo San Lorenzo?', a: 'Sí, en todos los barrios de San Lorenzo, tanto en el centro como en las zonas de quintas. Es nuestra ciudad base, así que la cobertura es total y los plazos los más rápidos.' },
       { q: '¿Tienen taller o local en San Lorenzo?', a: 'Sí, nuestro taller está en San Lorenzo. La dirección exacta te la pasamos al coordinar la visita o el retiro de un trabajo.' },
-      { q: '¿Cobran la visita para presupuestar en San Lorenzo?', a: 'No. La visita para tomar medidas y presupuestar es sin cargo y sin compromiso dentro de San Lorenzo y la Gran Asunción.' },
+      { q: '¿Cobran la visita para presupuestar en San Lorenzo?', a: 'No. La visita para tomar medidas y presupuestar es sin cargo y sin compromiso dentro de San Lorenzo y Gran Asunción.' },
     ],
   },
   {
@@ -88,7 +88,7 @@ export const zonas: Zona[] = [
     ],
     local: [
       'Cubrimos tanto Fernando de la Mora Norte como Sur, atendiendo las zonas residenciales y los corredores comerciales sobre las avenidas principales. Para casas hacemos cerramientos y mamparas; para locales, vidrieras y frentes de aluminio y vidrio.',
-      'La visita para tomar medidas y presupuestar es sin cargo, como en toda nuestra cobertura de la Gran Asunción.',
+      'La visita para tomar medidas y presupuestar es sin cargo, como en toda nuestra cobertura de Gran Asunción.',
     ],
     faqs: [
       { q: '¿Cuánto tardan en ir a Fernando de la Mora?', a: 'Al estar pegado a San Lorenzo, es de las zonas que atendemos más rápido. Coordinamos la visita en pocos días.' },
@@ -125,15 +125,15 @@ export const zonas: Zona[] = [
     metaDesc: 'Vidriería en Lambaré: vidrio templado, cerramientos, divisorias de oficina y aberturas de aluminio a medida. +15 años de experiencia. Presupuesto sin compromiso, vamos a tu obra.',
     hero: 'Trabajamos en Lambaré con el mismo estándar de siempre.',
     intro: [
-      'Lambaré está dentro de nuestra zona de trabajo en la Gran Asunción. Hacemos cerramientos, mamparas, divisiones de oficina, aberturas de aluminio y vidrio templado en viviendas, comercios y oficinas de la ciudad.',
+      'Lambaré está dentro de nuestra zona de trabajo en Gran Asunción. Hacemos cerramientos, mamparas, divisiones de oficina, aberturas de aluminio y vidrio templado en viviendas, comercios y oficinas de la ciudad.',
       'Desde San Lorenzo llegamos a Lambaré de forma habitual para presupuestar y colocar, con la misma prolijidad y cumplimiento que nos caracteriza desde 2009.',
     ],
     local: [
       'Cubrimos las zonas residenciales de Lambaré y los corredores comerciales. Para casas hacemos cerramientos de galería y mamparas; para oficinas y locales, divisiones de vidrio, vidrieras y frentes.',
-      'La visita para tomar medidas y presupuestar es sin cargo, como en toda la Gran Asunción.',
+      'La visita para tomar medidas y presupuestar es sin cargo, como en toda Gran Asunción.',
     ],
     faqs: [
-      { q: '¿Llegan a Lambaré?', a: 'Sí, Lambaré está dentro de nuestra cobertura habitual de la Gran Asunción. Coordinamos la visita sin cargo.' },
+      { q: '¿Llegan a Lambaré?', a: 'Sí, Lambaré está dentro de nuestra cobertura habitual de Gran Asunción. Coordinamos la visita sin cargo.' },
       { q: '¿Hacen divisiones de oficina en Lambaré?', a: 'Sí. Hacemos tabiquería de vidrio y puertas vidriadas a medida para oficinas y locales de Lambaré.' },
       { q: '¿La visita tiene costo?', a: 'No, la visita para presupuestar es gratuita y sin compromiso.' },
     ],

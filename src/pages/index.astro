@@ -20,11 +20,11 @@ const proyectos = [
 ];
 
 // Tira de materiales (motion + keywords SEO)
-const tira = ['Vidrio templado', 'DBH · doble vidriado hermético', 'Cerramientos', 'Mamparas de baño', 'Carpintería de aluminio', 'Divisiones de oficina', 'Barandas vidriadas', 'Policarbonato', 'Cielo raso Durlock', 'Muro cortina'];
+const tira = ['Vidrio templado', 'DVH · doble vidriado hermético', 'Cerramientos', 'Mamparas de baño', 'Carpintería de aluminio', 'Divisiones de oficina', 'Barandas vidriadas', 'Policarbonato', 'Cielo raso Durlock', 'Muro cortina'];
 
 // H1 visible: institucional + keyword (vidrio templado + San Lorenzo). "Gran Asunción" queda en el title/meta/cuerpo para SEO, no en el H1 (a pedido de la familia).
 const h1 = 'Vidrio templado, cerramientos y aberturas de aluminio en San Lorenzo';
-const desc = 'MÁS VIDRIOS: vidrio templado, cerramientos, mamparas, divisorias de oficina y aberturas de aluminio en San Lorenzo y la Gran Asunción. Empresa familiar con más de 17 años y +1.800 trabajos realizados. Presupuesto sin compromiso, vamos a tu obra.';
+const desc = 'MÁS VIDRIOS: vidrio templado, cerramientos, mamparas, divisorias de oficina y aberturas de aluminio en San Lorenzo y Gran Asunción. Empresa familiar con más de 17 años y +1.800 trabajos realizados. Presupuesto sin compromiso, vamos a tu obra.';
 ---
 <Base description={desc}>
   <div class="scrollbar" id="sbar" aria-hidden="true"></div>
@@ -37,7 +37,7 @@ const desc = 'MÁS VIDRIOS: vidrio templado, cerramientos, mamparas, divisorias 
         <div class="hero-copy">
           <span class="eyebrow reveal" style="--d:.05s">Vidrio templado · Aluminio · {site.city}</span>
           <h1 class="reveal" style="--d:.12s">{h1}</h1>
-          <p class="lead reveal" style="--d:.2s">Empresa familiar de San Lorenzo con más de 17 años y +1.800 trabajos en la Gran Asunción. Te asesoramos sobre la solución que mejor funciona para tu obra, no solo sobre el precio, y cuidamos cada terminación.</p>
+          <p class="lead reveal" style="--d:.2s">Empresa familiar de San Lorenzo con más de 17 años y +1.800 trabajos en Gran Asunción. Te asesoramos sobre la solución que mejor funciona para tu obra, no solo sobre el precio, y cuidamos cada terminación.</p>
           <div class="hero-actions reveal" style="--d:.28s">
             <a class="btn btn-primary" href={site.whatsapp} target="_blank" rel="noopener">Contactanos</a>
             <a class="btn btn-ghost" href="/proyectos/">Ver proyectos</a>
@@ -48,7 +48,7 @@ const desc = 'MÁS VIDRIOS: vidrio templado, cerramientos, mamparas, divisorias 
           <div class="hero-frame" data-parallax data-tilt>
             <img src="/fotos/proyectos/cerramiento-galeria-vidrio-marco-madera-exterior.jpg" alt="Galería cerrada con vidrio y carpintería color madera · MÁS VIDRIOS" width="900" height="600" fetchpriority="high" />
             <span class="sheen" aria-hidden="true"></span>
-            <div class="hero-badge"><span class="pulse" aria-hidden="true"></span>Trabajando en San Lorenzo y la Gran Asunción</div>
+            <div class="hero-badge"><span class="pulse" aria-hidden="true"></span>Trabajando en San Lorenzo y Gran Asunción</div>
           </div>
         </div>
       </div>
@@ -98,7 +98,7 @@ const desc = 'MÁS VIDRIOS: vidrio templado, cerramientos, mamparas, divisorias 
     <div class="wrap center">
       <span class="eyebrow reveal">Portfolio</span>
       <h2 class="sec reveal" style="--d:.06s">Proyectos que hablan por nosotros</h2>
-      <p class="sec-sub reveal" style="--d:.12s">Residencias, oficinas y locales en San Lorenzo y la Gran Asunción. Una muestra de trabajos terminados.</p>
+      <p class="sec-sub reveal" style="--d:.12s">Residencias, oficinas y locales en San Lorenzo y Gran Asunción. Una muestra de trabajos terminados.</p>
     </div>
     <div class="wrap">
       <div class="grid-gal">
@@ -138,7 +138,7 @@ const desc = 'MÁS VIDRIOS: vidrio templado, cerramientos, mamparas, divisorias 
     <div class="wrap center">
       <span class="eyebrow reveal">Dónde trabajamos</span>
       <h2 class="sec reveal" style="--d:.06s">Zonas que cubrimos</h2>
-      <p class="sec-sub reveal" style="--d:.12s">Con base en San Lorenzo, llegamos a toda la Gran Asunción. La visita para presupuestar es sin cargo.</p>
+      <p class="sec-sub reveal" style="--d:.12s">Con base en San Lorenzo, llegamos a toda Gran Asunción. La visita para presupuestar es sin cargo.</p>
       <div class="chips" style="justify-content:center;margin-top:26px">
         {zonas.map((z) => <a class="chip" href={`/areas/${z.slug}/`}>{z.nombre}</a>)}
       </div>

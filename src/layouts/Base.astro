@@ -16,7 +16,7 @@ interface Props {
 const {
   title = site.name,
   titleTail,
-  description = `${site.name}: vidrio templado, cerramientos, mamparas, divisorias y aberturas de aluminio en ${site.city} y la Gran Asunción. Empresa familiar desde ${site.founded}. Presupuesto sin compromiso.`,
+  description = `${site.name}: vidrio templado, cerramientos, mamparas, divisorias y aberturas de aluminio en ${site.city} y Gran Asunción. Empresa familiar desde ${site.founded}. Presupuesto sin compromiso.`,
   image = '/brand/logo.png',
   schema,
   noindex = false,
@@ -26,7 +26,7 @@ const {
 // La marca queda de ancla en el medio. Cada página pasa su `title` (front) y, opcional, su `titleTail`.
 const tail = titleTail ?? 'vidrio templado, cerramientos, mamparas, divisorias de oficina y aberturas de aluminio cerca tuyo';
 const fullTitle = title === site.name
-  ? `MÁS VIDRIOS - vidriería en ${site.city} y la Gran Asunción | ${tail}`
+  ? `MÁS VIDRIOS - vidriería en ${site.city} y Gran Asunción | ${tail}`
   : `${title} - ${site.name} | ${tail}`;
 
 const canonical = new URL(Astro.url.pathname, site.url).href;
