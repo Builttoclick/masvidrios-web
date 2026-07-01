@@ -26,7 +26,11 @@ const tira = ['Vidrio templado', 'DVH · doble vidriado hermético', 'Cerramient
 const h1 = 'Vidrio templado, cerramientos y aberturas de aluminio en San Lorenzo';
 const desc = 'MÁS VIDRIOS: vidrio templado, cerramientos, mamparas, divisorias de oficina y aberturas de aluminio en San Lorenzo y Gran Asunción. Empresa familiar con más de 17 años y +1.800 trabajos realizados. Presupuesto sin compromiso, vamos a tu obra.';
 ---
-<Base description={desc}>
+<Base description={desc} alternates={[
+  { hreflang: 'es', href: `${site.url}/` },
+  { hreflang: 'en', href: `${site.url}/en/` },
+  { hreflang: 'x-default', href: `${site.url}/` },
+]}>
   <div class="scrollbar" id="sbar" aria-hidden="true"></div>
 
   <!-- HERO -->

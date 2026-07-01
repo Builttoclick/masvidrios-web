@@ -1,0 +1,355 @@
+---
+// English overview page (single page) for foreign clients.
+// Standalone document (its own English header/footer) so nothing shows in Spanish.
+// Reuses the site design system (global.css) + central data (site, servicios, zonas).
+import '../../styles/global.css';
+import { site } from '../../data/site';
+import { getServicio } from '../../data/servicios';
+import { zonas } from '../../data/zonas';
+
+const canonical = `${site.url}/en/`;
+const ogImage = `${site.url}/og-masvidrios.jpg`;
+const desc = 'MÁS VIDRIOS: tempered glass, glass enclosures, shower screens, office partitions and aluminum windows in San Lorenzo and Greater Asunción, Paraguay. Family business since 2009. Free, no-obligation quote. English spoken.';
+
+// WhatsApp link with an English message pre-filled.
+const waEn = `${site.whatsapp}?text=${encodeURIComponent("Hi MÁS VIDRIOS! I found you online and I'd like a quote. ")}`;
+
+// 9 services in short English form. Icons come from the Spanish data by slug.
+const services = [
+  { slug: 'vidrio-templado', name: 'Tempered glass', blurb: 'Safety tempered glass cut to size: doors, windows, table tops and enclosures.' },
+  { slug: 'cerramientos-de-vidrio', name: 'Glass enclosures & galleries', blurb: 'Turn your gallery, quincho or patio into a year-round room without losing the view.' },
+  { slug: 'mamparas-de-bano', name: 'Shower screens', blurb: 'Made-to-measure tempered glass shower screens: sturdy, clear and easy to clean.' },
+  { slug: 'divisorias-de-oficina', name: 'Office partitions', blurb: 'Glass partitions that divide your office without blocking the natural light.' },
+  { slug: 'aberturas-de-aluminio', name: 'Aluminum windows & doors', blurb: 'Custom aluminum windows and doors, wood-look finishes and built-in insect screens.' },
+  { slug: 'cielo-raso-durlock', name: 'Ceilings & drywall', blurb: 'Drop ceilings in drywall and PVC, plus dry-construction partitions. Clean and fast.' },
+  { slug: 'barandas-vidriadas', name: 'Glass railings', blurb: 'Tempered glass railings for stairs, balconies and mezzanines: safe and elegant.' },
+  { slug: 'policarbonato', name: 'Polycarbonate roofing', blurb: 'Translucent, impact-resistant roofs for galleries, patios, carports and skylights.' },
+  { slug: 'mantenimientos', name: 'Repairs & maintenance', blurb: "We service and repair doors, windows, screens and hardware, even if we didn't install them." },
+];
+
+// Same portfolio images as the Spanish home, English captions.
+const work = [
+  { img: 'puerta-vidrio-corrediza-aluminio-negro-living-piscina-02.jpg', cap: 'Sliding glass enclosure · black aluminum', cls: 'tall wide', alt: 'Sliding glass enclosure with black aluminum frame opening to the garden · MÁS VIDRIOS' },
+  { img: 'mesa-vidrio-templado-curvado-mobiliario-01.jpg', cap: 'Tempered glass furniture', cls: '', alt: 'Made-to-measure curved tempered glass table · MÁS VIDRIOS' },
+  { img: 'cerramiento-galeria-vidrio-marco-madera-exterior.jpg', cap: 'Enclosed gallery · wood-look frame', cls: '', alt: 'Enclosed gallery with glass and wood-look joinery · MÁS VIDRIOS' },
+  { img: 'muro-cortina-vidrio-fachada-edificio-ladrillo.jpg', cap: 'Curtain wall · commercial façade', cls: '', alt: 'Glass curtain wall on a building façade · MÁS VIDRIOS' },
+  { img: 'divisiones-vidrio-aluminio-negro-oficina-corporativa.jpg', cap: 'Office partitions · black aluminum', cls: 'wide', alt: 'Glass office partitions with black aluminum in a corporate office · MÁS VIDRIOS' },
+  { img: 'puerta-corrediza-vidrio-aluminio-negro-estilo-industrial-cuadricula.jpg', cap: 'Industrial-style sliding door', cls: '', alt: 'Industrial-style sliding glass door with grid · MÁS VIDRIOS' },
+];
+
+const year = new Date().getFullYear();
+
+// Language-neutral business schema, tagged as English.
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'GlassMerchant',
+  '@id': `${site.url}/#masvidrios`,
+  name: site.name,
+  alternateName: 'Más Vidrios',
+  slogan: 'Glass solutions & much more',
+  url: canonical,
+  inLanguage: 'en',
+  logo: `${site.url}/brand/logo.png`,
+  image: [ogImage],
+  telephone: `+${site.phoneIntl}`,
+  email: site.email,
+  priceRange: '₲₲',
+  foundingDate: String(site.founded),
+  address: { '@type': 'PostalAddress', addressLocality: site.city, addressRegion: site.region, addressCountry: site.country },
+  geo: { '@type': 'GeoCoordinates', latitude: site.geo.lat, longitude: site.geo.lng },
+  areaServed: [...zonas.map((z) => z.nombre), 'Greater Asunción', 'Paraguay'],
+  sameAs: [site.facebook, site.instagram],
+};
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MÁS VIDRIOS · Glass & aluminum in San Lorenzo and Greater Asunción, Paraguay</title>
+    <meta name="description" content={desc} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="es" href={`${site.url}/`} />
+    <link rel="alternate" hreflang="en" href={canonical} />
+    <link rel="alternate" hreflang="x-default" href={`${site.url}/`} />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#2478FC" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content="MÁS VIDRIOS · Glass & aluminum in San Lorenzo, Paraguay" />
+    <meta property="og:description" content={desc} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="es_PY" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="MÁS VIDRIOS · Glass & aluminum in San Lorenzo, Paraguay" />
+    <meta name="twitter:description" content={desc} />
+    <meta name="twitter:image" content={ogImage} />
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    <noscript><style>{`.reveal{opacity:1!important;transform:none!important;filter:none!important}`}</style></noscript>
+  </head>
+  <body>
+    <!-- HEADER (English) -->
+    <header class="nav">
+      <div class="wrap nav-in">
+        <a href="/en/" aria-label="MÁS VIDRIOS home"><img src="/brand/logo.png" alt="MÁS VIDRIOS" width="170" height="38" /></a>
+        <div class="en-nav">
+          <a href="#services">Services</a>
+          <a href="#work">Work</a>
+          <a href="#areas">Areas</a>
+          <a href="#contact">Contact</a>
+          <a class="en-lang" href="/" hreflang="es" lang="es" aria-label="Ver en español">ES · Español</a>
+          <a class="btn btn-primary cta" href={waEn} target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="en-hero">
+        <div class="wrap">
+          <div class="en-hero-grid">
+            <div>
+              <span class="eyebrow reveal" style="--d:.05s">Tempered glass · Aluminum · {site.city}</span>
+              <h1 class="reveal" style="--d:.12s">Tempered glass, enclosures &amp; aluminum windows in {site.city} &amp; Greater Asunción</h1>
+              <p class="en-lead reveal" style="--d:.2s">MÁS VIDRIOS is a family-owned glass company from San Lorenzo, Paraguay, with more than 17 years of experience and over 1,800 projects across Greater Asunción. We measure, build and install to order, and we advise you on the right solution, not just the price.</p>
+              <div class="hero-actions reveal" style="--d:.28s">
+                <a class="btn btn-primary" href={waEn} target="_blank" rel="noopener">Message us on WhatsApp</a>
+                <a class="btn btn-ghost" href="#services">See what we do</a>
+              </div>
+              <p class="trust-line reveal" style="--d:.36s">The owner answers and visits your site · Free, no-obligation quote · English spoken</p>
+            </div>
+            <div class="en-hero-media reveal" style="--d:.22s">
+              <img src="/fotos/proyectos/divisiones-oficina-vidrio-aluminio-blanco-interior.jpg" alt="Glass office partitions with white aluminum framing · MÁS VIDRIOS" width="900" height="620" fetchpriority="high" />
+              <div class="en-badge"><span class="pulse" aria-hidden="true"></span>Working in San Lorenzo &amp; Greater Asunción</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STATS -->
+      <section style="padding-top:0">
+        <div class="wrap">
+          <div class="stats">
+            <div class="stat reveal"><b>+1,800</b><span>projects delivered</span></div>
+            <div class="stat reveal" style="--d:.08s"><b>{site.yearsExp}+</b><span>years of experience</span></div>
+            <div class="stat reveal" style="--d:.16s"><b>{site.founded}</b><span>family-owned since</span></div>
+            <div class="stat reveal" style="--d:.24s"><b>100%</b><span>made to measure</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services">
+        <div class="wrap center">
+          <span class="eyebrow reveal">What we do</span>
+          <h2 class="sec reveal" style="--d:.06s">Glass solutions &amp; much more</h2>
+          <p class="sec-sub reveal" style="--d:.12s">From safety tempered glass to aluminum joinery: we supply and install, made to measure and to your budget.</p>
+        </div>
+        <div class="wrap">
+          <div class="cards">
+            {services.map((s, i) => (
+              <div class="card reveal" style={`--d:${0.05 * (i % 3)}s`}>
+                <div class="ic"><svg viewBox="0 0 24 24" set:html={getServicio(s.slug)?.icon}></svg></div>
+                <h3>{s.name}</h3>
+                <p>{s.blurb}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- WORK -->
+      <section id="work" style="background:var(--bg2)">
+        <div class="wrap center">
+          <span class="eyebrow reveal">Portfolio</span>
+          <h2 class="sec reveal" style="--d:.06s">Some of our work</h2>
+          <p class="sec-sub reveal" style="--d:.12s">Homes, offices and shops across San Lorenzo and Greater Asunción. A sample of finished projects.</p>
+        </div>
+        <div class="wrap">
+          <div class="grid-gal">
+            {work.map((p, i) => (
+              <figure class={`${p.cls} reveal`} style={`--d:${0.05 * i}s`}>
+                <img src={`/fotos/proyectos/${p.img}`} alt={p.alt} loading="lazy" />
+                <figcaption>{p.cap}</figcaption>
+              </figure>
+            ))}
+          </div>
+          <p class="en-featured reveal">Trusted with high-visibility work: the VIP boxes at Estadio Manuel Ferreira (Club Olimpia) and the SITRANDE / ANDE building façade in Asunción.</p>
+        </div>
+      </section>
+
+      <!-- AREAS -->
+      <section id="areas">
+        <div class="wrap center">
+          <span class="eyebrow reveal">Where we work</span>
+          <h2 class="sec reveal" style="--d:.06s">Areas we cover</h2>
+          <p class="sec-sub reveal" style="--d:.12s">Based in San Lorenzo, we reach all of Greater Asunción. The visit to measure and quote is free of charge.</p>
+          <div class="chips" style="justify-content:center;margin-top:26px">
+            {zonas.map((z) => <span class="chip">{z.nombre}</span>)}
+            <span class="chip">Greater Asunción</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section style="background:var(--bg2)">
+        <div class="wrap-narrow center">
+          <span class="eyebrow reveal">Who we are</span>
+          <h2 class="sec reveal" style="--d:.06s">A family business</h2>
+          <p class="en-story reveal" style="--d:.12s">MÁS VIDRIOS grew out of our family's experience in the glass trade. José, the owner, personally visits every project: he advises you on the solution that works best for your space and makes sure every finish is impeccable. We work with honesty, responsibility and seriousness, to protect each client's investment. If you speak English and prefer to be attended in English, just let us know when you write.</p>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <div class="wrap">
+          <div class="ctaband reveal">
+            <h2>Tell us about your project</h2>
+            <p>Send us a message and we'll come to your home or site to take measurements. Free, no-obligation quote.</p>
+            <a class="btn btn-white" href={waEn} target="_blank" rel="noopener">Message us on WhatsApp</a>
+          </div>
+          <div class="en-contact">
+            <div class="en-details">
+              <h3>Get in touch</h3>
+              <ul>
+                <li><b>WhatsApp / Phone:</b> <a href={`tel:+${site.phoneIntl}`}>{site.phone}</a> (+595)</li>
+                <li><b>Email:</b> <a href={`mailto:${site.email}`}>{site.email}</a></li>
+                <li><b>Area:</b> {site.city} &amp; Greater Asunción, Paraguay</li>
+                <li><b>Hours:</b> Mon–Fri 7:30–17:30 · Sat 7:30–12:00</li>
+                <li><b>Follow:</b> <a href={site.instagram} target="_blank" rel="noopener">Instagram</a> · <a href={site.facebook} target="_blank" rel="noopener">Facebook</a></li>
+              </ul>
+            </div>
+            <iframe class="en-map" src={site.gbpEmbed} loading="lazy" title="MÁS VIDRIOS location on Google Maps" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER (English) -->
+    <footer class="ft">
+      <div class="wrap">
+        <div class="ft-grid">
+          <div>
+            <img class="logo" src="/brand/logo-white.png" alt="MÁS VIDRIOS" width="180" height="40" />
+            <p class="ft-about">Glass solutions &amp; much more. Tempered glass, aluminum, enclosures and partitions. Family business in {site.city} since {site.founded}.</p>
+            <div class="ft-nap" style="margin-top:16px">
+              <b>MÁS VIDRIOS</b><br />
+              {site.addressFull}<br />
+              <a href={`tel:+${site.phoneIntl}`}><b>{site.phone}</b></a> · <a href={`mailto:${site.email}`}>{site.email}</a>
+            </div>
+          </div>
+          <div>
+            <h5>Services</h5>
+            <ul>
+              {services.map((s) => <li>{s.name}</li>)}
+            </ul>
+          </div>
+          <div>
+            <h5>Areas we cover</h5>
+            <ul>
+              {zonas.map((z) => <li>{z.nombre}</li>)}
+              <li>Greater Asunción</li>
+            </ul>
+          </div>
+          <div>
+            <h5>Company</h5>
+            <ul>
+              <li><a href="/">Sitio en español</a></li>
+              <li><a href={waEn} target="_blank" rel="noopener">WhatsApp</a></li>
+              <li><a href={site.instagram} target="_blank" rel="noopener">Instagram</a></li>
+              <li><a href={site.facebook} target="_blank" rel="noopener">Facebook</a></li>
+              <li><a href="/politica-de-privacidad/">Privacy Policy</a></li>
+            </ul>
+            <a class="btn btn-primary" style="margin-top:14px" href={waEn} target="_blank" rel="noopener">Write to us</a>
+          </div>
+        </div>
+        <div class="ft-bot">
+          <span>© {year} {site.name}. All rights reserved. · <a href="/" style="color:#9aa3b2">Español</a></span>
+          <span>Made by <a href="https://builttoclick.com" target="_blank" rel="noopener" style="color:#9aa3b2">Built to Click</a></span>
+        </div>
+      </div>
+    </footer>
+
+    <style>
+      /* section anchors clear the sticky header */
+      section[id]{scroll-margin-top:90px}
+
+      /* English header nav */
+      .en-nav{display:flex;align-items:center;gap:22px;font-size:15px;font-weight:500}
+      .en-nav a:not(.btn){color:var(--tinta)}
+      .en-nav a:not(.btn):hover{color:var(--azul)}
+      .en-lang{font-weight:700}
+      .en-nav .cta{font-size:14px;padding:11px 20px;color:#fff}
+      @media(max-width:760px){.en-nav a[href^="#"]{display:none}.en-nav{gap:14px}}
+
+      /* Hero */
+      .en-hero{position:relative;overflow:hidden;background:radial-gradient(120% 90% at 80% -10%,#eaf3ff 0%,var(--bg2) 55%);padding:64px 0 72px}
+      .en-hero-grid{display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:50px}
+      .en-hero h1{font-size:46px;line-height:1.08;letter-spacing:-1.4px;font-weight:800;margin:16px 0 18px;background:linear-gradient(135deg,#11203a 40%,#2478FC 120%);-webkit-background-clip:text;background-clip:text;color:transparent}
+      .en-lead{font-size:18px;color:var(--gris);max-width:540px;margin-bottom:28px}
+      .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+      .trust-line{margin-top:18px;font-size:13px;color:var(--gris);font-weight:600}
+      .en-hero-media{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 30px 70px rgba(20,40,90,.22);min-height:360px}
+      .en-hero-media img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+      .en-hero-media::after{content:"";position:absolute;inset:0;border-radius:22px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+      .en-badge{position:absolute;left:16px;bottom:16px;z-index:2;display:flex;align-items:center;gap:9px;padding:10px 15px;border-radius:13px;font-size:12.5px;font-weight:700;color:#11203a;background:rgba(255,255,255,.72);backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);border:1px solid rgba(255,255,255,.7);box-shadow:0 10px 30px rgba(20,40,90,.18);max-width:80%}
+      .pulse{width:9px;height:9px;border-radius:50%;background:#27c06a;box-shadow:0 0 0 0 rgba(39,192,106,.6);animation:pulse 2s infinite;flex:0 0 auto}
+      @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(39,192,106,.55)}70%{box-shadow:0 0 0 9px rgba(39,192,106,0)}100%{box-shadow:0 0 0 0 rgba(39,192,106,0)}}
+      @media(max-width:860px){
+        .en-hero-grid{grid-template-columns:1fr;gap:28px}
+        .en-hero h1{font-size:33px}
+        .en-hero-media{min-height:260px}
+      }
+
+      /* Work */
+      .en-featured{max-width:760px;margin:34px auto 0;text-align:center;font-size:15px;color:var(--gris)}
+
+      /* About */
+      .en-story{max-width:720px;margin:14px auto 0;color:var(--gris);font-size:16.5px}
+
+      /* Contact */
+      .en-contact{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:34px;align-items:stretch}
+      .en-details{background:var(--negro);color:#c4ccd8;border-radius:18px;padding:28px}
+      .en-details h3{color:#fff;font-size:19px;margin-bottom:14px}
+      .en-details ul{list-style:none;font-size:15px;line-height:2.05}
+      .en-details b{color:#fff}
+      .en-details a{color:var(--celeste)}
+      .en-map{border:0;width:100%;min-height:280px;height:100%;border-radius:18px}
+      @media(max-width:760px){.en-contact{grid-template-columns:1fr}}
+
+      /* footer: no links in English service/area lists, so lighten them */
+      footer.ft ul li{color:#c4ccd8}
+
+      @media(prefers-reduced-motion:reduce){.pulse{animation:none}}
+    </style>
+
+    <!-- reveal-on-scroll (this page is standalone, so it ships its own observer) -->
+    <script is:inline>
+      (function () {
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var els = document.querySelectorAll('.reveal');
+        if (reduce || !('IntersectionObserver' in window)) {
+          els.forEach(function (el) { el.classList.add('is-in'); });
+          return;
+        }
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (!e.isIntersecting) return;
+            e.target.classList.add('is-in');
+            io.unobserve(e.target);
+          });
+        }, { threshold: 0.14, rootMargin: '0px 0px -6% 0px' });
+        els.forEach(function (el) { io.observe(el); });
+      })();
+    </script>
+  </body>
+</html>

@@ -8,6 +8,7 @@ import { nav } from '../data/site';
       <ul>
         <li><a href="/">Inicio</a></li>
         {nav.map((n) => <li><a href={n.href}>{n.label}</a></li>)}
+        <li><a class="lang-link" href="/en/" hreflang="en" lang="en" aria-label="English version">EN</a></li>
         <li><a class="btn btn-primary cta" href="/contacto/">Pedir presupuesto</a></li>
       </ul>
     </nav>
@@ -27,3 +28,8 @@ import { nav } from '../data/site';
     m.addEventListener('click',function(e){if(e.target.tagName==='A')m.classList.remove('open');});
   })();
 </script>
+<style>
+  .lang-link{font-weight:700;font-size:13px;letter-spacing:.5px;padding:6px 12px;border-radius:999px;border:1.5px solid var(--linea);color:var(--tinta)!important;transition:.18s}
+  .lang-link:hover{border-color:var(--azul);color:var(--azul)!important}
+  @media(max-width:900px){.lang-link{display:inline-block;text-align:center}}
+</style>

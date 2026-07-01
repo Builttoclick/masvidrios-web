@@ -12,6 +12,7 @@ interface Props {
   image?: string;
   schema?: object | object[];
   noindex?: boolean;
+  alternates?: { hreflang: string; href: string }[];
 }
 const {
   title = site.name,
@@ -20,6 +21,7 @@ const {
   image = '/og-masvidrios.jpg',
   schema,
   noindex = false,
+  alternates = [],
 } = Astro.props;
 
 // Título estilo "trenbolone" de la guía SEO local: {keyword + ciudad} - MARCA | {servicios + cerca tuyo}.
@@ -91,6 +93,7 @@ const allSchema = [negocio, ...(breadcrumb ? [breadcrumb] : []), ...extra];
     <meta name="description" content={description} />
     {noindex && <meta name="robots" content="noindex, follow" />}
     <link rel="canonical" href={canonical} />
+    {alternates.map((a) => <link rel="alternate" hreflang={a.hreflang} href={a.href} />)}
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
