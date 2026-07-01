@@ -3,7 +3,7 @@
 // Standalone document (its own English header/footer) so nothing shows in Spanish.
 // Reuses the site design system (global.css) + central data (site, servicios, zonas).
 import '../../styles/global.css';
-import { site } from '../../data/site';
+import { site, people } from '../../data/site';
 import { getServicio } from '../../data/servicios';
 import { zonas } from '../../data/zonas';
 
@@ -39,6 +39,17 @@ const work = [
 
 const year = new Date().getFullYear();
 
+// Team as Person nodes (founder + employees), same @id as the Spanish site.
+const persons = people.map((p) => ({
+  '@type': 'Person',
+  '@id': `${site.url}/#${p.id}`,
+  name: p.name,
+  jobTitle: p.jobTitle,
+  image: `${site.url}${p.photo}`,
+  worksFor: { '@id': `${site.url}/#masvidrios` },
+}));
+const founderPerson = persons[people.findIndex((p) => p.founder)];
+
 // Language-neutral business schema, tagged as English.
 const schema = {
   '@context': 'https://schema.org',
@@ -55,10 +66,33 @@ const schema = {
   email: site.email,
   priceRange: '₲₲',
   foundingDate: String(site.founded),
+  founder: founderPerson,
+  employee: persons,
   address: { '@type': 'PostalAddress', addressLocality: site.city, addressRegion: site.region, addressCountry: site.country },
   geo: { '@type': 'GeoCoordinates', latitude: site.geo.lat, longitude: site.geo.lng },
+  hasMap: `https://www.google.com/maps/search/?api=1&query=${site.geo.lat},${site.geo.lng}`,
   areaServed: [...zonas.map((z) => z.nombre), 'Greater Asunción', 'Paraguay'],
   sameAs: [site.facebook, site.instagram],
+};
+
+// English FAQ — visible section + FAQPage schema (rich results).
+const faqs = [
+  { q: 'Do you speak English?', a: "Yes. Let us know when you write and we'll assist you in English by WhatsApp, email or in person." },
+  { q: 'What areas do you cover?', a: 'We are based in San Lorenzo and serve all of Greater Asunción: Asunción, Luque, Fernando de la Mora, Capiatá, Lambaré and nearby areas. The visit to measure and quote is free of charge.' },
+  { q: 'How do I get a quote?', a: 'Send us a message on WhatsApp with a short description of what you need (photos help). We come to your home or site, take measurements and give you a free, no-obligation quote.' },
+  { q: 'Is tempered glass the same as safety glass?', a: 'Yes. Tempered glass is heat-treated to be up to five times stronger than ordinary glass, and if it ever breaks it crumbles into small blunt pieces instead of sharp shards.' },
+  { q: 'Do you work with businesses and offices?', a: 'Yes. We do office partitions, storefronts, curtain walls and maintenance for shops, offices and buildings, as well as homes.' },
+  { q: 'Do you only sell the glass, or also install it?', a: 'We supply and install. We handle the measuring, fabrication and professional installation with the right aluminum profiles and hardware, so you deal with a single provider.' },
+];
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  inLanguage: 'en',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
 };
 ---
 <!doctype html>
@@ -94,6 +128,7 @@ const schema = {
     <meta name="twitter:description" content={desc} />
     <meta name="twitter:image" content={ogImage} />
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
     <noscript><style>{`.reveal{opacity:1!important;transform:none!important;filter:none!important}`}</style></noscript>
   </head>
   <body>
@@ -206,6 +241,24 @@ const schema = {
           <span class="eyebrow reveal">Who we are</span>
           <h2 class="sec reveal" style="--d:.06s">A family business</h2>
           <p class="en-story reveal" style="--d:.12s">MÁS VIDRIOS grew out of our family's experience in the glass trade. José, the owner, personally visits every project: he advises you on the solution that works best for your space and makes sure every finish is impeccable. We work with honesty, responsibility and seriousness, to protect each client's investment. If you speak English and prefer to be attended in English, just let us know when you write.</p>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" style="background:var(--bg2)">
+        <div class="wrap-narrow">
+          <div class="center">
+            <span class="eyebrow reveal">FAQ</span>
+            <h2 class="sec reveal" style="--d:.06s">Frequently asked questions</h2>
+          </div>
+          <div class="faq reveal" style="margin-top:30px">
+            {faqs.map((f) => (
+              <details>
+                <summary>{f.q}</summary>
+                <p>{f.a}</p>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
 

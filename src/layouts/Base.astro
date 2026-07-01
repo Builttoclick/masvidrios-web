@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
-import { site } from '../data/site';
+import { site, people } from '../data/site';
 import { zonas } from '../data/zonas';
 
 interface Props {
@@ -34,6 +34,17 @@ const fullTitle = title === site.name
 const canonical = new URL(Astro.url.pathname, site.url).href;
 const ogImage = new URL(image, site.url).href;
 
+// Equipo como nodos Person (founder + employee) para el knowledge graph.
+const persons = people.map((p) => ({
+  '@type': 'Person',
+  '@id': `${site.url}/#${p.id}`,
+  name: p.name,
+  jobTitle: p.jobTitle,
+  image: `${site.url}${p.photo}`,
+  worksFor: { '@id': `${site.url}/#masvidrios` },
+}));
+const founderPerson = persons[people.findIndex((p) => p.founder)];
+
 // LocalBusiness / GlassMerchant
 const negocio = {
   '@context': 'https://schema.org',
@@ -44,11 +55,13 @@ const negocio = {
   slogan: site.tagline,
   url: site.url,
   logo: `${site.url}/brand/logo.png`,
-  image: [`${site.url}/brand/logo.png`],
+  image: [`${site.url}/brand/logo.png`, `${site.url}/og-masvidrios.jpg`],
   telephone: `+${site.phoneIntl}`,
   email: site.email,
   priceRange: '₲₲',
   foundingDate: String(site.founded),
+  founder: founderPerson,
+  employee: persons,
   address: {
     '@type': 'PostalAddress',
     addressLocality: site.city,
@@ -56,6 +69,7 @@ const negocio = {
     addressCountry: site.country,
   },
   geo: { '@type': 'GeoCoordinates', latitude: site.geo.lat, longitude: site.geo.lng },
+  hasMap: `https://www.google.com/maps/search/?api=1&query=${site.geo.lat},${site.geo.lng}`,
   areaServed: [...zonas.map((z) => z.nombre), 'Gran Asunción', 'Paraguay'],
   sameAs: [site.facebook, site.instagram],
   openingHoursSpecification: [

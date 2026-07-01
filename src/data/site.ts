@@ -31,3 +31,9 @@ export const nav = [
   { label: 'Nosotros', href: '/sobre-nosotros/' },
   { label: 'Contacto', href: '/contacto/' },
 ];
+
+// Equipo — fuente única para el schema Person (founder/employee) y las tarjetas de equipo.
+export const people = [
+  { id: 'jose', name: 'José', jobTitle: 'Fundador y Director', photo: '/fotos/equipo/jose.jpg', founder: true },
+  { id: 'erika', name: 'Erika', jobTitle: 'Administración y Atención al Cliente', photo: '/fotos/equipo/erika.jpg', founder: false },
+] as const;
