@@ -1,0 +1,406 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site';
+
+const title = 'Política de Privacidad';
+const titleTail = 'protección de datos personales, cookies y tus derechos';
+const desc = 'Política de Privacidad de MÁS VIDRIOS: qué datos recopilamos, cómo usamos cookies y tecnologías de Google y Meta, con quién los compartimos y cómo ejercer tus derechos. Disponible en español e inglés.';
+
+const updatedEs = '1 de julio de 2026';
+const updatedEn = 'July 1, 2026';
+---
+<Base title={title} titleTail={titleTail} description={desc}>
+  <section class="phero">
+    <div class="wrap">
+      <div class="crumbs"><a href="/">Inicio</a> › <span>Política de Privacidad</span></div>
+      <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+        <button type="button" data-set-lang="es" class="is-active">Español</button>
+        <button type="button" data-set-lang="en">English</button>
+      </div>
+      <h1 data-lang="es">Política de Privacidad</h1>
+      <h1 data-lang="en" hidden>Privacy Policy</h1>
+      <p data-lang="es">Cómo MÁS VIDRIOS recopila, usa y protege tu información cuando visitás nuestro sitio o nos contactás. Última actualización: {updatedEs}.</p>
+      <p data-lang="en" hidden>How MÁS VIDRIOS collects, uses and protects your information when you visit our website or contact us. Last updated: {updatedEn}.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap-narrow">
+
+      <!-- ==================== ESPAÑOL ==================== -->
+      <div class="prose legal" data-lang="es">
+
+        <div class="toc">
+          <b>Contenido</b>
+          <ol>
+            <li><a href="#es-s1">Quiénes somos y responsable del tratamiento</a></li>
+            <li><a href="#es-s2">Alcance de esta política</a></li>
+            <li><a href="#es-s3">Qué información recopilamos</a></li>
+            <li><a href="#es-s4">Cookies y tecnologías de seguimiento</a></li>
+            <li><a href="#es-s5">Cómo usamos tu información</a></li>
+            <li><a href="#es-s6">Bases legales del tratamiento</a></li>
+            <li><a href="#es-s7">Publicidad, análisis y remarketing</a></li>
+            <li><a href="#es-s8">Con quién compartimos tu información</a></li>
+            <li><a href="#es-s9">Transferencias internacionales</a></li>
+            <li><a href="#es-s10">Cuánto tiempo conservamos los datos</a></li>
+            <li><a href="#es-s11">Seguridad de la información</a></li>
+            <li><a href="#es-s12">Tus derechos</a></li>
+            <li><a href="#es-s13">Cómo gestionar cookies y exclusiones</a></li>
+            <li><a href="#es-s14">Enlaces y servicios de terceros</a></li>
+            <li><a href="#es-s15">Menores de edad</a></li>
+            <li><a href="#es-s16">Señales de "No rastrear"</a></li>
+            <li><a href="#es-s17">Cambios a esta política</a></li>
+            <li><a href="#es-s18">Contacto</a></li>
+          </ol>
+        </div>
+
+        <p>En MÁS VIDRIOS valoramos tu privacidad. Esta Política de Privacidad explica de forma clara qué datos personales tratamos, con qué finalidad, sobre qué base legal, con quién los compartimos y qué derechos tenés sobre ellos. Te recomendamos leerla con atención. Al usar nuestro sitio web {site.url} aceptás las prácticas descritas en este documento.</p>
+
+        <h2 id="es-s1">1. Quiénes somos y responsable del tratamiento</h2>
+        <p>El responsable del tratamiento de tus datos personales es <strong>MÁS VIDRIOS</strong>, empresa familiar dedicada a soluciones en vidrio templado, cerramientos, mamparas, divisorias de oficina y carpintería de aluminio, con base en {site.city}, Departamento Central, Paraguay.</p>
+        <ul>
+          <li><strong>Titular:</strong> MÁS VIDRIOS</li>
+          <li><strong>Domicilio:</strong> {site.addressFull}</li>
+          <li><strong>Correo electrónico:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></li>
+          <li><strong>Teléfono / WhatsApp:</strong> <a href={`tel:+${site.phoneIntl}`}>{site.phone}</a></li>
+        </ul>
+
+        <h2 id="es-s2">2. Alcance de esta política</h2>
+        <p>Esta política se aplica a la información que recopilamos a través de nuestro sitio web, de nuestros formularios de contacto, de WhatsApp, del correo electrónico, del teléfono y de nuestras redes sociales oficiales. No se aplica a sitios o servicios de terceros que no controlamos y a los que podés acceder desde enlaces publicados en nuestro sitio.</p>
+
+        <h2 id="es-s3">3. Qué información recopilamos</h2>
+        <p>Recopilamos distintos tipos de información según cómo interactúes con nosotros:</p>
+        <h3>a. Información que nos proporcionás</h3>
+        <ul>
+          <li><strong>Datos de contacto:</strong> nombre, número de teléfono y, si nos escribís por correo, tu dirección de email.</li>
+          <li><strong>Contenido de tu consulta:</strong> los detalles de tu proyecto o pedido que incluís en el formulario, en WhatsApp o por email (por ejemplo, medidas, tipo de trabajo o dirección de la obra).</li>
+        </ul>
+        <p>Nuestro formulario de contacto arma un mensaje que se envía a través de WhatsApp. Al usarlo, tus datos también quedan sujetos a las políticas de WhatsApp y Meta.</p>
+        <h3>b. Información que recopilamos automáticamente</h3>
+        <ul>
+          <li><strong>Datos técnicos y de uso:</strong> dirección IP, tipo y versión de navegador, sistema operativo, dispositivo, idioma, páginas visitadas, tiempo de permanencia, fuente de referencia y fecha y hora de acceso.</li>
+          <li><strong>Datos de cookies y tecnologías similares:</strong> identificadores que se guardan en tu dispositivo, según se describe en la sección 4.</li>
+        </ul>
+        <p>No solicitamos ni pretendemos recopilar categorías especiales de datos (por ejemplo, salud, religión u opiniones políticas). Te pedimos no incluir ese tipo de información en tus mensajes.</p>
+
+        <h2 id="es-s4">4. Cookies y tecnologías de seguimiento</h2>
+        <p>Una cookie es un pequeño archivo que se guarda en tu dispositivo cuando visitás un sitio web. Usamos cookies propias y de terceros, además de tecnologías similares como píxeles y etiquetas, para que el sitio funcione, para medir su rendimiento y para mostrarte publicidad relevante. Asumí que, salvo que configures lo contrario, utilizamos las siguientes categorías:</p>
+        <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Tecnología</th><th>Proveedor</th><th>Finalidad</th><th>Tipo</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Cookies necesarias</td><td>MÁS VIDRIOS / Cloudflare</td><td>Funcionamiento, seguridad y entrega del sitio</td><td>Necesaria</td></tr>
+            <tr><td>Google Analytics (GA4)</td><td>Google</td><td>Medir visitas y comportamiento de navegación</td><td>Analítica</td></tr>
+            <tr><td>Google Tag Manager</td><td>Google</td><td>Gestión de etiquetas de medición y marketing</td><td>Funcional</td></tr>
+            <tr><td>Google Ads y remarketing</td><td>Google</td><td>Medir conversiones y mostrar anuncios</td><td>Publicidad</td></tr>
+            <tr><td>Meta Pixel (Facebook e Instagram)</td><td>Meta</td><td>Medir conversiones, públicos y remarketing</td><td>Publicidad</td></tr>
+            <tr><td>Google Maps</td><td>Google</td><td>Mostrar el mapa de nuestra ubicación</td><td>Funcional</td></tr>
+            <tr><td>Google Fonts</td><td>Google</td><td>Cargar las tipografías del sitio</td><td>Funcional</td></tr>
+            <tr><td>WhatsApp Business</td><td>Meta</td><td>Canal de contacto y atención</td><td>Funcional</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p>Los nombres y duraciones exactas de cada cookie pueden variar según el proveedor. Podés controlar o eliminar las cookies desde la configuración de tu navegador, tal como se explica en la sección 13.</p>
+
+        <h2 id="es-s5">5. Cómo usamos tu información</h2>
+        <p>Tratamos tus datos personales para las siguientes finalidades:</p>
+        <ul>
+          <li>Responder a tus consultas y prepararte un presupuesto sin compromiso.</li>
+          <li>Coordinar visitas, tomar medidas y prestar nuestros servicios de vidrio y aluminio.</li>
+          <li>Gestionar la relación comercial, pedidos, facturación y posventa.</li>
+          <li>Operar, mantener y mejorar el sitio web y la experiencia de usuario.</li>
+          <li>Medir el tráfico y el rendimiento de nuestras campañas de marketing.</li>
+          <li>Mostrarte publicidad y recordatorios en plataformas de Google y Meta (remarketing).</li>
+          <li>Cumplir con obligaciones legales, contables y fiscales, y responder a autoridades competentes.</li>
+          <li>Prevenir fraudes, abusos y proteger la seguridad del sitio.</li>
+        </ul>
+
+        <h2 id="es-s6">6. Bases legales del tratamiento</h2>
+        <p>Tratamos tus datos sobre alguna de estas bases, según corresponda:</p>
+        <ul>
+          <li><strong>Tu consentimiento:</strong> cuando aceptás las cookies no esenciales o nos escribís voluntariamente.</li>
+          <li><strong>Ejecución de un contrato o medidas precontractuales:</strong> para atender tu pedido o presupuesto.</li>
+          <li><strong>Interés legítimo:</strong> para mejorar el sitio, medir su rendimiento y proteger nuestra actividad, siempre que no prevalezcan tus derechos.</li>
+          <li><strong>Obligación legal:</strong> cuando una ley nos exige conservar o comunicar información.</li>
+        </ul>
+        <p>Podés retirar tu consentimiento en cualquier momento, sin que ello afecte la licitud del tratamiento previo.</p>
+
+        <h2 id="es-s7">7. Publicidad, análisis y remarketing</h2>
+        <p>Usamos servicios de Google (Analytics, Ads y Tag Manager) y de Meta (Meta Pixel) para entender cómo se usa nuestro sitio y para mostrar anuncios a personas que ya lo visitaron. Estas plataformas pueden usar cookies e identificadores para crear públicos y medir resultados. No les entregamos tu nombre ni tu teléfono con fines publicitarios; la información que procesan se rige por sus propias políticas:</p>
+        <ul>
+          <li>Política de privacidad de Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
+          <li>Política de privacidad de Meta: <a href="https://www.facebook.com/privacy/policy" target="_blank" rel="noopener">facebook.com/privacy/policy</a></li>
+        </ul>
+
+        <h2 id="es-s8">8. Con quién compartimos tu información</h2>
+        <p>No vendemos tus datos personales. Podemos compartirlos con:</p>
+        <ul>
+          <li><strong>Proveedores de servicios</strong> que nos ayudan a operar: alojamiento web (Cloudflare), correo electrónico (Zoho), medición y publicidad (Google y Meta) y mensajería (WhatsApp).</li>
+          <li><strong>Autoridades públicas</strong> cuando la ley lo exige o para ejercer o defender nuestros derechos.</li>
+          <li><strong>Terceros en caso de reorganización empresarial</strong>, como una fusión, venta o transferencia de activos, manteniendo la confidencialidad.</li>
+        </ul>
+
+        <h2 id="es-s9">9. Transferencias internacionales</h2>
+        <p>Algunos de nuestros proveedores (por ejemplo, Google, Meta, Cloudflare y Zoho) procesan datos en servidores ubicados fuera de Paraguay. Cuando esto ocurre, procuramos que existan garantías adecuadas de protección conforme a las prácticas del sector y a la normativa aplicable.</p>
+
+        <h2 id="es-s10">10. Cuánto tiempo conservamos los datos</h2>
+        <p>Conservamos tus datos solo durante el tiempo necesario para las finalidades descritas: mientras dure la relación comercial y, luego, durante los plazos que exijan las obligaciones legales, contables y fiscales. Los datos de navegación y analítica se conservan según la configuración de cada herramienta. Cuando ya no son necesarios, los eliminamos o anonimizamos de forma segura.</p>
+
+        <h2 id="es-s11">11. Seguridad de la información</h2>
+        <p>Aplicamos medidas técnicas y organizativas razonables para proteger tus datos contra pérdida, uso indebido, acceso no autorizado, alteración o divulgación. Ningún sistema es totalmente infalible, por lo que no podemos garantizar una seguridad absoluta, pero trabajamos para reducir los riesgos.</p>
+
+        <h2 id="es-s12">12. Tus derechos</h2>
+        <p>En Paraguay, la protección de datos se sustenta en la garantía constitucional de <strong>habeas data</strong> (artículo 135 de la Constitución Nacional) y en la Ley N.º 1682/2001, que reglamenta la información de carácter privado, y sus modificatorias. De acuerdo con la normativa aplicable, podés ejercer los siguientes derechos:</p>
+        <ul>
+          <li><strong>Acceso:</strong> saber qué datos tuyos tratamos.</li>
+          <li><strong>Rectificación:</strong> corregir datos inexactos o desactualizados.</li>
+          <li><strong>Actualización y supresión:</strong> actualizar o eliminar datos cuando corresponda.</li>
+          <li><strong>Oposición y limitación:</strong> oponerte a ciertos tratamientos, como la publicidad.</li>
+          <li><strong>Retiro del consentimiento:</strong> revocar un consentimiento otorgado previamente.</li>
+        </ul>
+        <p>Si nos visitás desde la Unión Europea, podés tener además derechos de portabilidad y de presentar reclamos ante tu autoridad de control conforme al RGPD. Si nos visitás desde California, podés tener derechos conforme a la CCPA/CPRA, incluido el derecho a no ser objeto de venta de datos (no vendemos tus datos). Para ejercer cualquiera de estos derechos, escribinos a <a href={`mailto:${site.email}`}>{site.email}</a>.</p>
+
+        <h2 id="es-s13">13. Cómo gestionar cookies y exclusiones</h2>
+        <p>Podés aceptar, bloquear o eliminar cookies desde la configuración de tu navegador. También podés usar estas herramientas:</p>
+        <ul>
+          <li>Exclusión de Google Analytics: <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">tools.google.com/dlpage/gaoptout</a></li>
+          <li>Configuración de anuncios de Google: <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a></li>
+          <li>Preferencias de anuncios de Meta: en la configuración de tu cuenta de Facebook o Instagram.</li>
+        </ul>
+        <p>Si bloqueás algunas cookies, ciertas funciones del sitio, como el mapa, podrían no funcionar correctamente.</p>
+
+        <h2 id="es-s14">14. Enlaces y servicios de terceros</h2>
+        <p>Nuestro sitio puede contener enlaces a WhatsApp, Facebook, Instagram, Google Maps y otros servicios. No somos responsables de las prácticas de privacidad de esos terceros. Te recomendamos revisar sus políticas antes de proporcionarles información.</p>
+
+        <h2 id="es-s15">15. Menores de edad</h2>
+        <p>Nuestro sitio y servicios están dirigidos a personas mayores de edad. No recopilamos de forma consciente datos de menores. Si creés que un menor nos proporcionó información, escribinos y la eliminaremos.</p>
+
+        <h2 id="es-s16">16. Señales de "No rastrear"</h2>
+        <p>Algunos navegadores permiten enviar señales de "No rastrear" (Do Not Track). Como todavía no existe un estándar uniforme, nuestro sitio actualmente no responde de manera diferenciada a esas señales, pero podés gestionar el seguimiento con las herramientas de la sección 13.</p>
+
+        <h2 id="es-s17">17. Cambios a esta política</h2>
+        <p>Podemos actualizar esta Política de Privacidad para reflejar cambios legales o en nuestras prácticas. Publicaremos la versión vigente en esta página con su fecha de actualización. Te sugerimos revisarla periódicamente.</p>
+
+        <h2 id="es-s18">18. Contacto</h2>
+        <p>Si tenés preguntas sobre esta política o querés ejercer tus derechos, contactanos:</p>
+        <ul>
+          <li><strong>MÁS VIDRIOS</strong>, {site.addressFull}</li>
+          <li>Email: <a href={`mailto:${site.email}`}>{site.email}</a></li>
+          <li>Teléfono / WhatsApp: <a href={`tel:+${site.phoneIntl}`}>{site.phone}</a></li>
+        </ul>
+        <p class="legal-note">En caso de discrepancia entre la versión en español y la versión en inglés de esta política, prevalecerá la versión en español.</p>
+      </div>
+
+      <!-- ==================== ENGLISH ==================== -->
+      <div class="prose legal" data-lang="en" hidden>
+
+        <div class="toc">
+          <b>Contents</b>
+          <ol>
+            <li><a href="#en-s1">Who we are and data controller</a></li>
+            <li><a href="#en-s2">Scope of this policy</a></li>
+            <li><a href="#en-s3">Information we collect</a></li>
+            <li><a href="#en-s4">Cookies and tracking technologies</a></li>
+            <li><a href="#en-s5">How we use your information</a></li>
+            <li><a href="#en-s6">Legal bases for processing</a></li>
+            <li><a href="#en-s7">Advertising, analytics and remarketing</a></li>
+            <li><a href="#en-s8">Who we share your information with</a></li>
+            <li><a href="#en-s9">International transfers</a></li>
+            <li><a href="#en-s10">How long we keep your data</a></li>
+            <li><a href="#en-s11">Information security</a></li>
+            <li><a href="#en-s12">Your rights</a></li>
+            <li><a href="#en-s13">Managing cookies and opt-outs</a></li>
+            <li><a href="#en-s14">Third-party links and services</a></li>
+            <li><a href="#en-s15">Children</a></li>
+            <li><a href="#en-s16">Do Not Track signals</a></li>
+            <li><a href="#en-s17">Changes to this policy</a></li>
+            <li><a href="#en-s18">Contact</a></li>
+          </ol>
+        </div>
+
+        <p>At MÁS VIDRIOS we value your privacy. This Privacy Policy explains, in plain terms, what personal data we process, for what purpose, on what legal basis, who we share it with and what rights you have over it. Please read it carefully. By using our website {site.url} you accept the practices described in this document.</p>
+
+        <h2 id="en-s1">1. Who we are and data controller</h2>
+        <p>The controller of your personal data is <strong>MÁS VIDRIOS</strong>, a family business specializing in tempered glass solutions, enclosures, shower screens, office partitions and aluminum joinery, based in {site.city}, Central Department, Paraguay.</p>
+        <ul>
+          <li><strong>Company:</strong> MÁS VIDRIOS</li>
+          <li><strong>Address:</strong> {site.addressFull}</li>
+          <li><strong>Email:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></li>
+          <li><strong>Phone / WhatsApp:</strong> <a href={`tel:+${site.phoneIntl}`}>{site.phone}</a></li>
+        </ul>
+
+        <h2 id="en-s2">2. Scope of this policy</h2>
+        <p>This policy applies to information we collect through our website, contact forms, WhatsApp, email, phone and our official social media. It does not apply to third-party sites or services that we do not control and that you may reach through links on our site.</p>
+
+        <h2 id="en-s3">3. Information we collect</h2>
+        <p>We collect different types of information depending on how you interact with us:</p>
+        <h3>a. Information you provide</h3>
+        <ul>
+          <li><strong>Contact details:</strong> name, phone number and, if you email us, your email address.</li>
+          <li><strong>Content of your inquiry:</strong> the project or request details you include in the form, on WhatsApp or by email (for example, measurements, type of work or job-site address).</li>
+        </ul>
+        <p>Our contact form builds a message that is sent through WhatsApp. When you use it, your data is also subject to the WhatsApp and Meta policies.</p>
+        <h3>b. Information we collect automatically</h3>
+        <ul>
+          <li><strong>Technical and usage data:</strong> IP address, browser type and version, operating system, device, language, pages visited, time on page, referral source and date and time of access.</li>
+          <li><strong>Cookie and similar technology data:</strong> identifiers stored on your device, as described in section 4.</li>
+        </ul>
+        <p>We do not request or intend to collect special categories of data (for example, health, religion or political opinions). Please do not include that type of information in your messages.</p>
+
+        <h2 id="en-s4">4. Cookies and tracking technologies</h2>
+        <p>A cookie is a small file stored on your device when you visit a website. We use first-party and third-party cookies, as well as similar technologies such as pixels and tags, to make the site work, to measure its performance and to show you relevant advertising. Assume that, unless you configure otherwise, we use the following categories:</p>
+        <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Technology</th><th>Provider</th><th>Purpose</th><th>Type</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Necessary cookies</td><td>MÁS VIDRIOS / Cloudflare</td><td>Site operation, security and delivery</td><td>Necessary</td></tr>
+            <tr><td>Google Analytics (GA4)</td><td>Google</td><td>Measure visits and browsing behavior</td><td>Analytics</td></tr>
+            <tr><td>Google Tag Manager</td><td>Google</td><td>Management of measurement and marketing tags</td><td>Functional</td></tr>
+            <tr><td>Google Ads and remarketing</td><td>Google</td><td>Measure conversions and show ads</td><td>Advertising</td></tr>
+            <tr><td>Meta Pixel (Facebook and Instagram)</td><td>Meta</td><td>Measure conversions, audiences and remarketing</td><td>Advertising</td></tr>
+            <tr><td>Google Maps</td><td>Google</td><td>Display the map of our location</td><td>Functional</td></tr>
+            <tr><td>Google Fonts</td><td>Google</td><td>Load the site typefaces</td><td>Functional</td></tr>
+            <tr><td>WhatsApp Business</td><td>Meta</td><td>Contact and support channel</td><td>Functional</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p>The exact names and durations of each cookie may vary by provider. You can control or delete cookies from your browser settings, as explained in section 13.</p>
+
+        <h2 id="en-s5">5. How we use your information</h2>
+        <p>We process your personal data for the following purposes:</p>
+        <ul>
+          <li>Respond to your inquiries and prepare a no-obligation quote.</li>
+          <li>Schedule visits, take measurements and provide our glass and aluminum services.</li>
+          <li>Manage the commercial relationship, orders, invoicing and after-sales.</li>
+          <li>Operate, maintain and improve the website and user experience.</li>
+          <li>Measure traffic and the performance of our marketing campaigns.</li>
+          <li>Show you advertising and reminders on Google and Meta platforms (remarketing).</li>
+          <li>Comply with legal, accounting and tax obligations, and respond to competent authorities.</li>
+          <li>Prevent fraud and abuse and protect the security of the site.</li>
+        </ul>
+
+        <h2 id="en-s6">6. Legal bases for processing</h2>
+        <p>We process your data on one of these bases, as applicable:</p>
+        <ul>
+          <li><strong>Your consent:</strong> when you accept non-essential cookies or contact us voluntarily.</li>
+          <li><strong>Performance of a contract or pre-contractual steps:</strong> to handle your request or quote.</li>
+          <li><strong>Legitimate interest:</strong> to improve the site, measure its performance and protect our business, provided your rights do not override it.</li>
+          <li><strong>Legal obligation:</strong> when a law requires us to keep or disclose information.</li>
+        </ul>
+        <p>You can withdraw your consent at any time, without affecting the lawfulness of processing before withdrawal.</p>
+
+        <h2 id="en-s7">7. Advertising, analytics and remarketing</h2>
+        <p>We use Google services (Analytics, Ads and Tag Manager) and Meta services (Meta Pixel) to understand how our site is used and to show ads to people who have already visited it. These platforms may use cookies and identifiers to build audiences and measure results. We do not provide them with your name or phone number for advertising purposes; the information they process is governed by their own policies:</p>
+        <ul>
+          <li>Google Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
+          <li>Meta Privacy Policy: <a href="https://www.facebook.com/privacy/policy" target="_blank" rel="noopener">facebook.com/privacy/policy</a></li>
+        </ul>
+
+        <h2 id="en-s8">8. Who we share your information with</h2>
+        <p>We do not sell your personal data. We may share it with:</p>
+        <ul>
+          <li><strong>Service providers</strong> that help us operate: web hosting (Cloudflare), email (Zoho), measurement and advertising (Google and Meta) and messaging (WhatsApp).</li>
+          <li><strong>Public authorities</strong> when required by law or to exercise or defend our rights.</li>
+          <li><strong>Third parties in a corporate reorganization</strong>, such as a merger, sale or transfer of assets, keeping confidentiality.</li>
+        </ul>
+
+        <h2 id="en-s9">9. International transfers</h2>
+        <p>Some of our providers (for example, Google, Meta, Cloudflare and Zoho) process data on servers located outside Paraguay. When this happens, we seek to ensure appropriate safeguards in line with industry practice and applicable regulations.</p>
+
+        <h2 id="en-s10">10. How long we keep your data</h2>
+        <p>We keep your data only for as long as necessary for the purposes described: for the duration of the commercial relationship and then for the periods required by legal, accounting and tax obligations. Browsing and analytics data is retained according to each tool's configuration. When no longer needed, we securely delete or anonymize it.</p>
+
+        <h2 id="en-s11">11. Information security</h2>
+        <p>We apply reasonable technical and organizational measures to protect your data against loss, misuse, unauthorized access, alteration or disclosure. No system is completely foolproof, so we cannot guarantee absolute security, but we work to reduce risks.</p>
+
+        <h2 id="en-s12">12. Your rights</h2>
+        <p>In Paraguay, data protection is grounded in the constitutional guarantee of <strong>habeas data</strong> (article 135 of the National Constitution) and in Law No. 1682/2001, which regulates private information, and its amendments. Under applicable law, you can exercise the following rights:</p>
+        <ul>
+          <li><strong>Access:</strong> know what data of yours we process.</li>
+          <li><strong>Rectification:</strong> correct inaccurate or outdated data.</li>
+          <li><strong>Update and deletion:</strong> update or delete data where appropriate.</li>
+          <li><strong>Objection and restriction:</strong> object to certain processing, such as advertising.</li>
+          <li><strong>Withdrawal of consent:</strong> revoke a consent previously granted.</li>
+        </ul>
+        <p>If you visit us from the European Union, you may also have rights to portability and to lodge a complaint with your supervisory authority under the GDPR. If you visit us from California, you may have rights under the CCPA/CPRA, including the right not to have your data sold (we do not sell your data). To exercise any of these rights, write to us at <a href={`mailto:${site.email}`}>{site.email}</a>.</p>
+
+        <h2 id="en-s13">13. Managing cookies and opt-outs</h2>
+        <p>You can accept, block or delete cookies from your browser settings. You can also use these tools:</p>
+        <ul>
+          <li>Google Analytics opt-out: <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">tools.google.com/dlpage/gaoptout</a></li>
+          <li>Google Ads settings: <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a></li>
+          <li>Meta ad preferences: in your Facebook or Instagram account settings.</li>
+        </ul>
+        <p>If you block some cookies, certain site features, such as the map, may not work correctly.</p>
+
+        <h2 id="en-s14">14. Third-party links and services</h2>
+        <p>Our site may contain links to WhatsApp, Facebook, Instagram, Google Maps and other services. We are not responsible for the privacy practices of those third parties. We recommend reviewing their policies before providing them with information.</p>
+
+        <h2 id="en-s15">15. Children</h2>
+        <p>Our site and services are intended for adults. We do not knowingly collect data from minors. If you believe a minor has provided us with information, please contact us and we will delete it.</p>
+
+        <h2 id="en-s16">16. Do Not Track signals</h2>
+        <p>Some browsers let you send "Do Not Track" signals. Because there is still no uniform standard, our site currently does not respond differently to those signals, but you can manage tracking with the tools in section 13.</p>
+
+        <h2 id="en-s17">17. Changes to this policy</h2>
+        <p>We may update this Privacy Policy to reflect legal changes or changes in our practices. We will post the current version on this page with its update date. We suggest reviewing it periodically.</p>
+
+        <h2 id="en-s18">18. Contact</h2>
+        <p>If you have questions about this policy or want to exercise your rights, contact us:</p>
+        <ul>
+          <li><strong>MÁS VIDRIOS</strong>, {site.addressFull}</li>
+          <li>Email: <a href={`mailto:${site.email}`}>{site.email}</a></li>
+          <li>Phone / WhatsApp: <a href={`tel:+${site.phoneIntl}`}>{site.phone}</a></li>
+        </ul>
+        <p class="legal-note">In case of any discrepancy between the Spanish and English versions of this policy, the Spanish version shall prevail.</p>
+      </div>
+
+    </div>
+  </section>
+</Base>
+
+<style>
+  .lang-toggle{display:inline-flex;gap:4px;background:#fff;border:1px solid var(--linea);border-radius:999px;padding:4px;margin:2px 0 18px}
+  .lang-toggle button{border:none;background:none;font-family:inherit;font-weight:700;font-size:14px;color:var(--gris);padding:8px 18px;border-radius:999px;cursor:pointer;transition:.18s}
+  .lang-toggle button:hover{color:var(--azul)}
+  .lang-toggle button.is-active{background:var(--azul);color:#fff}
+
+  .legal .toc{background:var(--bg2);border:1px solid var(--linea);border-radius:14px;padding:22px 26px;margin:0 0 34px}
+  .legal .toc b{display:block;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--negro);margin-bottom:12px}
+  .legal .toc ol{margin:0;padding-left:20px;list-style:decimal;columns:2;column-gap:32px}
+  .legal .toc li{padding:4px 0;font-size:14.5px;break-inside:avoid}
+  .legal .toc a{color:var(--tinta);border:none;font-weight:600}
+  .legal .toc a:hover{color:var(--azul)}
+  @media(max-width:600px){.legal .toc ol{columns:1}}
+
+  .legal h2{scroll-margin-top:90px}
+  .legal .table-scroll{overflow-x:auto;margin:0 0 22px}
+  .legal table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:520px}
+  .legal th,.legal td{text-align:left;padding:11px 13px;border:1px solid var(--linea);vertical-align:top}
+  .legal th{background:var(--bg2);font-weight:700;color:var(--negro)}
+  .legal .legal-note{margin-top:28px;padding-top:18px;border-top:1px solid var(--linea);font-size:14px;color:var(--gris)}
+</style>
+
+<script is:inline>
+  (function () {
+    var buttons = document.querySelectorAll('[data-set-lang]');
+    var blocks = document.querySelectorAll('[data-lang]');
+    function apply(lang) {
+      blocks.forEach(function (el) { el.hidden = el.getAttribute('data-lang') !== lang; });
+      buttons.forEach(function (b) { b.classList.toggle('is-active', b.getAttribute('data-set-lang') === lang); });
+      document.documentElement.lang = lang;
+      try { localStorage.setItem('pp-lang', lang); } catch (e) {}
+    }
+    var stored = null;
+    try { stored = localStorage.getItem('pp-lang'); } catch (e) {}
+    var initial = stored || ((navigator.language || 'es').toLowerCase().indexOf('en') === 0 ? 'en' : 'es');
+    apply(initial);
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { apply(b.getAttribute('data-set-lang')); });
+    });
+  })();
+</script>
