@@ -1,0 +1,8 @@
+# Redirects · MÁS VIDRIOS (Cloudflare Pages)
+# URLs del sitio viejo (2017) → equivalentes nuevos.
+# Preservan el link equity y eliminan los 404 que Google seguía rastreando.
+/index.html        /                  301
+/about_us.html     /sobre-nosotros/   301
+/servicios.html    /servicios/        301
+/trabajos.html     /proyectos/        301
+/contact_us.html   /contacto/         301
