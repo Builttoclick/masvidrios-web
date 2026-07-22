@@ -95,6 +95,10 @@ const desc = 'Contactá a MÁS VIDRIOS en San Lorenzo. WhatsApp 0984 452 749, em
         var d = new FormData(f);
         var txt = 'Hola MÁS VIDRIOS! Soy ' + (d.get('nombre') || '') +
           (d.get('tel') ? ' (tel: ' + d.get('tel') + ')' : '') + '. ' + (d.get('msg') || '');
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'whatsapp_click', { wa_number: phoneIntl, wa_message: txt, button_location: 'form-contacto', page_path: location.pathname });
+        }
+        if (typeof window.clarity === 'function') { window.clarity('set', 'whatsapp_click', 'form-contacto'); }
         window.open('https://wa.me/' + phoneIntl + '?text=' + encodeURIComponent(txt), '_blank');
       });
     })();
