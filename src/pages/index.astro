@@ -5,22 +5,26 @@ import { servicios } from '../data/servicios';
 import { zonas } from '../data/zonas';
 
 const proyectos = [
-  { img: 'puerta-vidrio-corrediza-aluminio-negro-living-piscina-02.jpg', cap: 'Cerramiento corredizo · aluminio negro', cls: 'tall wide',
-    alt: 'Cerramiento de vidrio corredizo con marco de aluminio negro hacia el jardín · MÁS VIDRIOS' },
-  { img: 'mesa-vidrio-templado-curvado-mobiliario-01.jpg', cap: 'Mobiliario en vidrio templado', cls: '',
-    alt: 'Mesa de vidrio templado curvado de dos niveles hecha a medida · MÁS VIDRIOS' },
-  { img: 'cerramiento-galeria-vidrio-marco-madera-exterior.jpg', cap: 'Galería cerrada · símil madera', cls: '',
-    alt: 'Cerramiento de galería con vidrio y carpintería color madera · MÁS VIDRIOS' },
-  { img: 'muro-cortina-vidrio-fachada-edificio-ladrillo.jpg', cap: 'Muro cortina · fachada comercial', cls: '',
-    alt: 'Muro cortina de vidrio en fachada de edificio con ladrillo visto · MÁS VIDRIOS' },
-  { img: 'divisiones-vidrio-aluminio-negro-oficina-corporativa.jpg', cap: 'Divisiones de oficina · aluminio negro', cls: 'wide',
-    alt: 'Divisiones de vidrio con aluminio negro en oficina corporativa · MÁS VIDRIOS' },
-  { img: 'puerta-corrediza-vidrio-aluminio-negro-estilo-industrial-cuadricula.jpg', cap: 'Corrediza estilo industrial', cls: '',
-    alt: 'Puerta corrediza de vidrio estilo industrial con cuadrícula · MÁS VIDRIOS' },
+  { img: '/fotos/galeria/mampara-ducha-esquinera-perfil-negro-01.jpg', cap: 'Mampara de ducha · perfil negro', cls: 'tall wide',
+    alt: 'Mampara de ducha esquinera de vidrio con perfilería negra en baño moderno · MÁS VIDRIOS' },
+  { img: '/fotos/galeria/ventanal-corredizo-aluminio-negro.jpg', cap: 'Ventanal corredizo · aluminio negro', cls: '',
+    alt: 'Ventanal corredizo de aluminio negro con vista al jardín en casa moderna · MÁS VIDRIOS' },
+  { img: '/fotos/galeria/espejo-organico-sin-marco-bano-moderno-02.jpg', cap: 'Espejo orgánico a medida', cls: '',
+    alt: 'Espejo de forma orgánica sin marco sobre bacha en baño moderno · MÁS VIDRIOS' },
+  { img: '/fotos/galeria/baranda-vidrio-curvo-inox-escalera.jpg', cap: 'Baranda de vidrio curvo e inox', cls: '',
+    alt: 'Baranda de vidrio curvo con parantes y pasamanos de acero inoxidable en escalera interior · MÁS VIDRIOS' },
+  { img: '/fotos/galeria/cerramiento-vidrio-aluminio-negro-piscina.jpg', cap: 'Cerramiento junto a la piscina', cls: 'wide',
+    alt: 'Cerramiento de vidrio con perfiles de aluminio negro junto a piscina · MÁS VIDRIOS' },
+  { img: '/fotos/galeria/frente-vidriado-puerta-automatica-local.jpg', cap: 'Puerta automática · local comercial', cls: '',
+    alt: 'Frente vidriado con puerta automática en local comercial · MÁS VIDRIOS' },
+  { img: '/fotos/galeria/muestras-stampa-simil-marmol.jpg', cap: 'Vidrio impreso stampa', cls: '',
+    alt: 'Muestras de vidrio impreso stampa símil mármol blanco y azul · MÁS VIDRIOS' },
+  { img: '/fotos/galeria/puerta-principal-aluminio-simil-madera.jpg', cap: 'Puerta principal símil madera', cls: '',
+    alt: 'Puerta principal de aluminio símil madera con barral de acero inoxidable · MÁS VIDRIOS' },
 ];
 
 // Tira de materiales (motion + keywords SEO)
-const tira = ['Vidrio templado', 'DVH · doble vidriado hermético', 'Cerramientos', 'Mamparas de baño', 'Carpintería de aluminio', 'Divisiones de oficina', 'Barandas vidriadas', 'Policarbonato', 'Cielo raso Durlock', 'Muro cortina'];
+const tira = ['Vidrio templado', 'DVH · doble vidriado hermético', 'Cerramientos', 'Mamparas de baño', 'Carpintería de aluminio y PVC', 'Divisiones de oficina', 'Barandas vidriadas', 'Espejos a medida', 'Puertas automáticas', 'Vidrio impreso stampa', 'Policarbonato', 'Cielo raso Durlock', 'Muro cortina'];
 
 // H1 visible: institucional + keyword (vidrio templado + San Lorenzo). "Gran Asunción" queda en el title/meta/cuerpo para SEO, no en el H1 (a pedido de la familia).
 const h1 = 'Vidrio templado, cerramientos y aberturas de aluminio en San Lorenzo';
@@ -44,7 +48,7 @@ const desc = 'MÁS VIDRIOS: vidrio templado, cerramientos, mamparas, divisorias 
           <p class="lead reveal" style="--d:.2s">Empresa familiar de San Lorenzo con más de 17 años y +1.800 trabajos en Gran Asunción. Te asesoramos sobre la solución que mejor funciona para tu obra, no solo sobre el precio, y cuidamos cada terminación.</p>
           <div class="hero-actions reveal" style="--d:.28s">
             <a class="btn btn-primary" href={site.whatsapp} target="_blank" rel="noopener">Contactanos</a>
-            <a class="btn btn-ghost" href="/proyectos/">Ver proyectos</a>
+            <a class="btn btn-ghost" href="/galeria/">Ver galería</a>
           </div>
           <p class="hero-trust reveal" style="--d:.36s">El dueño atiende y va a tu obra · Presupuesto sin compromiso</p>
         </div>
@@ -62,8 +66,8 @@ const desc = 'MÁS VIDRIOS: vidrio templado, cerramientos, mamparas, divisorias 
       <div class="hero-stats">
         <div class="gstat glass reveal" style="--d:.08s"><b data-count-to="1800" data-pre="+">0</b><span>trabajos realizados</span></div>
         <div class="gstat glass reveal" style="--d:.16s"><b data-count-to={site.yearsExp} data-post="+">0</b><span>años de experiencia</span></div>
-        <div class="gstat glass reveal" style="--d:.24s"><b><span class="g">Olimpia</span></b><span>Palcos VIP · M. Ferreira</span></div>
-        <div class="gstat glass reveal" style="--d:.32s"><b><span class="g">ANDE</span></b><span>Fachada SITRANDE</span></div>
+        <div class="gstat glass reveal" style="--d:.24s"><b data-count-to={servicios.length}>0</b><span>servicios especializados</span></div>
+        <div class="gstat glass reveal" style="--d:.32s"><b data-count-to="600" data-pre="+">0</b><span>clientes atendidos</span></div>
       </div>
     </div>
   </section>
@@ -100,38 +104,43 @@ const desc = 'MÁS VIDRIOS: vidrio templado, cerramientos, mamparas, divisorias 
   <!-- GALERIA -->
   <section id="proyectos" class="gal" style="background:var(--bg2)">
     <div class="wrap center">
-      <span class="eyebrow reveal">Portfolio</span>
-      <h2 class="sec reveal" style="--d:.06s">Proyectos que hablan por nosotros</h2>
-      <p class="sec-sub reveal" style="--d:.12s">Residencias, oficinas y locales en San Lorenzo y Gran Asunción. Una muestra de trabajos terminados.</p>
+      <span class="eyebrow reveal">Galería</span>
+      <h2 class="sec reveal" style="--d:.06s">Trabajos que hablan por nosotros</h2>
+      <p class="sec-sub reveal" style="--d:.12s">Residencias, oficinas y locales en San Lorenzo y Gran Asunción. Todas las fotos son de obras nuestras.</p>
     </div>
     <div class="wrap">
       <div class="grid-gal">
         {proyectos.map((p, i) => (
           <figure class={`${p.cls} reveal`} style={`--d:${0.05 * i}s`} data-tilt>
-            <img src={`/fotos/proyectos/${p.img}`} alt={p.alt} loading="lazy" />
+            <img src={p.img} alt={p.alt} loading="lazy" />
             <span class="sheen" aria-hidden="true"></span>
             <figcaption>{p.cap}</figcaption>
           </figure>
         ))}
       </div>
-      <div class="center" style="margin-top:36px"><a class="btn btn-ghost" href="/proyectos/">Ver todos los proyectos</a></div>
+      <div class="center" style="margin-top:36px"><a class="btn btn-ghost" href="/galeria/">Ver la galería completa</a></div>
     </div>
   </section>
 
-  <!-- DESTACADOS -->
-  <section id="destacados">
+  <!-- PERSONAL CALIFICADO -->
+  <section id="equipo-obra">
     <div class="wrap">
       <div class="feat reveal">
         <div class="feat-aurora" aria-hidden="true"></div>
-        <div class="feat-in">
-        <span class="eyebrow">Obras destacadas</span>
-        <h2>Cuando el trabajo tiene que estar impecable, nos llaman a nosotros.</h2>
-        <div class="feat-list">
-          <div class="feat-item"><div class="dot">★</div><div><h4>Palcos VIP, Club Olimpia</h4><p>Vidriado de los palcos VIP del Estadio Manuel Ferreira.</p></div></div>
-          <div class="feat-item"><div class="dot">★</div><div><h4>Fachada SITRANDE / ANDE</h4><p>Fachada del sindicato de la ANDE sobre Tte. Fariña, Asunción.</p></div></div>
-          <div class="feat-item"><div class="dot">✦</div><div><h4>Residencias &amp; oficinas</h4><p>Cerramientos, divisorios y aberturas en obra pública y privada.</p></div></div>
-          <div class="feat-item"><div class="dot">✦</div><div><h4>Locales comerciales</h4><p>Vidrieras, muros cortina y fachadas de gran formato.</p></div></div>
-        </div>
+        <div class="feat-in feat-grid">
+          <div class="feat-txt">
+            <span class="eyebrow">Personal calificado</span>
+            <h2>Equipo propio, del taller a tu obra.</h2>
+            <div class="feat-list">
+              <div class="feat-item"><div class="dot">★</div><div><h4>Instaladores propios y capacitados</h4><p>No tercerizamos: el equipo que mide es el mismo que instala y responde.</p></div></div>
+              <div class="feat-item"><div class="dot">★</div><div><h4>El dueño en tu obra</h4><p>José visita, mide y supervisa personalmente cada trabajo.</p></div></div>
+              <div class="feat-item"><div class="dot">✦</div><div><h4>+1.800 trabajos entregados</h4><p>Residencias, comercios y obra pública en toda Gran Asunción.</p></div></div>
+              <div class="feat-item"><div class="dot">✦</div><div><h4>Terminaciones cuidadas</h4><p>Vidrio de seguridad, herrajes de calidad y obra limpia al entregar.</p></div></div>
+            </div>
+          </div>
+          <figure class="feat-photo">
+            <img src="/fotos/equipo/equipo-instalacion.jpg" alt="Instaladores de MÁS VIDRIOS colocando una ventana en obra" loading="lazy" width="800" height="600" />
+          </figure>
         </div>
       </div>
     </div>
@@ -256,6 +265,11 @@ const desc = 'MÁS VIDRIOS: vidrio templado, cerramientos, mamparas, divisorias 
   .feat h2{font-size:30px;font-weight:800;letter-spacing:-.5px;margin:8px 0 26px;max-width:680px;line-height:1.2;color:#fff}
   .feat-list{display:grid;grid-template-columns:1fr 1fr;gap:22px}
   @media(max-width:680px){.feat-list{grid-template-columns:1fr}.feat-in{padding:40px 26px}}
+  .feat-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+  .feat-grid .feat-list{grid-template-columns:1fr;gap:18px}
+  .feat-photo{margin:0;border-radius:18px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+  .feat-photo img{display:block;width:100%;height:100%;object-fit:cover}
+  @media(max-width:860px){.feat-grid{grid-template-columns:1fr;gap:28px}.feat-photo{order:-1}}
   .feat-item{display:flex;gap:14px;align-items:flex-start}
   .feat-item .dot{flex:0 0 auto;width:42px;height:42px;border-radius:11px;background:rgba(255,255,255,.10);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--celeste)}
   .feat-item h4{font-size:17px;font-weight:700;color:#fff}

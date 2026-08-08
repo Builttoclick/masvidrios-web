@@ -1,5 +1,6 @@
 export interface Bloque { h2: string; parrafos?: string[]; lista?: string[]; }
 export interface Faq { q: string; a: string; }
+export interface VideoServicio { src: string; poster: string; titulo: string; }
 export interface Servicio {
   slug: string;
   nombre: string;          // nombre corto (cards, nav)
@@ -15,6 +16,7 @@ export interface Servicio {
   bloques: Bloque[];
   destacados: string[];
   faqs: Faq[];
+  videos?: VideoServicio[]; // videos reales de obra (self-hosted en /videos/)
 }
 
 const CIUDAD = 'San Lorenzo';
@@ -109,6 +111,9 @@ export const servicios: Servicio[] = [
       { q: '¿Puedo abrir el cerramiento en los días lindos?', a: 'Sí. Con sistemas corredizos podés abrir total o parcialmente los paños y dejar la galería como estaba. Es la opción más elegida porque combina lo mejor de los dos mundos.' },
       { q: '¿El cerramiento aísla del frío y del ruido?', a: 'En buena medida. Cortar el viento ya hace una diferencia enorme de confort; si necesitás más aislación térmica y acústica podemos usar vidrios de mayor espesor o laminados.' },
       { q: '¿Trabajan con medidas irregulares?', a: 'Sí, justamente por eso medimos en obra. Nos adaptamos a galerías con desniveles, columnas o formas no rectangulares.' },
+    ],
+    videos: [
+      { src: '/videos/video-cerramiento-vidrio-galeria-obra.mp4', poster: '/videos/video-cerramiento-vidrio-galeria-obra-poster.jpg', titulo: 'Cerramiento de una galería con paños fijos, en obra' },
     ],
   },
   {
@@ -209,11 +214,11 @@ export const servicios: Servicio[] = [
     fotoAlt: 'Ventana corrediza de aluminio símil madera con mosquitero · MÁS VIDRIOS',
     metaTitle: 'Aberturas de aluminio en San Lorenzo',
     titleTail: 'ventanas y puertas de aluminio a medida cerca tuyo',
-    metaDesc: 'Aberturas de aluminio en San Lorenzo y Gran Asunción: ventanas y puertas corredizas, líneas suprema y 25, símil madera y mosquiteros. A medida y bien instaladas. Presupuesto sin compromiso.',
-    hero: 'Ventanas y puertas de aluminio a medida, líneas suprema, 25, módulo práctico, símil madera y mosquiteros.',
+    metaDesc: 'Aberturas de aluminio y PVC en San Lorenzo y Gran Asunción: ventanas y puertas corredizas, líneas suprema y 25, símil madera, PVC y mosquiteros. A medida y bien instaladas. Presupuesto sin compromiso.',
+    hero: 'Ventanas y puertas de aluminio y PVC a medida, líneas suprema, 25, módulo práctico, símil madera y mosquiteros.',
     intro: [
       'El aluminio es el complemento natural del vidrio y una de nuestras especialidades. Es liviano, no se oxida, casi no necesita mantenimiento y permite armar ventanas y puertas de gran tamaño con marcos finos que dejan entrar la mayor cantidad de luz posible.',
-      'En MÁS VIDRIOS trabajamos las líneas más usadas del mercado, suprema, línea 25, módulo práctico, además de mosquiteros corredizos y la línea símil madera para quienes buscan la calidez de la madera sin su mantenimiento. Fabricamos y colocamos a medida, con el vidrio que corresponda en cada caso.',
+      'En MÁS VIDRIOS trabajamos las líneas más usadas del mercado, suprema, línea 25, módulo práctico, además de mosquiteros corredizos y la línea símil madera para quienes buscan la calidez de la madera sin su mantenimiento. También instalamos aberturas de PVC, la opción de mayor aislación térmica y acústica. Fabricamos y colocamos a medida, con el vidrio que corresponda en cada caso.',
     ],
     bloques: [
       {
@@ -222,6 +227,7 @@ export const servicios: Servicio[] = [
           'Ventanas corredizas y de abrir en líneas suprema, 25 y módulo práctico.',
           'Puertas de aluminio con vidrio para entradas y balcones.',
           'Aluminio símil madera (símil roble y otros tonos).',
+          'Aberturas de PVC de alta aislación térmica y acústica.',
           'Mosquiteros corredizos integrados.',
           'Paños fijos y ventanales de gran formato.',
         ],
@@ -242,7 +248,12 @@ export const servicios: Servicio[] = [
     faqs: [
       { q: '¿Qué línea de aluminio me conviene?', a: 'Depende del tamaño de la abertura, la exposición al viento y el presupuesto. La línea suprema es más robusta para grandes vanos; la línea 25 es ideal para aberturas estándar. Te asesoramos según tu caso.' },
       { q: '¿El aluminio símil madera se mantiene como la madera?', a: 'No requiere el mantenimiento de la madera real: no hay que barnizar ni se pudre. Da la estética cálida de la madera con la durabilidad del aluminio.' },
+      { q: '¿Trabajan aberturas de PVC además de aluminio?', a: 'Sí. Instalamos aberturas de PVC con perfilería de primera línea, una gran opción cuando la prioridad es la aislación térmica y acústica. Te asesoramos sobre qué conviene en tu obra, aluminio o PVC.' },
       { q: '¿Incluye el vidrio y la colocación?', a: 'Sí. Presupuestamos la abertura completa, perfilería, vidrio, herrajes y colocación, para que no tengas que coordinar con varios proveedores.' },
+    ],
+    videos: [
+      { src: '/videos/video-frente-corredizo-aluminio-galeria.mp4', poster: '/videos/video-frente-corredizo-aluminio-galeria-poster.jpg', titulo: 'Frente corredizo de aluminio negro cerrando una galería' },
+      { src: '/videos/video-aberturas-aluminio-quincho.mp4', poster: '/videos/video-aberturas-aluminio-quincho-poster.jpg', titulo: 'Ventanas proyectantes y corredizas en un quincho' },
     ],
   },
   {
@@ -420,6 +431,149 @@ export const servicios: Servicio[] = [
       { q: '¿Reparan trabajos que no instalaron ustedes?', a: 'Sí. Reparamos y damos mantenimiento a instalaciones de vidrio y aluminio sin importar quién las haya hecho.' },
       { q: '¿Mi puerta corrediza cuesta correr, tiene arreglo?', a: 'Casi siempre sí. Generalmente es cuestión de cambiar las ruedas y limpiar/ajustar el riel, sin reemplazar la abertura entera.' },
       { q: '¿Hacen contratos de mantenimiento para locales?', a: 'Sí, coordinamos visitas periódicas de service para comercios y oficinas con puertas de alto tránsito.' },
+    ],
+  },
+  {
+    slug: 'espejos',
+    nombre: 'Espejos',
+    categoria: 'Espejos a medida',
+    icon: '<ellipse cx="12" cy="11" rx="7" ry="8"/><path d="M8.5 8c-.8.8-1.3 1.8-1.5 3"/><path d="M8 21h8"/>',
+    foto: '/fotos/galeria/espejo-organico-sin-marco-bano-moderno-02.jpg',
+    fotoAlt: 'Espejo de forma orgánica sin marco sobre bacha en baño moderno · MÁS VIDRIOS',
+    metaTitle: 'Espejos a medida en San Lorenzo',
+    titleTail: 'espejos orgánicos, retroiluminados LED y a medida cerca tuyo',
+    metaDesc: 'Espejos a medida en San Lorenzo y Gran Asunción: formas orgánicas sin marco, espejos retroiluminados con LED y espejos clásicos para baños, vanitorys, dormitorios y pasillos. Corte, pulido e instalación incluidos.',
+    hero: 'Espejos a medida que transforman el ambiente: formas orgánicas sin marco, retroiluminados LED y clásicos.',
+    intro: [
+      'El espejo dejó de ser un accesorio para convertirse en protagonista del diseño. Las formas orgánicas e irregulares sin marco, tan buscadas hoy en baños y vanitorys modernos, y los espejos retroiluminados con LED que suman una luz cálida y pareja, son de los trabajos que más nos piden últimamente. En MÁS VIDRIOS los cortamos, pulimos e instalamos a medida.',
+      'Trabajamos espejos para baños, dormitorios, pasillos, gimnasios y locales comerciales. Vos elegís la forma y el tamaño (o nos pasás la referencia que viste), y nosotros nos encargamos de que llegue a tu pared con el canto pulido, la fijación segura y la terminación prolija que un espejo necesita.',
+    ],
+    bloques: [
+      {
+        h2: 'Tipos de espejo que hacemos',
+        lista: [
+          'Espejos de formas orgánicas e irregulares, sin marco, cortados a medida.',
+          'Espejos retroiluminados con LED perimetral para baños y vanitorys.',
+          'Espejos clásicos rectangulares o redondos, con o sin bisel.',
+          'Espejos de gran formato para gimnasios, estudios de danza y locales.',
+          'Reposición de espejos rotos o manchados.',
+        ],
+      },
+      {
+        h2: 'Instalación segura y prolija',
+        parrafos: [
+          'Un espejo grande mal fijado es un riesgo. Usamos la fijación correcta para cada pared y cada peso (pegado estructural, grampas o perfiles ocultos), cuidamos el apoyo sobre mesadas y zócalos, y dejamos el canto pulido para que el espejo se pueda tocar sin peligro. Si lleva LED, dejamos la conexión prevista y coordinada con tu electricista.',
+        ],
+      },
+    ],
+    destacados: [
+      'Formas orgánicas cortadas a medida',
+      'Retroiluminación LED cálida o fría',
+      'Canto pulido y fijación segura',
+      'Baños, vanitorys, gimnasios y locales',
+    ],
+    faqs: [
+      { q: '¿Pueden copiar una forma de espejo que vi en Pinterest o Instagram?', a: 'Sí. Pasanos la foto de referencia y las medidas aproximadas del espacio: dibujamos la forma, la ajustamos con vos y la cortamos a medida.' },
+      { q: '¿El espejo retroiluminado necesita instalación eléctrica especial?', a: 'Necesita un punto de corriente detrás del espejo. Si tu baño ya lo tiene, lo conectamos ahí; si no, te indicamos exactamente qué dejarle previsto a tu electricista antes de la colocación.' },
+      { q: '¿Qué espejo conviene para un baño con mucha humedad?', a: 'Usamos espejos de calidad con respaldo protegido y evitamos apoyos que acumulen agua. Con ventilación razonable, el espejo se mantiene impecable por años.' },
+    ],
+  },
+  {
+    slug: 'puertas-automaticas',
+    nombre: 'Puertas automáticas',
+    categoria: 'Puertas automáticas de vidrio',
+    icon: '<rect x="3" y="3" width="18" height="18" rx="1"/><path d="M12 3v18"/><path d="M9.5 12H5.5M5.5 12l2-2M5.5 12l2 2"/><path d="M14.5 12h4M18.5 12l-2-2M18.5 12l-2 2"/>',
+    foto: '/fotos/galeria/frente-vidriado-puerta-automatica-local.jpg',
+    fotoAlt: 'Frente vidriado con puerta automática en local comercial · MÁS VIDRIOS',
+    metaTitle: 'Puertas automáticas en San Lorenzo',
+    titleTail: 'puertas corredizas automáticas de vidrio para comercios cerca tuyo',
+    metaDesc: 'Puertas automáticas de vidrio en San Lorenzo y Gran Asunción: corredizas con sensor de movimiento para comercios, oficinas, sanatorios y edificios. Provisión, instalación y service. Presupuesto sin compromiso.',
+    hero: 'Puertas corredizas automáticas de vidrio con sensor: la entrada que tu comercio necesita.',
+    intro: [
+      'La puerta automática es la carta de presentación de un comercio moderno: se abre sola al detectar a tu cliente, mantiene el aire acondicionado adentro y deja el frente completamente vidriado y luminoso. En MÁS VIDRIOS proveemos e instalamos puertas corredizas automáticas de vidrio con el operador, los sensores y el vidrio de seguridad que corresponde.',
+      'Las instalamos en locales comerciales, oficinas, sanatorios, farmacias y edificios de toda Gran Asunción. Nos encargamos del conjunto completo: el frente de vidrio templado, el mecanismo en el dintel, la puesta en marcha y la regulación fina para que abra y cierre suave, sin golpes.',
+    ],
+    bloques: [
+      {
+        h2: 'Dónde conviene una puerta automática',
+        lista: [
+          'Locales comerciales y shoppings: entrada libre con las manos ocupadas.',
+          'Farmacias, sanatorios y consultorios: acceso sin contacto, más higiénico.',
+          'Oficinas corporativas y edificios: imagen profesional desde la entrada.',
+          'Supermercados y autoservicios de alto tránsito.',
+          'Cualquier frente donde quieras climatizar sin dejar la puerta abierta.',
+        ],
+      },
+      {
+        h2: 'Instalación completa y service',
+        parrafos: [
+          'Instalamos el sistema completo: paños fijos y hojas móviles de vidrio templado de seguridad, operador electromecánico oculto en el dintel, sensores de movimiento y presencia, y los modos de funcionamiento que necesites (apertura total, parcial, bloqueo nocturno). Después de la instalación hacemos el service periódico para que la puerta de tu negocio nunca quede fuera de uso.',
+        ],
+      },
+    ],
+    destacados: [
+      'Corredizas automáticas con sensor',
+      'Vidrio templado de seguridad',
+      'Operador silencioso y regulable',
+      'Instalación completa y service',
+    ],
+    faqs: [
+      { q: '¿Qué pasa si se corta la luz?', a: 'La puerta se puede abrir manualmente y, según el modelo, puede llevar batería de respaldo que la mantiene funcionando durante el corte. Lo definimos según la necesidad de tu local.' },
+      { q: '¿Sirve para un local que ya tiene el frente de vidrio?', a: 'Sí. Podemos automatizar la entrada aprovechando el frente existente o renovarlo completo, según el estado de la perfilería y el vidrio actual.' },
+      { q: '¿Cada cuánto necesita mantenimiento?', a: 'Para un local de tránsito normal recomendamos un service cada 6 a 12 meses: limpieza de guías, chequeo de sensores y regulación del operador. Coordinamos las visitas para que no interrumpan tu atención.' },
+    ],
+    videos: [
+      { src: '/videos/video-puerta-automatica-local-comercial.mp4', poster: '/videos/video-puerta-automatica-local-comercial-poster.jpg', titulo: 'Puerta automática de vidrio funcionando en un local comercial' },
+      { src: '/videos/video-puerta-automatica-mrodamientos.mp4', poster: '/videos/video-puerta-automatica-mrodamientos-poster.jpg', titulo: 'Puerta automática instalada en un comercio de repuestos' },
+    ],
+  },
+  {
+    slug: 'stampa-vidrio-impreso',
+    nombre: 'Stampa · vidrio impreso',
+    categoria: 'Vidrio impreso stampa',
+    icon: '<rect x="3" y="3" width="18" height="18" rx="1"/><path d="M7 15l3-4 3 3 4-6"/><circle cx="8.5" cy="7.5" r="1.2"/>',
+    foto: '/fotos/galeria/muestrario-vidrio-impreso-stampa-disenos.jpg',
+    fotoAlt: 'Muestrario de vidrio impreso Stampa con diseños de aves, paisajes y mármol · MÁS VIDRIOS',
+    metaTitle: 'Vidrio impreso stampa en San Lorenzo',
+    titleTail: 'impresión digital sobre vidrio: símil mármol, madera y diseños personalizados',
+    metaDesc: 'Vidrio impreso stampa en San Lorenzo y Gran Asunción: impresión digital sobre vidrio templado con diseños símil mármol, símil madera, naturaleza o personalizados. Para revestimientos, puertas y divisores.',
+    hero: 'Impresión digital sobre vidrio templado: mármol, madera, naturaleza o el diseño que imagines.',
+    intro: [
+      'El vidrio impreso stampa es pintura digital aplicada directamente sobre el vidrio: permite llevar cualquier diseño (un símil mármol, una textura de madera, un paisaje, una foto o un patrón geométrico) a un paño de vidrio templado. El resultado es un revestimiento vistoso, higiénico y que no se despega ni se decolora como un vinilo común.',
+      'En MÁS VIDRIOS trabajamos con muestrarios de diseños listos para elegir y también imprimimos diseños personalizados. Es una solución cada vez más pedida para dar personalidad a cocinas, baños, locales y oficinas sin obra húmeda.',
+    ],
+    bloques: [
+      {
+        h2: 'Dónde se usa el vidrio impreso',
+        lista: [
+          'Revestimiento de paredes de cocina (frente de mesada) fácil de limpiar.',
+          'Paredes de baño y duchas con diseño, sin juntas que junten hongos.',
+          'Puertas y divisores de ambientes con diseño translúcido.',
+          'Tapas de mesa y mobiliario con diseño bajo el vidrio.',
+          'Locales y oficinas: logos y gráficas impresas en el vidrio.',
+        ],
+      },
+      {
+        h2: 'Diseños de muestrario o personalizados',
+        parrafos: [
+          'Tenemos muestrarios con diseños listos: símil mármol blanco, negro o azul, símil madera, follajes, aves, paisajes y tramas geométricas. Y si tenés otra idea, se puede imprimir un diseño propio o una imagen en alta resolución. Te mostramos las muestras reales para que elijas viendo el material, no un catálogo en pantalla.',
+        ],
+      },
+    ],
+    destacados: [
+      'Impresión digital directa sobre el vidrio',
+      'Símil mármol, madera, naturaleza y tramas',
+      'Diseños personalizados con tu imagen',
+      'Higiénico, sin juntas y fácil de limpiar',
+    ],
+    faqs: [
+      { q: '¿La impresión se raya o se despega con el tiempo?', a: 'No. La pintura digital queda integrada al vidrio y en la mayoría de las aplicaciones va por la cara interna, protegida. No es un vinilo pegado: no se despega, no junta humedad y se limpia con cualquier limpiavidrios.' },
+      { q: '¿Puedo imprimir una foto o un diseño propio?', a: 'Sí, siempre que la imagen tenga buena resolución para el tamaño del paño. Te confirmamos la calidad antes de imprimir.' },
+      { q: '¿Sirve para la pared de la cocina detrás de la hornalla?', a: 'Sí, es uno de sus usos más comunes: vidrio templado resistente al calor con el diseño que quieras, de una sola pieza y sin juntas. Mucho más higiénico que los azulejos.' },
+    ],
+    videos: [
+      { src: '/videos/video-stampa-muestrario-en-mano.mp4', poster: '/videos/video-stampa-muestrario-en-mano-poster.jpg', titulo: 'Recorrido por el muestrario de diseños stampa' },
+      { src: '/videos/video-stampa-muestrario-paneo.mp4', poster: '/videos/video-stampa-muestrario-paneo-poster.jpg', titulo: 'Muestras de vidrio impreso: mármol, aves y paisajes' },
     ],
   },
 ];

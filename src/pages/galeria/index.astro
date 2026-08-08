@@ -1,0 +1,100 @@
+---
+import Base from '../../layouts/Base.astro';
+import { site } from '../../data/site';
+import { servicios } from '../../data/servicios';
+import { fotosGaleria } from '../../data/galeria';
+
+const title = 'Galería de trabajos';
+const titleTail = 'fotos y videos reales de obras en San Lorenzo y Gran Asunción';
+const desc = 'Galería de trabajos reales de MÁS VIDRIOS: barandas de vidrio, aberturas de aluminio y PVC, cerramientos, mamparas, espejos, vidrio impreso stampa y puertas automáticas en San Lorenzo y Gran Asunción.';
+
+// categorías en orden de muestra, con su página de servicio para interlinking
+const CATS: { cat: string; nombre: string; href: string }[] = [
+  { cat: 'barandas-vidriadas', nombre: 'Barandas de vidrio e inox', href: '/servicios/barandas-vidriadas/' },
+  { cat: 'aberturas-de-aluminio', nombre: 'Aberturas de aluminio y PVC', href: '/servicios/aberturas-de-aluminio/' },
+  { cat: 'cerramientos-de-vidrio', nombre: 'Cerramientos y galerías', href: '/servicios/cerramientos-de-vidrio/' },
+  { cat: 'mamparas-de-bano', nombre: 'Mamparas de baño', href: '/servicios/mamparas-de-bano/' },
+  { cat: 'espejos', nombre: 'Espejos', href: '/servicios/espejos/' },
+  { cat: 'vidrio-templado', nombre: 'Vidrio templado', href: '/servicios/vidrio-templado/' },
+  { cat: 'stampa-vidrio-impreso', nombre: 'Stampa · vidrio impreso', href: '/servicios/stampa-vidrio-impreso/' },
+  { cat: 'puertas-automaticas', nombre: 'Puertas automáticas', href: '/servicios/puertas-automaticas/' },
+  { cat: 'divisorias-de-oficina', nombre: 'Divisorias y sanitarios', href: '/servicios/divisorias-de-oficina/' },
+];
+const grupos = CATS.map((c) => ({ ...c, fotos: fotosGaleria.filter((f) => f.cat === c.cat) })).filter((g) => g.fotos.length > 0);
+const total = grupos.reduce((n, g) => n + g.fotos.length, 0);
+
+const videos = servicios.flatMap((s) => s.videos ?? []);
+---
+<Base title={title} titleTail={titleTail} description={desc}>
+  <section class="phero">
+    <div class="wrap">
+      <div class="crumbs"><a href="/">Inicio</a> › Galería</div>
+      <h1>Galería de <span class="hl">trabajos reales</span></h1>
+      <p>{total} fotos y {videos.length} videos de obras nuestras en San Lorenzo y Gran Asunción. Sin fotos de banco de imágenes: todo lo que ves acá lo hicimos nosotros.</p>
+    </div>
+  </section>
+
+  {grupos.map((g) => (
+    <section class="gal-sec">
+      <div class="wrap">
+        <div class="gal-head">
+          <h2>{g.nombre} <span class="cnt">{g.fotos.length}</span></h2>
+          <a class="btn btn-ghost btn-sm" href={g.href}>Ver servicio</a>
+        </div>
+        <div class="grid-gal">
+          {g.fotos.map((f, i) => (
+            <figure class={i === 0 && g.fotos.length > 4 ? 'tall wide' : ''}>
+              <img src={f.src} alt={f.alt} loading="lazy" decoding="async" />
+              <figcaption>{f.cap}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section style="background:var(--bg2)">
+    <div class="wrap center">
+      <span class="eyebrow">En movimiento</span>
+      <h2 class="sec">Videos de nuestras obras</h2>
+      <p class="sec-sub">Instalaciones funcionando, muestrarios y recorridos de obra.</p>
+    </div>
+    <div class="wrap">
+      <div class="vid-grid">
+        {videos.map((v) => (
+          <figure class="vid-card">
+            <video controls muted playsinline preload="none" poster={v.poster}>
+              <source src={v.src} type="video/mp4" />
+            </video>
+            <figcaption>{v.titulo}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="ctaband">
+        <h2>¿Te imaginás algo así en tu casa o tu negocio?</h2>
+        <p>Contanos tu proyecto. Vamos a tu obra o domicilio y te presupuestamos sin compromiso.</p>
+        <a class="btn btn-white" href={site.whatsapp} target="_blank" rel="noopener">Contactanos</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .gal-sec{padding:34px 0}
+  .gal-sec:first-of-type{padding-top:56px}
+  .gal-head{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:20px}
+  .gal-head h2{font-size:26px;font-weight:800;letter-spacing:-.6px}
+  .gal-head .cnt{display:inline-block;margin-left:8px;font-size:13px;font-weight:700;color:var(--azul);background:rgba(36,120,252,.1);border-radius:999px;padding:3px 10px;vertical-align:middle}
+  .btn-sm{padding:9px 16px;font-size:13.5px}
+  .vid-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:38px}
+  @media(max-width:980px){.vid-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:640px){.vid-grid{grid-template-columns:1fr}}
+  .vid-card{border-radius:16px;overflow:hidden;border:1px solid var(--linea);background:#000;box-shadow:var(--shadow-sm)}
+  .vid-card video{display:block;width:100%;max-height:430px;background:#000}
+  .vid-card figcaption{background:#fff;padding:11px 14px;font-size:13.5px;font-weight:600;color:var(--tinta)}
+</style>

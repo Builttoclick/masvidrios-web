@@ -73,6 +73,28 @@ const serviceSchema = {
     </div>
   </section>
 
+  {s.videos && s.videos.length > 0 && (
+    <section style="padding-top:0">
+      <div class="wrap center">
+        <span class="eyebrow">En acción</span>
+        <h2 class="sec">Miralo funcionando</h2>
+        <p class="sec-sub">Videos reales de nuestras obras e instalaciones.</p>
+      </div>
+      <div class="wrap">
+        <div class={`vid-grid ${s.videos.length === 1 ? 'solo' : ''}`}>
+          {s.videos.map((v) => (
+            <figure class="vid-card">
+              <video controls muted playsinline preload="none" poster={v.poster}>
+                <source src={v.src} type="video/mp4" />
+              </video>
+              <figcaption>{v.titulo}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
   <!-- FAQ -->
   <section style="padding-top:0">
     <div class="wrap-narrow">
@@ -118,6 +140,12 @@ const serviceSchema = {
 </Base>
 
 <style>
+  .vid-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:38px;max-width:920px;margin-left:auto;margin-right:auto}
+  .vid-grid.solo{grid-template-columns:minmax(0,560px);justify-content:center}
+  @media(max-width:760px){.vid-grid{grid-template-columns:1fr}}
+  .vid-card{border-radius:16px;overflow:hidden;border:1px solid var(--linea);background:#000;box-shadow:var(--shadow-sm)}
+  .vid-card video{display:block;width:100%;max-height:520px;background:#000}
+  .vid-card figcaption{background:#fff;padding:12px 16px;font-size:14px;font-weight:600;color:var(--tinta)}
   .svc-grid{display:grid;grid-template-columns:1fr 340px;gap:44px;align-items:start}
   @media(max-width:880px){.svc-grid{grid-template-columns:1fr}}
   .svc-aside{position:sticky;top:96px;display:flex;flex-direction:column;gap:20px}
