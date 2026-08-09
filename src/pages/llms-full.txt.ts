@@ -30,7 +30,7 @@ export const GET: APIRoute = () => {
   L.push('');
 
   L.push('## Quiénes somos');
-  L.push('MÁS VIDRIOS nació en ' + site.founded + ' como fruto de la experiencia de una familia en el rubro del vidrio. Ofrece soluciones completas en vidrio templado, aluminio y construcción en seco para toda Gran Asunción. El dueño, ' + owner.name + ', atiende y va personalmente a cada obra: asesora sobre la solución que mejor funciona para el espacio y cuida cada terminación. Valores: honestidad, responsabilidad, seriedad y puntualidad. Atiende también en inglés a pedido (English spoken on request).');
+  L.push('MÁS VIDRIOS nació en ' + site.founded + ' como fruto de la experiencia de una familia en el rubro del vidrio. Ofrece soluciones completas con vidrio templado, aluminio y construcción en seco para toda Gran Asunción. El dueño, ' + owner.name + ', atiende y va personalmente a cada obra: asesora sobre la solución que mejor funciona para el espacio y cuida cada terminación. Valores: honestidad, responsabilidad, seriedad y puntualidad. Atiende también en inglés a pedido (English spoken on request).');
   L.push('');
 
   L.push('## Servicios');

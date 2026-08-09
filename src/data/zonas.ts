@@ -41,7 +41,7 @@ export const zonas: Zona[] = [
     metaDesc: 'Vidriería en Asunción: vidrio templado, cerramientos, divisorias de oficina, fachadas y aberturas de aluminio. +15 años de experiencia. Obras como la fachada de SITRANDE/ANDE. Presupuesto gratis.',
     hero: 'Trabajamos en toda Asunción, de la vivienda al edificio corporativo.',
     intro: [
-      'Asunción es donde están muchas de nuestras obras más exigentes. Desde MÁS VIDRIOS cruzamos a la capital de forma constante para cerramientos, divisorias de oficina, fachadas comerciales y trabajos de vidrio templado en viviendas y edificios.',
+      'Asunción es donde están muchas de nuestras obras más exigentes. Desde MÁS VIDRIOS cruzamos a la capital de forma constante para cerramientos, divisorias de oficina, fachadas comerciales y trabajos con vidrio templado en viviendas y edificios.',
       'Una de nuestras obras destacadas está justamente en Asunción: la fachada del Sindicato de Trabajadores de la ANDE (SITRANDE), sobre la calle Tte. Fariña. Ese tipo de trabajo en altura y de cara al público es la mejor carta de presentación de lo que hacemos.',
     ],
     local: [
@@ -62,7 +62,7 @@ export const zonas: Zona[] = [
     metaDesc: 'Vidriería en Luque: cerramientos de vidrio, mamparas, divisorias y aberturas de aluminio a medida. Empresa familiar con +15 años. Vamos a tu obra. Presupuesto sin compromiso.',
     hero: 'Llegamos a Luque y alrededores con el mismo servicio de siempre.',
     intro: [
-      'Luque está dentro de nuestra zona de trabajo habitual. Desde San Lorenzo llegamos sin problema para cerramientos de galería, mamparas de baño, ventanas de aluminio, barandas y trabajos de vidrio templado en viviendas y comercios.',
+      'Luque está dentro de nuestra zona de trabajo habitual. Desde San Lorenzo llegamos sin problema para cerramientos de galería, mamparas de baño, ventanas de aluminio, barandas y trabajos con vidrio templado en viviendas y comercios.',
       'El crecimiento residencial de Luque trajo muchas casas nuevas que buscan cerrar galerías y quinchos para aprovecharlos todo el año, uno de los trabajos que más hacemos en la zona.',
     ],
     local: [
@@ -83,7 +83,7 @@ export const zonas: Zona[] = [
     metaDesc: 'Vidriería en Fernando de la Mora: vidrio templado, mamparas, cerramientos y aberturas de aluminio a medida. +15 años de experiencia. Presupuesto sin compromiso, vamos a tu obra.',
     hero: 'Fernando de la Mora, a pasos de nuestra base en San Lorenzo.',
     intro: [
-      'Fernando de la Mora limita con San Lorenzo, así que es una de las zonas que atendemos con mayor rapidez. Hacemos mamparas, cerramientos, divisiones, ventanas de aluminio y todo tipo de trabajos de vidrio templado, tanto en viviendas como en comercios y oficinas.',
+      'Fernando de la Mora limita con San Lorenzo, así que es una de las zonas que atendemos con mayor rapidez. Hacemos mamparas, cerramientos, divisiones, ventanas de aluminio y todo tipo de trabajos con vidrio templado, tanto en viviendas como en comercios y oficinas.',
       'La cercanía con nuestro taller hace que medir, fabricar y colocar en Fernando de la Mora sea ágil, ideal cuando necesitás resolver rápido.',
     ],
     local: [
@@ -104,7 +104,7 @@ export const zonas: Zona[] = [
     metaDesc: 'Vidriería en Capiatá: cerramientos de vidrio, aberturas de aluminio, mamparas y vidrio templado a medida. Empresa familiar con +15 años. Vamos a tu obra. Presupuesto gratis.',
     hero: 'Capiatá también está dentro de nuestra zona de cobertura.',
     intro: [
-      'Capiatá forma parte del corredor donde trabajamos habitualmente desde San Lorenzo. Hacemos cerramientos de galería, aberturas de aluminio, mamparas, barandas y trabajos de vidrio templado para las viviendas y comercios de la zona.',
+      'Capiatá forma parte del corredor donde trabajamos habitualmente desde San Lorenzo. Hacemos cerramientos de galería, aberturas de aluminio, mamparas, barandas y trabajos con vidrio templado para las viviendas y comercios de la zona.',
       'Con el crecimiento de Capiatá, cada vez más casas buscan cerrar galerías y poner aberturas de aluminio de calidad, justo lo nuestro.',
     ],
     local: [

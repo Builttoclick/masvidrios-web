@@ -43,7 +43,7 @@ const faqSchema = {
       {z.intro.map((p) => <p>{p}</p>)}
 
       <h2>Nuestros servicios en {z.nombre}</h2>
-      <p>En {z.nombre} hacemos <a href="/servicios/vidrio-templado/">vidrio templado</a>, <a href="/servicios/cerramientos-de-vidrio/">cerramientos de galería</a>, <a href="/servicios/mamparas-de-bano/">mamparas de baño</a>, <a href="/servicios/divisorias-de-oficina/">divisorias de oficina</a>, <a href="/servicios/aberturas-de-aluminio/">aberturas de aluminio</a> y más. Estos son los servicios que más nos piden en la zona:</p>
+      <p>En {z.nombre} hacemos <a href="/servicios/cerramientos-de-vidrio/">cerramientos de galería</a>, <a href="/servicios/mamparas-de-bano/">mamparas de baño</a>, <a href="/servicios/divisorias-de-oficina/">divisorias de oficina</a>, <a href="/servicios/aberturas-de-aluminio/">aberturas de aluminio</a> y todo tipo de trabajos con <a href="/servicios/vidrio-templado/">vidrio templado</a>. Estos son los servicios que más nos piden en la zona:</p>
       <div class="chips" style="margin:6px 0 24px">
         {destacados.map((s) => <a class="chip" href={`/servicios/${s.slug}/`}>{s.nombre}</a>)}
       </div>

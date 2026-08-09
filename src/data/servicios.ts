@@ -30,12 +30,12 @@ export const servicios: Servicio[] = [
     foto: '/fotos/proyectos/puerta-corrediza-vidrio-aluminio-negro-estilo-industrial-cuadricula.jpg',
     fotoAlt: 'Puerta corrediza de vidrio templado estilo industrial con aluminio negro · MÁS VIDRIOS',
     metaTitle: 'Vidrio templado en San Lorenzo',
-    titleTail: 'colocación, puertas, ventanas y tapas de vidrio templado cerca tuyo',
-    metaDesc: 'Colocación e instalación de vidrio templado en San Lorenzo y Gran Asunción: puertas, ventanas, tapas de mesa y cerramientos. Empresa familiar con +15 años. Presupuesto sin compromiso.',
-    hero: 'Nuestro rubro principal: provisión y colocación de vidrio templado de seguridad, a medida y con terminación prolija.',
+    titleTail: 'puertas, ventanas, mamparas y tapas de vidrio templado a medida cerca tuyo',
+    metaDesc: 'Puertas, ventanas, tapas de mesa y cerramientos con vidrio templado en San Lorenzo y Gran Asunción, hechos a medida e instalados. Empresa familiar con +15 años. Presupuesto sin compromiso.',
+    hero: 'Nuestro rubro principal: puertas, ventanas, mamparas y tapas de mesa con vidrio templado de seguridad, a medida y con terminación prolija.',
     intro: [
       'El vidrio templado es el corazón de lo que hacemos en MÁS VIDRIOS desde 2009. Es un vidrio sometido a un tratamiento térmico que lo vuelve hasta cinco veces más resistente que un vidrio común y que, ante un golpe extremo, se fragmenta en pedazos pequeños y sin filo en lugar de astillas peligrosas. Por eso es el material indicado para puertas, ventanas, mamparas, barandas y tapas de mesa donde la seguridad importa.',
-      'Trabajamos toda la cadena: te asesoramos sobre el espesor y el tipo de vidrio según el uso, tomamos las medidas en tu obra, y nos encargamos de la colocación con la perfilería y los herrajes correctos. En San Lorenzo y toda Gran Asunción nos trasladamos a tu domicilio u obra para presupuestar sin compromiso.',
+      'Trabajamos toda la cadena: te asesoramos sobre el espesor y el tipo de vidrio según el uso, tomamos las medidas en tu obra, fabricamos cada pieza y nos encargamos de la colocación con la perfilería y los herrajes correctos. En San Lorenzo y toda Gran Asunción nos trasladamos a tu domicilio u obra para presupuestar sin compromiso.',
     ],
     bloques: [
       {
@@ -52,19 +52,19 @@ export const servicios: Servicio[] = [
         h2: 'Por qué elegir vidrio templado y no vidrio común',
         parrafos: [
           'La diferencia se nota en el uso diario. Un vidrio crudo de la misma medida es mucho más frágil y, si se rompe, lo hace en placas con filo. El templado resiste mejor los golpes, los cambios de temperatura y el peso de los herrajes, y cumple con las exigencias de seguridad para puertas y barandas.',
-          'Si tu proyecto no requiere templado, también trabajamos vidrio crudo, laminado y espejos: te recomendamos la opción justa para que no pagues de más ni de menos.',
+          'Si tu proyecto no requiere templado, también hacemos trabajos con vidrio crudo, laminado y espejos: te recomendamos la opción justa para que no pagues de más ni de menos.',
         ],
       },
     ],
     destacados: [
-      'Vidrio templado de seguridad, cortado y procesado a medida',
+      'Trabajos a medida con vidrio templado de seguridad',
       'Asesoramiento de espesor y herrajes según el uso',
       'Medición en obra y colocación profesional',
       'Cobertura en San Lorenzo y toda Gran Asunción',
     ],
     faqs: [
       { q: '¿El vidrio templado se puede cortar después de templado?', a: 'No. El vidrio se corta y se procesa (perforaciones, pulido) antes del templado. Por eso es clave tomar bien las medidas en obra desde el principio, de eso nos encargamos nosotros.' },
-      { q: '¿Cuánto tarda un trabajo de vidrio templado?', a: 'Depende del tamaño y de la cola de fabricación, pero en general entre una y dos semanas desde que se aprueba el presupuesto y se toman las medidas definitivas. Te damos un plazo concreto al presupuestar.' },
+      { q: '¿Cuánto tarda un trabajo con vidrio templado?', a: 'Depende del tamaño y de la cola de fabricación, pero en general entre una y dos semanas desde que se aprueba el presupuesto y se toman las medidas definitivas. Te damos un plazo concreto al presupuestar.' },
       { q: '¿Hacen tapas de mesa de vidrio templado a medida?', a: 'Sí, con el espesor y el canto que prefieras (pulido recto, biselado, etc.). Tomamos el molde exacto de tu mesa para que calce perfecto.' },
     ],
   },
@@ -124,9 +124,9 @@ export const servicios: Servicio[] = [
     foto: '/fotos/proyectos/puerta-bambu-marco-madera-bano-marmol.jpg',
     fotoAlt: 'Baño revestido en mármol con carpintería a medida · MÁS VIDRIOS',
     metaTitle: 'Mamparas de baño en San Lorenzo',
-    titleTail: 'mamparas de ducha en vidrio templado a medida cerca tuyo',
-    metaDesc: 'Mamparas de baño en vidrio templado de seguridad en San Lorenzo y Gran Asunción. A medida, robustas y de durabilidad garantizada. Evitá salpicaduras con estilo. Presupuesto sin compromiso.',
-    hero: 'Mamparas de ducha en vidrio templado de seguridad: a medida, resistentes y fáciles de limpiar.',
+    titleTail: 'mamparas de ducha con vidrio templado a medida cerca tuyo',
+    metaDesc: 'Mamparas de baño con vidrio templado de seguridad en San Lorenzo y Gran Asunción. A medida, robustas y de durabilidad garantizada. Evitá salpicaduras con estilo. Presupuesto sin compromiso.',
+    hero: 'Mamparas de ducha con vidrio templado de seguridad: a medida, resistentes y fáciles de limpiar.',
     intro: [
       'La mampara de ducha es uno de esos detalles que cambian por completo un baño. Evita las salpicaduras, mantiene el ambiente cálido durante el baño y le da una sensación de amplitud y prolijidad que ninguna cortina logra. En MÁS VIDRIOS las fabricamos a medida de tu baño, no con kits estándar que nunca terminan de calzar.',
       'Apostamos sin dudas por el vidrio templado de seguridad: mucho más robusto y resistente que el acrílico, con una durabilidad garantizada y una transparencia que se mantiene en el tiempo. Vos elegís el sistema de apertura, los herrajes y el acabado; nosotros nos encargamos del resto.',
@@ -357,7 +357,7 @@ export const servicios: Servicio[] = [
     hero: 'Techos y cubiertas de policarbonato: translúcidos, resistentes y livianos.',
     intro: [
       'El policarbonato es la solución ideal cuando querés cubrir un espacio dejando pasar la luz: galerías, patios, cocheras, pasillos y aberturas cenitales. Es hasta 200 veces más resistente al impacto que el vidrio, muy liviano, y filtra los rayos UV protegiendo lo que hay debajo.',
-      'En MÁS VIDRIOS proveemos e instalamos policarbonato alveolar y compacto, con la estructura de soporte y los perfiles de sujeción correctos para que la cubierta sea estanca y dure años.',
+      'En MÁS VIDRIOS hacemos techos y cubiertas de policarbonato alveolar y compacto, con la estructura de soporte y los perfiles de sujeción correctos para que la cubierta sea estanca y dure años.',
     ],
     bloques: [
       {
@@ -487,10 +487,10 @@ export const servicios: Servicio[] = [
     fotoAlt: 'Frente vidriado con puerta automática en local comercial · MÁS VIDRIOS',
     metaTitle: 'Puertas automáticas en San Lorenzo',
     titleTail: 'puertas corredizas automáticas de vidrio para comercios cerca tuyo',
-    metaDesc: 'Puertas automáticas de vidrio en San Lorenzo y Gran Asunción: corredizas con sensor de movimiento para comercios, oficinas, sanatorios y edificios. Provisión, instalación y service. Presupuesto sin compromiso.',
+    metaDesc: 'Puertas automáticas de vidrio en San Lorenzo y Gran Asunción: corredizas con sensor de movimiento para comercios, oficinas, sanatorios y edificios. Instalación completa y service. Presupuesto sin compromiso.',
     hero: 'Puertas corredizas automáticas de vidrio con sensor: la entrada que tu comercio necesita.',
     intro: [
-      'La puerta automática es la carta de presentación de un comercio moderno: se abre sola al detectar a tu cliente, mantiene el aire acondicionado adentro y deja el frente completamente vidriado y luminoso. En MÁS VIDRIOS proveemos e instalamos puertas corredizas automáticas de vidrio con el operador, los sensores y el vidrio de seguridad que corresponde.',
+      'La puerta automática es la carta de presentación de un comercio moderno: se abre sola al detectar a tu cliente, mantiene el aire acondicionado adentro y deja el frente completamente vidriado y luminoso. En MÁS VIDRIOS instalamos puertas corredizas automáticas de vidrio completas, con el operador, los sensores y el vidrio de seguridad que corresponde.',
       'Las instalamos en locales comerciales, oficinas, sanatorios, farmacias y edificios de toda Gran Asunción. Nos encargamos del conjunto completo: el frente de vidrio templado, el mecanismo en el dintel, la puesta en marcha y la regulación fina para que abra y cierre suave, sin golpes.',
     ],
     bloques: [
