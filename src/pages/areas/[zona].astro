@@ -29,7 +29,7 @@ const faqSchema = {
   <section class="phero">
     <div class="wrap">
       <div class="crumbs"><a href="/">Inicio</a> › <a href="/areas/">Zonas</a> › {z.nombre}</div>
-      <h1>Vidriería en <span class="hl">{z.nombre}</span></h1>
+      <h1>{z.slug === 'san-lorenzo' ? 'Vidriería en ' : 'Vidrio y aluminio en '}<span class="hl">{z.nombre}</span></h1>
       <p>{z.hero}</p>
       <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:24px">
         <a class="btn btn-primary" href={site.whatsapp} target="_blank" rel="noopener">Pedir presupuesto</a>

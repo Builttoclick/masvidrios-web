@@ -55,6 +55,13 @@ export const servicios: Servicio[] = [
           'Si tu proyecto no requiere templado, también hacemos trabajos con vidrio crudo, laminado y espejos: te recomendamos la opción justa para que no pagues de más ni de menos.',
         ],
       },
+      {
+        h2: 'Cuándo va templado y cuándo va laminado',
+        parrafos: [
+          'El templado es el indicado para puertas, ventanas, mamparas, barandas y tapas de mesa. Para fachadas de edificios y techos de vidrio, en cambio, va el laminado: lleva una lámina intermedia que sostiene los pedazos si el vidrio llega a romperse, y por eso es el que corresponde cuando el vidrio está en altura sobre la gente.',
+          'Trabajamos los dos, y cuando vamos a tu obra te decimos cuál corresponde en cada lugar. Muchas veces en la misma casa conviven los dos, y saber cuál va en cada sitio es parte del asesoramiento.',
+        ],
+      },
     ],
     destacados: [
       'Trabajos a medida con vidrio templado de seguridad',
@@ -66,6 +73,7 @@ export const servicios: Servicio[] = [
       { q: '¿El vidrio templado se puede cortar después de templado?', a: 'No. El vidrio se corta y se procesa (perforaciones, pulido) antes del templado. Por eso es clave tomar bien las medidas en obra desde el principio, de eso nos encargamos nosotros.' },
       { q: '¿Cuánto tarda un trabajo con vidrio templado?', a: 'Depende del tamaño y de la cola de fabricación, pero en general entre una y dos semanas desde que se aprueba el presupuesto y se toman las medidas definitivas. Te damos un plazo concreto al presupuestar.' },
       { q: '¿Hacen tapas de mesa de vidrio templado a medida?', a: 'Sí, con el espesor y el canto que prefieras (pulido recto, biselado, etc.). Tomamos el molde exacto de tu mesa para que calce perfecto.' },
+      { q: '¿Qué vidrio corresponde en una fachada o en un techo de vidrio?', a: 'Ahí va vidrio laminado: lleva una lámina intermedia que sostiene los pedazos si el vidrio llega a romperse, y por eso es el que corresponde cuando el vidrio está en altura. El templado va en puertas, ventanas, mamparas, barandas y tapas de mesa. Trabajamos los dos y te decimos cuál corresponde en cada parte de tu obra.' },
     ],
   },
   {
@@ -173,7 +181,7 @@ export const servicios: Servicio[] = [
     hero: 'Oficinas más luminosas, ordenadas y modernas con divisiones de vidrio a medida.',
     intro: [
       'Las divisiones de vidrio transformaron la forma de pensar las oficinas: separan ambientes sin cerrar la luz, dan sensación de amplitud y proyectan una imagen profesional y vanguardista. En MÁS VIDRIOS las diseñamos y personalizamos según tu presupuesto y la distribución real de tu espacio, porque sabemos que cada empresa tiene necesidades distintas.',
-      'Trabajamos tanto la tabiquería vidriada de piso a techo como las divisiones combinadas con paneles ciegos, siempre con perfilería de aluminio prolija y puertas de vidrio con herrajes de calidad. El resultado: un ambiente de trabajo aislado del ruido pero conectado visualmente.',
+      'Trabajamos tanto las divisiones vidriadas de piso a techo como las combinadas con paneles ciegos, siempre con perfilería de aluminio prolija y puertas de vidrio con herrajes de calidad. El resultado: un ambiente de trabajo aislado del ruido pero conectado visualmente.',
     ],
     bloques: [
       {
@@ -214,40 +222,41 @@ export const servicios: Servicio[] = [
     fotoAlt: 'Ventana corrediza de aluminio símil madera con mosquitero · MÁS VIDRIOS',
     metaTitle: 'Aberturas de aluminio en San Lorenzo',
     titleTail: 'ventanas y puertas de aluminio a medida cerca tuyo',
-    metaDesc: 'Aberturas de aluminio y PVC en San Lorenzo y Gran Asunción: ventanas y puertas corredizas, líneas suprema y 25, símil madera, PVC y mosquiteros. A medida y bien instaladas. Presupuesto sin compromiso.',
-    hero: 'Ventanas y puertas de aluminio y PVC a medida, líneas suprema, 25, módulo práctico, símil madera y mosquiteros.',
+    metaDesc: 'Aberturas de aluminio y PVC en San Lorenzo y Gran Asunción: ventanas y puertas corredizas, líneas Inova, Gold y Alpha, efecto madera, PVC y tela mosquitera. A medida y bien instaladas. Presupuesto sin compromiso.',
+    hero: 'Ventanas y puertas de aluminio y PVC a medida, en líneas Inova, Gold y Alpha, con tela mosquitera y en los colores estándar.',
     intro: [
       'El aluminio es el complemento natural del vidrio y una de nuestras especialidades. Es liviano, no se oxida, casi no necesita mantenimiento y permite armar ventanas y puertas de gran tamaño con marcos finos que dejan entrar la mayor cantidad de luz posible.',
-      'En MÁS VIDRIOS trabajamos las líneas más usadas del mercado, suprema, línea 25, módulo práctico, además de mosquiteros corredizos y la línea símil madera para quienes buscan la calidez de la madera sin su mantenimiento. También instalamos aberturas de PVC, la opción de mayor aislación térmica y acústica. Fabricamos y colocamos a medida, con el vidrio que corresponda en cada caso.',
+      'En MÁS VIDRIOS trabajamos las líneas Inova, Gold y Alpha, además de las aberturas con tela mosquitera y el color efecto madera para quienes buscan la calidez de la madera sin su mantenimiento. También instalamos aberturas de PVC, la opción de mayor aislación térmica y acústica. Fabricamos y colocamos a medida, con el vidrio que corresponda en cada caso.',
     ],
     bloques: [
       {
         h2: 'Líneas y productos',
         lista: [
-          'Ventanas corredizas y de abrir en líneas suprema, 25 y módulo práctico.',
+          'Ventanas corredizas, batientes y proyectantes en líneas Inova, Gold y Alpha.',
           'Puertas de aluminio con vidrio para entradas y balcones.',
-          'Aluminio símil madera (símil roble y otros tonos).',
+          'Aluminio efecto madera (símil roble y otros tonos).',
           'Aberturas de PVC de alta aislación térmica y acústica.',
-          'Mosquiteros corredizos integrados.',
+          'Aberturas con tela mosquitera.',
           'Paños fijos y ventanales de gran formato.',
         ],
       },
       {
-        h2: 'Color y acabado',
+        h2: 'Colores disponibles',
         parrafos: [
-          'El aluminio puede ir en blanco, negro, anodizado natural o símil madera. Elegís el acabado que mejor combine con la fachada y la carpintería de tu casa, y nosotros nos encargamos de que las aberturas calcen y cierren perfecto.',
+          'El aluminio va en negro, blanco, aluminio natural y efecto madera. Son los cuatro que mejor resuelven cualquier fachada, y te mostramos cómo queda cada uno para que elijas viendo el material. De la medida y del cierre nos encargamos nosotros: la abertura tiene que calzar y cerrar perfecto.',
         ],
       },
     ],
     destacados: [
-      'Líneas suprema, 25 y módulo práctico',
-      'Símil madera y acabados a elección',
-      'Mosquiteros corredizos integrados',
+      'Líneas Inova, Gold y Alpha',
+      'Colores: negro, blanco, natural y efecto madera',
+      'Aberturas con tela mosquitera',
       'Fabricación y colocación a medida',
     ],
     faqs: [
-      { q: '¿Qué línea de aluminio me conviene?', a: 'Depende del tamaño de la abertura, la exposición al viento y el presupuesto. La línea suprema es más robusta para grandes vanos; la línea 25 es ideal para aberturas estándar. Te asesoramos según tu caso.' },
-      { q: '¿El aluminio símil madera se mantiene como la madera?', a: 'No requiere el mantenimiento de la madera real: no hay que barnizar ni se pudre. Da la estética cálida de la madera con la durabilidad del aluminio.' },
+      { q: '¿Qué línea de aluminio me conviene?', a: 'Depende del tamaño de la abertura, del peso del vidrio que va a llevar y del uso que le vas a dar. Trabajamos las líneas Inova, Gold y Alpha, y te decimos cuál corresponde en tu caso cuando vemos la obra.' },
+      { q: '¿En qué colores viene el aluminio?', a: 'En negro, blanco, aluminio natural y efecto madera. Contanos cómo es tu fachada o tu ambiente y te decimos cuál queda mejor, o te mostramos las muestras para que elijas viendo el material.' },
+      { q: '¿El aluminio efecto madera se mantiene como la madera?', a: 'No requiere el mantenimiento de la madera real: no hay que barnizar ni se pudre. Da la estética cálida de la madera con la durabilidad del aluminio.' },
       { q: '¿Trabajan aberturas de PVC además de aluminio?', a: 'Sí. Instalamos aberturas de PVC con perfilería de primera línea, una gran opción cuando la prioridad es la aislación térmica y acústica. Te asesoramos sobre qué conviene en tu obra, aluminio o PVC.' },
       { q: '¿Incluye el vidrio y la colocación?', a: 'Sí. Presupuestamos la abertura completa, perfilería, vidrio, herrajes y colocación, para que no tengas que coordinar con varios proveedores.' },
     ],
@@ -353,39 +362,40 @@ export const servicios: Servicio[] = [
     fotoAlt: 'Galería cubierta con estructura y cerramiento · MÁS VIDRIOS',
     metaTitle: 'Techos de policarbonato en San Lorenzo',
     titleTail: 'techos y cubiertas de policarbonato translúcido cerca tuyo',
-    metaDesc: 'Techos y cubiertas de policarbonato en San Lorenzo y Gran Asunción: translúcidos, resistentes y livianos para galerías, patios y aberturas cenitales. Presupuesto sin compromiso.',
-    hero: 'Techos y cubiertas de policarbonato: translúcidos, resistentes y livianos.',
+    metaDesc: 'Policarbonato alveolar en San Lorenzo y Gran Asunción: cambio de placas deterioradas sobre tu estructura existente y cubiertas nuevas con estructura de aluminio. Presupuesto sin compromiso.',
+    hero: 'Policarbonato alveolar: cambio de placas sobre tu estructura existente y cubiertas nuevas en aluminio.',
     intro: [
-      'El policarbonato es la solución ideal cuando querés cubrir un espacio dejando pasar la luz: galerías, patios, cocheras, pasillos y aberturas cenitales. Es hasta 200 veces más resistente al impacto que el vidrio, muy liviano, y filtra los rayos UV protegiendo lo que hay debajo.',
-      'En MÁS VIDRIOS hacemos techos y cubiertas de policarbonato alveolar y compacto, con la estructura de soporte y los perfiles de sujeción correctos para que la cubierta sea estanca y dure años.',
+      'El policarbonato es la solución cuando querés cubrir un espacio dejando pasar la luz: galerías, patios, cocheras, pasillos y aberturas en el techo para iluminar ambientes interiores. Es mucho más resistente al impacto que el vidrio, muy liviano, y filtra los rayos UV protegiendo lo que hay debajo.',
+      'Lo que más nos piden es el cambio de placas: desmontamos la placa deteriorada de tu techo existente, colocamos la nueva y sellamos, sea cual sea la estructura que ya tengas. Y cuando la cubierta es nueva, la hacemos completa con estructura de aluminio, que es liviana, no se oxida y acompaña perfecto al policarbonato.',
     ],
     bloques: [
       {
-        h2: 'Aplicaciones',
+        h2: 'Qué hacemos con policarbonato',
         lista: [
-          'Techos de galerías, patios y quinchos.',
+          'Cambio de placas deterioradas sobre tu estructura existente, con desmonte y sellado.',
+          'Techos de galerías, patios y quinchos con estructura de aluminio.',
           'Cubiertas de cocheras y entradas.',
           'Cerramientos translúcidos y medias sombras.',
-          'Aberturas cenitales para iluminar ambientes interiores.',
         ],
       },
       {
-        h2: 'Alveolar o compacto',
+        h2: 'Policarbonato alveolar',
         parrafos: [
-          'El policarbonato alveolar (tipo "panal") es más liviano y económico, con buena aislación; el compacto es macizo, más resistente y transparente, parecido al vidrio. Según el uso y el presupuesto te recomendamos el indicado.',
+          'Trabajamos policarbonato alveolar, el tipo "panal": liviano, resistente al granizo y con cámaras de aire que ayudan a aislar el calor. Es el que mejor rinde en el clima de acá y viene en varios tonos para graduar cuánta luz y cuánto calor dejás pasar. Contanos qué querés cubrir y te decimos el tono y el espesor que conviene.',
         ],
       },
     ],
     destacados: [
-      'Policarbonato alveolar y compacto',
+      'Cambio de placas sobre estructura existente',
+      'Policarbonato alveolar',
+      'Estructura nueva en aluminio',
       'Resistente al impacto y a los rayos UV',
-      'Liviano y translúcido',
-      'Estructura y colocación incluidas',
     ],
     faqs: [
+      { q: '¿Se puede cambiar solo la placa y aprovechar el techo que ya tengo?', a: 'Sí, es lo que más hacemos. Desmontamos la placa deteriorada, colocamos la nueva sobre tu estructura existente y sellamos. Sale bastante menos que rehacer el techo entero.' },
+      { q: '¿Hacen también la estructura del techo?', a: 'Sí, la hacemos en aluminio, que es liviano, no se oxida y acompaña perfecto al policarbonato. Contanos la medida del espacio a cubrir y te presupuestamos la cubierta completa.' },
       { q: '¿El policarbonato amarillea con el sol?', a: 'Los policarbonatos de calidad vienen con protección UV en una de sus caras; instalados con esa cara hacia el sol, resisten muy bien y mantienen su transparencia por muchos años.' },
-      { q: '¿Aísla del calor?', a: 'El alveolar tiene cámaras de aire que ayudan a aislar; además podés elegir colores y tonos (opal, bronce) que reducen el ingreso de calor y el resplandor.' },
-      { q: '¿Incluye la estructura?', a: 'Sí, presupuestamos la cubierta completa: estructura de soporte, perfiles de sujeción y el policarbonato, todo instalado.' },
+      { q: '¿Aísla del calor?', a: 'El alveolar tiene cámaras de aire que ayudan a aislar; además hay colores y tonos que reducen el ingreso de calor y el resplandor.' },
     ],
   },
   {

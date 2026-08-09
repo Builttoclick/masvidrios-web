@@ -39,7 +39,7 @@ export const zonas: Zona[] = [
     metaTitle: 'Vidriería en Asunción',
     titleTail: 'vidrio templado, cerramientos, divisorias de oficina y aberturas de aluminio en Asunción',
     metaDesc: 'Vidriería en Asunción: vidrio templado, cerramientos, divisorias de oficina, fachadas y aberturas de aluminio. +15 años de experiencia. Obras como la fachada de SITRANDE/ANDE. Presupuesto gratis.',
-    hero: 'Trabajamos en toda Asunción, de la vivienda al edificio corporativo.',
+    hero: 'Cruzamos a Asunción desde nuestro taller de San Lorenzo, de la vivienda al edificio corporativo.',
     intro: [
       'Asunción es donde están muchas de nuestras obras más exigentes. Desde MÁS VIDRIOS cruzamos a la capital de forma constante para cerramientos, divisorias de oficina, fachadas comerciales y trabajos con vidrio templado en viviendas y edificios.',
       'Una de nuestras obras destacadas está justamente en Asunción: la fachada del Sindicato de Trabajadores de la ANDE (SITRANDE), sobre la calle Tte. Fariña. Ese tipo de trabajo en altura y de cara al público es la mejor carta de presentación de lo que hacemos.',
@@ -49,7 +49,8 @@ export const zonas: Zona[] = [
       'Coordinamos las visitas y la logística para movernos con la realidad del tránsito asunceno, y si la obra lo requiere trabajamos por etapas o en horarios convenidos.',
     ],
     faqs: [
-      { q: '¿Hacen divisiones de oficina en Asunción?', a: 'Sí, es uno de nuestros trabajos más solicitados en la capital. Hacemos tabiquería de vidrio, salas de reunión y puertas vidriadas a medida para oficinas y edificios.' },
+      { q: '¿Desde dónde atienden Asunción?', a: 'Desde nuestro taller de San Lorenzo. Cruzamos a Asunción a tomar las medidas, colocar y hacer después el mantenimiento, con el mismo equipo que fabrica. Es así desde 2009.' },
+      { q: '¿Hacen divisiones de oficina en Asunción?', a: 'Sí, es uno de nuestros trabajos más solicitados en la capital. Hacemos divisiones de vidrio, salas de reunión y puertas vidriadas a medida para oficinas y edificios.' },
       { q: '¿Trabajan fachadas y vidrieras comerciales en Asunción?', a: 'Sí. Hicimos, por ejemplo, la fachada de SITRANDE/ANDE. Hacemos vidrieras, frentes comerciales y muros cortina en zonas de alto tránsito.' },
       { q: '¿Llegan a todos los barrios de Asunción?', a: 'Sí, cubrimos toda Asunción. Coordinamos la visita según la zona para optimizar los tiempos.' },
     ],
@@ -60,7 +61,7 @@ export const zonas: Zona[] = [
     metaTitle: 'Vidriería en Luque',
     titleTail: 'vidrio templado, cerramientos, mamparas y aberturas de aluminio en Luque',
     metaDesc: 'Vidriería en Luque: cerramientos de vidrio, mamparas, divisorias y aberturas de aluminio a medida. Empresa familiar con +15 años. Vamos a tu obra. Presupuesto sin compromiso.',
-    hero: 'Llegamos a Luque y alrededores con el mismo servicio de siempre.',
+    hero: 'Vamos a Luque y alrededores desde nuestro taller de San Lorenzo, con el mismo servicio de siempre.',
     intro: [
       'Luque está dentro de nuestra zona de trabajo habitual. Desde San Lorenzo llegamos sin problema para cerramientos de galería, mamparas de baño, ventanas de aluminio, barandas y trabajos con vidrio templado en viviendas y comercios.',
       'El crecimiento residencial de Luque trajo muchas casas nuevas que buscan cerrar galerías y quinchos para aprovecharlos todo el año, uno de los trabajos que más hacemos en la zona.',
@@ -70,6 +71,7 @@ export const zonas: Zona[] = [
       'Como en toda nuestra cobertura, la visita para presupuestar en Luque es sin cargo y sin compromiso.',
     ],
     faqs: [
+      { q: '¿Desde dónde atienden Luque?', a: 'Desde nuestro taller de San Lorenzo. Vamos a Luque a tomar las medidas, colocar y hacer después el mantenimiento, con el mismo equipo que fabrica. Es así desde 2009.' },
       { q: '¿Atienden en Luque sin recargo por distancia?', a: 'Luque está dentro de nuestra zona habitual; la visita para presupuestar es sin cargo. Cualquier detalle de logística lo charlamos al coordinar.' },
       { q: '¿Qué es lo que más hacen en Luque?', a: 'Cerramientos de galería y quincho, mamparas y aberturas de aluminio para las viviendas nuevas de la zona.' },
       { q: '¿Trabajan en barrios cerrados de Luque?', a: 'Sí. Coordinamos el ingreso y los horarios según las reglas de cada barrio cerrado o condominio.' },
@@ -91,7 +93,7 @@ export const zonas: Zona[] = [
       'La visita para tomar medidas y presupuestar es sin cargo, como en toda nuestra cobertura de Gran Asunción.',
     ],
     faqs: [
-      { q: '¿Cuánto tardan en ir a Fernando de la Mora?', a: 'Al estar pegado a San Lorenzo, es de las zonas que atendemos más rápido. Coordinamos la visita en pocos días.' },
+      { q: '¿Desde dónde atienden Fernando de la Mora?', a: 'Desde nuestro taller de San Lorenzo, que está pegado, así que es de las zonas que atendemos más rápido. Vamos a medir, colocar y hacer después el mantenimiento, con el mismo equipo que fabrica.' },
       { q: '¿Hacen mamparas a medida en Fernando de la Mora?', a: 'Sí. Vamos a tu baño, medimos y fabricamos la mampara de vidrio templado a la medida exacta.' },
       { q: '¿Atienden comercios sobre las avenidas?', a: 'Sí, hacemos vidrieras, frentes y cerramientos comerciales en los corredores de avenidas de Fernando de la Mora.' },
     ],
@@ -102,7 +104,7 @@ export const zonas: Zona[] = [
     metaTitle: 'Vidriería en Capiatá',
     titleTail: 'vidrio templado, cerramientos, aberturas de aluminio y mamparas en Capiatá',
     metaDesc: 'Vidriería en Capiatá: cerramientos de vidrio, aberturas de aluminio, mamparas y vidrio templado a medida. Empresa familiar con +15 años. Vamos a tu obra. Presupuesto gratis.',
-    hero: 'Capiatá también está dentro de nuestra zona de cobertura.',
+    hero: 'Llegamos a Capiatá desde nuestro taller de San Lorenzo, como a toda Gran Asunción.',
     intro: [
       'Capiatá forma parte del corredor donde trabajamos habitualmente desde San Lorenzo. Hacemos cerramientos de galería, aberturas de aluminio, mamparas, barandas y trabajos con vidrio templado para las viviendas y comercios de la zona.',
       'Con el crecimiento de Capiatá, cada vez más casas buscan cerrar galerías y poner aberturas de aluminio de calidad, justo lo nuestro.',
@@ -112,7 +114,7 @@ export const zonas: Zona[] = [
       'La visita para presupuestar en Capiatá es sin cargo y sin compromiso.',
     ],
     faqs: [
-      { q: '¿Atienden en Capiatá?', a: 'Sí, Capiatá está dentro de nuestra zona de cobertura habitual. Coordinamos la visita para tomar medidas sin cargo.' },
+      { q: '¿Desde dónde atienden Capiatá?', a: 'Desde nuestro taller de San Lorenzo. Vamos a Capiatá a tomar las medidas, colocar y hacer después el mantenimiento, con el mismo equipo que fabrica. La visita para presupuestar es sin cargo.' },
       { q: '¿Qué trabajos hacen más seguido en Capiatá?', a: 'Cerramientos de galería, aberturas de aluminio y mamparas para las viviendas de la zona.' },
       { q: '¿Hay costo de traslado a Capiatá?', a: 'La visita para presupuestar es sin cargo. Si hubiera algún detalle de logística por la distancia, lo charlamos de forma transparente antes de empezar.' },
     ],
@@ -123,7 +125,7 @@ export const zonas: Zona[] = [
     metaTitle: 'Vidriería en Lambaré',
     titleTail: 'vidrio templado, cerramientos, divisorias y aberturas de aluminio en Lambaré',
     metaDesc: 'Vidriería en Lambaré: vidrio templado, cerramientos, divisorias de oficina y aberturas de aluminio a medida. +15 años de experiencia. Presupuesto sin compromiso, vamos a tu obra.',
-    hero: 'Trabajamos en Lambaré con el mismo estándar de siempre.',
+    hero: 'Vamos a Lambaré desde nuestro taller de San Lorenzo, con el mismo estándar de siempre.',
     intro: [
       'Lambaré está dentro de nuestra zona de trabajo en Gran Asunción. Hacemos cerramientos, mamparas, divisiones de oficina, aberturas de aluminio y vidrio templado en viviendas, comercios y oficinas de la ciudad.',
       'Desde San Lorenzo llegamos a Lambaré de forma habitual para presupuestar y colocar, con la misma prolijidad y cumplimiento que nos caracteriza desde 2009.',
@@ -133,8 +135,8 @@ export const zonas: Zona[] = [
       'La visita para tomar medidas y presupuestar es sin cargo, como en toda Gran Asunción.',
     ],
     faqs: [
-      { q: '¿Llegan a Lambaré?', a: 'Sí, Lambaré está dentro de nuestra cobertura habitual de Gran Asunción. Coordinamos la visita sin cargo.' },
-      { q: '¿Hacen divisiones de oficina en Lambaré?', a: 'Sí. Hacemos tabiquería de vidrio y puertas vidriadas a medida para oficinas y locales de Lambaré.' },
+      { q: '¿Desde dónde atienden Lambaré?', a: 'Desde nuestro taller de San Lorenzo. Vamos a Lambaré a tomar las medidas, colocar y hacer después el mantenimiento, con el mismo equipo que fabrica. La visita para presupuestar es sin cargo.' },
+      { q: '¿Hacen divisiones de oficina en Lambaré?', a: 'Sí. Hacemos divisiones de vidrio y puertas vidriadas a medida para oficinas y locales de Lambaré.' },
       { q: '¿La visita tiene costo?', a: 'No, la visita para presupuestar es gratuita y sin compromiso.' },
     ],
   },
