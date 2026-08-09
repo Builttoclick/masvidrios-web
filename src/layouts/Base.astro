@@ -183,6 +183,95 @@ const allSchema = [negocio, ...(breadcrumb ? [breadcrumb] : []), ...extra];
         document.querySelectorAll('.reveal, [data-count-to]').forEach(function (el) { io.observe(el); });
       })();
     </script>
+    <!-- Lightbox: toda foto de contenido se abre en grande (pedido de Jose, 09-ago). Excluye logos y avatares del equipo. -->
+    <script is:inline>
+      (function () {
+        var main = document.querySelector('main');
+        if (!main) return;
+        var fotos = [].slice.call(main.querySelectorAll('img')).filter(function (im) {
+          return !im.closest('nav') && !im.closest('header') && !im.closest('footer') && !im.closest('.ph') && !/\/brand\//.test(im.getAttribute('src') || '');
+        });
+        if (!fotos.length) return;
+        fotos.forEach(function (im) {
+          im.classList.add('zoomable');
+          im.setAttribute('role', 'button');
+          im.setAttribute('tabindex', '0');
+          if (!im.getAttribute('title')) im.setAttribute('title', 'Tocá para ver la foto en grande');
+        });
+
+        var box, bImg, bCap, idx = -1, lastFocus = null;
+
+        function textoDe(im) {
+          var fig = im.closest('figure');
+          var cap = fig && fig.querySelector('figcaption');
+          return (cap && cap.textContent.trim()) || im.getAttribute('alt') || '';
+        }
+        function pintar(i) {
+          idx = (i + fotos.length) % fotos.length;
+          var im = fotos[idx];
+          bImg.src = im.currentSrc || im.src;
+          bImg.alt = im.getAttribute('alt') || '';
+          bCap.innerHTML = '';
+          bCap.appendChild(document.createTextNode(textoDe(im)));
+          if (fotos.length > 1) {
+            var n = document.createElement('span');
+            n.className = 'n';
+            n.textContent = (idx + 1) + ' de ' + fotos.length;
+            bCap.appendChild(n);
+          }
+        }
+        function armar() {
+          box = document.createElement('div');
+          box.className = 'lbx';
+          box.setAttribute('role', 'dialog');
+          box.setAttribute('aria-modal', 'true');
+          box.setAttribute('aria-label', 'Foto ampliada');
+          box.innerHTML =
+            '<figure class="lbx-fig"><img alt="" /><figcaption class="lbx-cap"></figcaption></figure>' +
+            '<button class="lbx-x" type="button" aria-label="Cerrar">&times;</button>' +
+            (fotos.length > 1
+              ? '<button class="lbx-p" type="button" aria-label="Foto anterior">&#8249;</button><button class="lbx-n" type="button" aria-label="Foto siguiente">&#8250;</button>'
+              : '');
+          bImg = box.querySelector('.lbx-fig img');
+          bCap = box.querySelector('.lbx-cap');
+          box.addEventListener('click', function (e) {
+            if (e.target === box || e.target.classList.contains('lbx-fig')) cerrar();
+          });
+          box.querySelector('.lbx-x').addEventListener('click', cerrar);
+          var p = box.querySelector('.lbx-p'), n = box.querySelector('.lbx-n');
+          if (p) p.addEventListener('click', function () { pintar(idx - 1); });
+          if (n) n.addEventListener('click', function () { pintar(idx + 1); });
+          document.body.appendChild(box);
+        }
+        function abrir(i) {
+          if (!box) armar();
+          lastFocus = document.activeElement;
+          pintar(i);
+          document.body.style.overflow = 'hidden';
+          box.classList.add('on');
+          box.querySelector('.lbx-x').focus();
+        }
+        function cerrar() {
+          if (!box) return;
+          box.classList.remove('on');
+          document.body.style.overflow = '';
+          if (lastFocus && lastFocus.focus) lastFocus.focus();
+          setTimeout(function () { if (box && !box.classList.contains('on')) bImg.removeAttribute('src'); }, 200);
+        }
+        fotos.forEach(function (im, i) {
+          im.addEventListener('click', function () { abrir(i); });
+          im.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); abrir(i); }
+          });
+        });
+        document.addEventListener('keydown', function (e) {
+          if (!box || !box.classList.contains('on')) return;
+          if (e.key === 'Escape') cerrar();
+          else if (e.key === 'ArrowRight') pintar(idx + 1);
+          else if (e.key === 'ArrowLeft') pintar(idx - 1);
+        });
+      })();
+    </script>
     <!-- Tracking de clics de WhatsApp: evento whatsapp_click a GA4 (numero + mensaje + ubicacion) + tag de sesion Clarity -->
     <script is:inline>
       (function () {

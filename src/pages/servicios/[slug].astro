@@ -3,6 +3,7 @@ import Base from '../../layouts/Base.astro';
 import { site } from '../../data/site';
 import { servicios, getServicio } from '../../data/servicios';
 import { zonas } from '../../data/zonas';
+import { fotosGaleria } from '../../data/galeria';
 
 export function getStaticPaths() {
   return servicios.map((s) => ({ params: { slug: s.slug } }));
@@ -13,6 +14,12 @@ const s = getServicio(slug!)!;
 
 // servicios relacionados (los demás, hasta 4) para interlinking
 const relacionados = servicios.filter((x) => x.slug !== s.slug).slice(0, 4);
+
+// mini galería del servicio: las fotos de ESTA categoría, hasta 8, con salida a /galeria/
+const MAX_MINI = 8;
+const fotosServicio = fotosGaleria.filter((f) => f.cat === s.slug);
+const mini = fotosServicio.slice(0, MAX_MINI);
+const restantes = fotosServicio.length - mini.length;
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -72,6 +79,31 @@ const serviceSchema = {
       </aside>
     </div>
   </section>
+
+  {mini.length > 0 && (
+    <section style="padding-top:0">
+      <div class="wrap center">
+        <span class="eyebrow">Trabajos nuestros</span>
+        <h2 class="sec">{s.nombre} que ya hicimos</h2>
+        <p class="sec-sub">Fotos reales de obras en San Lorenzo y Gran Asunción. Tocá cualquiera para verla en grande.</p>
+      </div>
+      <div class="wrap">
+        <div class="mini-gal">
+          {mini.map((f) => (
+            <figure>
+              <img src={f.src} alt={f.alt} loading="lazy" decoding="async" />
+              <figcaption>{f.cap}</figcaption>
+            </figure>
+          ))}
+        </div>
+        <div class="mini-mas">
+          <a class="btn btn-ghost" href="/galeria/">
+            {restantes > 0 ? `Ver las otras ${restantes} fotos en la galería` : 'Ver la galería completa'}
+          </a>
+        </div>
+      </div>
+    </section>
+  )}
 
   {s.videos && s.videos.length > 0 && (
     <section style="padding-top:0">
@@ -140,6 +172,16 @@ const serviceSchema = {
 </Base>
 
 <style>
+  /* mini galería del servicio: las fotos de esa categoría, con lightbox global */
+  .mini-gal{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:38px}
+  @media(max-width:900px){.mini-gal{grid-template-columns:repeat(3,1fr);gap:12px}}
+  @media(max-width:620px){.mini-gal{grid-template-columns:1fr 1fr;gap:10px}}
+  .mini-gal figure{border-radius:14px;overflow:hidden;border:1px solid var(--linea);background:#fff;box-shadow:var(--shadow-sm)}
+  .mini-gal img{display:block;width:100%;height:190px;object-fit:cover;transition:transform .3s ease}
+  .mini-gal figure:hover img{transform:scale(1.04)}
+  @media(max-width:620px){.mini-gal img{height:150px}}
+  .mini-gal figcaption{padding:9px 12px;font-size:12.5px;font-weight:600;color:var(--tinta);line-height:1.35}
+  .mini-mas{display:flex;justify-content:center;margin-top:26px}
   .vid-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:38px;max-width:920px;margin-left:auto;margin-right:auto}
   .vid-grid.solo{grid-template-columns:minmax(0,560px);justify-content:center}
   @media(max-width:760px){.vid-grid{grid-template-columns:1fr}}

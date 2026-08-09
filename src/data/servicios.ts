@@ -35,7 +35,7 @@ export const servicios: Servicio[] = [
     hero: 'Nuestro rubro principal: puertas, ventanas, mamparas y tapas de mesa con vidrio templado de seguridad, a medida y con terminación prolija.',
     intro: [
       'El vidrio templado es el corazón de lo que hacemos en MÁS VIDRIOS desde 2009. Es un vidrio sometido a un tratamiento térmico que lo vuelve hasta cinco veces más resistente que un vidrio común y que, ante un golpe extremo, se fragmenta en pedazos pequeños y sin filo en lugar de astillas peligrosas. Por eso es el material indicado para puertas, ventanas, mamparas, barandas y tapas de mesa donde la seguridad importa.',
-      'Trabajamos toda la cadena: te asesoramos sobre el espesor y el tipo de vidrio según el uso, tomamos las medidas en tu obra, fabricamos cada pieza y nos encargamos de la colocación con la perfilería y los herrajes correctos. En San Lorenzo y toda Gran Asunción nos trasladamos a tu domicilio u obra para presupuestar sin compromiso.',
+      'Trabajamos toda la cadena: te asesoramos sobre el espesor y el tipo de vidrio según el uso, tomamos las medidas en tu obra, coordinamos el corte y el templado de cada pieza con la planta, y armamos y colocamos el trabajo con la perfilería y los herrajes correctos. En San Lorenzo y toda Gran Asunción nos trasladamos a tu domicilio u obra para presupuestar sin compromiso.',
     ],
     bloques: [
       {
@@ -74,6 +74,9 @@ export const servicios: Servicio[] = [
       { q: '¿Cuánto tarda un trabajo con vidrio templado?', a: 'Depende del tamaño y de la cola de fabricación, pero en general entre una y dos semanas desde que se aprueba el presupuesto y se toman las medidas definitivas. Te damos un plazo concreto al presupuestar.' },
       { q: '¿Hacen tapas de mesa de vidrio templado a medida?', a: 'Sí, con el espesor y el canto que prefieras (pulido recto, biselado, etc.). Tomamos el molde exacto de tu mesa para que calce perfecto.' },
       { q: '¿Qué vidrio corresponde en una fachada o en un techo de vidrio?', a: 'Ahí va vidrio laminado: lleva una lámina intermedia que sostiene los pedazos si el vidrio llega a romperse, y por eso es el que corresponde cuando el vidrio está en altura. El templado va en puertas, ventanas, mamparas, barandas y tapas de mesa. Trabajamos los dos y te decimos cuál corresponde en cada parte de tu obra.' },
+    ],
+    videos: [
+      { src: '/videos/video-puerta-pivotante-vidrio-aluminio-negro.mp4', poster: '/videos/video-puerta-pivotante-vidrio-aluminio-negro-poster.jpg', titulo: 'Puerta pivotante de vidrio con marco de aluminio negro y manijón de acero' },
     ],
   },
   {
@@ -167,6 +170,9 @@ export const servicios: Servicio[] = [
       { q: '¿Qué espesor de vidrio usan?', a: 'Para mamparas usamos generalmente vidrio templado de 8 mm o 10 mm según el tamaño y el sistema. Te recomendamos el adecuado al presupuestar.' },
       { q: '¿Cómo se limpia una mampara de vidrio templado?', a: 'Con un limpiavidrios común y un secador de goma. Si querés que repela el agua y el sarro, podemos aplicar un tratamiento antical que facilita mucho el mantenimiento.' },
     ],
+    videos: [
+      { src: '/videos/video-mampara-corrediza-ducha-marmol.mp4', poster: '/videos/video-mampara-corrediza-ducha-marmol-poster.jpg', titulo: 'Mampara corrediza de ducha probada en obra por nuestro instalador' },
+    ],
   },
   {
     slug: 'divisorias-de-oficina',
@@ -177,21 +183,35 @@ export const servicios: Servicio[] = [
     fotoAlt: 'Divisiones de oficina en vidrio con aluminio blanco y puertas vidriadas · MÁS VIDRIOS',
     metaTitle: 'Divisorias de oficina en San Lorenzo',
     titleTail: 'divisiones de vidrio y aluminio para oficinas cerca tuyo',
-    metaDesc: 'Divisorias de oficina en vidrio y aluminio en San Lorenzo y Gran Asunción. Aislamiento acústico y térmico, diseño a medida y look vanguardista para tu espacio de trabajo. Presupuesto gratis.',
-    hero: 'Oficinas más luminosas, ordenadas y modernas con divisiones de vidrio a medida.',
+    metaDesc: 'Divisorias de oficina en vidrio, drywall y Eucatex en San Lorenzo y Gran Asunción, y divisiones de sanitarios a medida. Aislamiento acústico y térmico y diseño a medida. Presupuesto gratis.',
+    hero: 'Oficinas más luminosas y ordenadas con divisiones a medida, en vidrio, drywall o Eucatex, y divisiones de sanitarios.',
     intro: [
       'Las divisiones de vidrio transformaron la forma de pensar las oficinas: separan ambientes sin cerrar la luz, dan sensación de amplitud y proyectan una imagen profesional y vanguardista. En MÁS VIDRIOS las diseñamos y personalizamos según tu presupuesto y la distribución real de tu espacio, porque sabemos que cada empresa tiene necesidades distintas.',
-      'Trabajamos tanto las divisiones vidriadas de piso a techo como las combinadas con paneles ciegos, siempre con perfilería de aluminio prolija y puertas de vidrio con herrajes de calidad. El resultado: un ambiente de trabajo aislado del ruido pero conectado visualmente.',
+      'Trabajamos las divisiones vidriadas de piso a techo, las combinadas (drywall abajo y vidrio arriba, que es la más pedida) y las de Eucatex, siempre con perfilería de aluminio prolija y puertas con herrajes de calidad. El resultado: un ambiente de trabajo aislado del ruido pero conectado visualmente.',
     ],
     bloques: [
+      {
+        h2: 'Tres materiales para dividir una oficina',
+        parrafos: [
+          'Dividir dos oficinas se puede resolver de tres maneras, y muchas veces se combinan en el mismo trabajo. En vidrio, cuando lo que se busca es luz y amplitud. En drywall (placa de yeso), cuando se necesita una pared llena, con aislación adentro y lista para pintar. Y en Eucatex, la opción más económica y rápida de montar para dividir un espacio de trabajo.',
+          'La combinación que más nos piden es drywall en la parte baja y vidrio arriba: da privacidad a la altura del escritorio y deja pasar la luz por encima. Contanos cómo es tu oficina y armamos la mezcla que mejor funcione.',
+        ],
+      },
       {
         h2: 'Qué resolvemos con las divisorias',
         lista: [
           'Separar oficinas, salas de reunión y recepciones manteniendo la luz natural.',
           'Aislamiento acústico y térmico entre ambientes.',
           'Puertas de vidrio con manijones de acero y cierres suaves.',
-          'Combinación de vidrio con paneles ciegos para privacidad parcial.',
+          'Divisiones combinadas: drywall o Eucatex abajo, vidrio arriba.',
           'Vinilos o vidrio esmerilado para zonas que requieren reserva.',
+        ],
+      },
+      {
+        h2: 'Divisiones de sanitarios',
+        parrafos: [
+          'El mismo sistema resuelve los baños de locales, fábricas, colegios y oficinas: cabinas de sanitario en paneles de Eucatex con parantes y perfilería de aluminio, puertas con herrajes y cierre, y todo levantado del piso para que se pueda limpiar por debajo. Se arman a la medida del baño, con la cantidad de cabinas que entren y el color de panel que elijas.',
+          'Es una de las cosas que más nos piden las empresas y las obras comerciales, porque se monta rápido, aguanta el uso intenso y queda prolijo.',
         ],
       },
       {
@@ -202,14 +222,15 @@ export const servicios: Servicio[] = [
       },
     ],
     destacados: [
-      'Aislamiento acústico y térmico',
+      'Vidrio, drywall o Eucatex',
+      'Divisiones de sanitarios a medida',
       'Diseño y distribución a medida',
-      'Aluminio blanco o negro',
-      'Puertas vidriadas con herrajes de calidad',
+      'Aislamiento acústico y térmico',
     ],
     faqs: [
-      { q: '¿Las divisiones de vidrio dejan pasar el ruido?', a: 'Bien instaladas, con el espesor y los sellos correctos, aíslan muy bien el ruido entre ambientes. Para salas que necesitan más reserva usamos vidrios de mayor espesor o doble vidrio.' },
-      { q: '¿Puedo tener privacidad sin perder la luz?', a: 'Sí. Se puede usar vidrio esmerilado/arenado, vinilos decorativos o paneles ciegos en la parte baja, manteniendo la luz natural en la parte superior.' },
+      { q: '¿Con qué materiales se hace una divisoria de oficina?', a: 'Con tres: vidrio, drywall (placa de yeso) y Eucatex. Se pueden combinar, y de hecho la solución más pedida es drywall o Eucatex en la parte baja y vidrio arriba.' },
+      { q: '¿Las divisiones de vidrio dejan pasar el ruido?', a: 'Bien instaladas, con el espesor y la silicona correctos, aíslan muy bien el ruido entre ambientes. Para salas que necesitan más reserva usamos vidrios de mayor espesor o doble vidrio.' },
+      { q: '¿Puedo tener privacidad sin perder la luz?', a: 'Sí. Se puede usar vidrio esmerilado/arenado, vinilos decorativos o un paño lleno de drywall o Eucatex en la parte baja, manteniendo la luz natural en la parte superior.' },
       { q: '¿Trabajan en oficinas ya en funcionamiento?', a: 'Sí. Coordinamos la instalación para minimizar la interrupción, y de ser necesario trabajamos por etapas o fuera del horario laboral.' },
     ],
   },
@@ -222,42 +243,48 @@ export const servicios: Servicio[] = [
     fotoAlt: 'Ventana corrediza de aluminio símil madera con mosquitero · MÁS VIDRIOS',
     metaTitle: 'Aberturas de aluminio en San Lorenzo',
     titleTail: 'ventanas y puertas de aluminio a medida cerca tuyo',
-    metaDesc: 'Aberturas de aluminio y PVC en San Lorenzo y Gran Asunción: ventanas y puertas corredizas, líneas Inova, Gold y Alpha, efecto madera, PVC y tela mosquitera. A medida y bien instaladas. Presupuesto sin compromiso.',
-    hero: 'Ventanas y puertas de aluminio y PVC a medida, en líneas Inova, Gold y Alpha, con tela mosquitera y en los colores estándar.',
+    metaDesc: 'Aberturas de aluminio en San Lorenzo y Gran Asunción: ventanas y puertas corredizas, batientes y proyectantes, líneas Inova, Gold y Alpha, efecto madera y tela mosquitera. A medida y bien instaladas. Presupuesto sin compromiso.',
+    hero: 'Ventanas y puertas de aluminio a medida, en líneas Inova, Gold y Alpha, con o sin vidrio, con tela mosquitera y en distintos diseños y colores.',
     intro: [
-      'El aluminio es el complemento natural del vidrio y una de nuestras especialidades. Es liviano, no se oxida, casi no necesita mantenimiento y permite armar ventanas y puertas de gran tamaño con marcos finos que dejan entrar la mayor cantidad de luz posible.',
-      'En MÁS VIDRIOS trabajamos las líneas Inova, Gold y Alpha, además de las aberturas con tela mosquitera y el color efecto madera para quienes buscan la calidez de la madera sin su mantenimiento. También instalamos aberturas de PVC, la opción de mayor aislación térmica y acústica. Fabricamos y colocamos a medida, con el vidrio que corresponda en cada caso.',
+      'El aluminio es el complemento natural del vidrio y una de nuestras especialidades. Es un metal liviano y no inflamable, no se oxida, casi no necesita mantenimiento y permite armar ventanas y puertas de gran tamaño con marcos más finos que los de otros materiales, que dejan entrar la mayor cantidad de luz posible.',
+      'En MÁS VIDRIOS trabajamos las líneas Inova, Gold y Alpha, además de las aberturas con tela mosquitera y el color efecto madera para quienes buscan la calidez de la madera sin su mantenimiento. Fabricamos y colocamos a medida, con el vidrio que corresponda en cada caso.',
     ],
     bloques: [
       {
         h2: 'Líneas y productos',
         lista: [
           'Ventanas corredizas, batientes y proyectantes en líneas Inova, Gold y Alpha.',
-          'Puertas de aluminio con vidrio para entradas y balcones.',
-          'Aluminio efecto madera (símil roble y otros tonos).',
-          'Aberturas de PVC de alta aislación térmica y acústica.',
+          'Puertas de aluminio con o sin vidrio para entradas y balcones.',
+          'Puertas vaivén para locales y ambientes de paso.',
+          'Aluminio en distintos diseños y colores, incluido el efecto madera.',
           'Aberturas con tela mosquitera.',
           'Paños fijos y ventanales de gran formato.',
         ],
       },
       {
-        h2: 'Colores disponibles',
+        h2: 'Aberturas sin vidrio',
         parrafos: [
-          'El aluminio va en negro, blanco, aluminio natural y efecto madera. Son los cuatro que mejor resuelven cualquier fachada, y te mostramos cómo queda cada uno para que elijas viendo el material. De la medida y del cierre nos encargamos nosotros: la abertura tiene que calzar y cerrar perfecto.',
+          'No toda la carpintería de aluminio lleva vidrio. Hacemos puertas ciegas de aluminio para lavaderos, depósitos, accesos de servicio y baños, puertas con tela mosquitera para el paso al patio, y tapas y cierres de aluminio a medida. Es el mismo trabajo de perfilería y herrajes, con el paño lleno en lugar del vidrio.',
+        ],
+      },
+      {
+        h2: 'Distintos diseños y colores',
+        parrafos: [
+          'El aluminio viene en distintos diseños y colores, del blanco y el negro al aluminio natural y el efecto madera. Te mostramos las muestras reales para que elijas viendo el material y no una pantalla. De la medida y del cierre nos encargamos nosotros: la abertura tiene que calzar y cerrar perfecto.',
         ],
       },
     ],
     destacados: [
       'Líneas Inova, Gold y Alpha',
-      'Colores: negro, blanco, natural y efecto madera',
-      'Aberturas con tela mosquitera',
+      'Distintos diseños y colores',
+      'Aberturas con y sin vidrio, y con tela mosquitera',
       'Fabricación y colocación a medida',
     ],
     faqs: [
       { q: '¿Qué línea de aluminio me conviene?', a: 'Depende del tamaño de la abertura, del peso del vidrio que va a llevar y del uso que le vas a dar. Trabajamos las líneas Inova, Gold y Alpha, y te decimos cuál corresponde en tu caso cuando vemos la obra.' },
-      { q: '¿En qué colores viene el aluminio?', a: 'En negro, blanco, aluminio natural y efecto madera. Contanos cómo es tu fachada o tu ambiente y te decimos cuál queda mejor, o te mostramos las muestras para que elijas viendo el material.' },
+      { q: '¿En qué colores viene el aluminio?', a: 'En distintos diseños y colores, del blanco y el negro al aluminio natural y el efecto madera. Contanos cómo es tu fachada o tu ambiente y te decimos cuál queda mejor, o te mostramos las muestras para que elijas viendo el material.' },
+      { q: '¿Hacen puertas y ventanas que no lleven vidrio?', a: 'Sí. Hacemos puertas ciegas de aluminio, puertas con tela mosquitera y paños llenos a medida, con la misma perfilería y los mismos herrajes que las aberturas vidriadas.' },
       { q: '¿El aluminio efecto madera se mantiene como la madera?', a: 'No requiere el mantenimiento de la madera real: no hay que barnizar ni se pudre. Da la estética cálida de la madera con la durabilidad del aluminio.' },
-      { q: '¿Trabajan aberturas de PVC además de aluminio?', a: 'Sí. Instalamos aberturas de PVC con perfilería de primera línea, una gran opción cuando la prioridad es la aislación térmica y acústica. Te asesoramos sobre qué conviene en tu obra, aluminio o PVC.' },
       { q: '¿Incluye el vidrio y la colocación?', a: 'Sí. Presupuestamos la abertura completa, perfilería, vidrio, herrajes y colocación, para que no tengas que coordinar con varios proveedores.' },
     ],
     videos: [
@@ -267,46 +294,62 @@ export const servicios: Servicio[] = [
   },
   {
     slug: 'cielo-raso-durlock',
-    nombre: 'Cielo raso & Durlock',
-    categoria: 'Cielo raso y Durlock',
+    nombre: 'Cielo raso & tabiques',
+    categoria: 'Cielo raso y tabiques',
     icon: '<path d="M3 12h18"/><path d="M3 6h18M3 18h18"/>',
     foto: '/fotos/proyectos/puerta-bambu-revestimiento-madera-detalle-marco.jpg',
     fotoAlt: 'Detalle de revestimiento de madera en cielorraso con spots embutidos · MÁS VIDRIOS',
-    metaTitle: 'Cielo raso y Durlock en San Lorenzo',
-    titleTail: 'cielo raso desmontable, PVC y tabiques de construcción en seco cerca tuyo',
-    metaDesc: 'Cielo raso desmontable de yeso/cartón Durlock y PVC, y tabiques de construcción en seco en San Lorenzo y Gran Asunción. Prolijo, rápido y limpio. Presupuesto sin compromiso.',
-    hero: 'Cielo raso desmontable de Durlock y PVC, y tabiques de construcción en seco, prolijo, rápido y limpio.',
+    metaTitle: 'Cielo raso y tabiques en San Lorenzo',
+    titleTail: 'cielo raso de PVC, de yeso y desmontable, y tabiques de drywall cerca tuyo',
+    metaDesc: 'Cielo raso de PVC, de yeso y desmontable, y tabiques de drywall en San Lorenzo y Gran Asunción. Construcción en seco: prolijo, rápido y limpio. Presupuesto sin compromiso.',
+    hero: 'Cielo raso de PVC, de yeso y desmontable, y tabiques para dividir ambientes: prolijo, rápido y limpio.',
     intro: [
-      'Además del vidrio y el aluminio, en MÁS VIDRIOS completamos la terminación de tus ambientes con cielo raso y construcción en seco. Es la forma más rápida y limpia de renovar un techo, ocultar instalaciones, mejorar la aislación y darle a un ambiente esa terminación prolija y moderna que se nota.',
-      'Trabajamos cielo raso desmontable de placa de yeso "Durlock" con perfilería de aluminio tipo "T", cielo raso de PVC, y tabiques de yeso para dividir ambientes sin la suciedad ni los tiempos de la obra húmeda.',
+      'Además del vidrio y el aluminio, en MÁS VIDRIOS completamos la terminación de tus ambientes con cielo raso y tabiques. Los dos son construcción en seco (drywall): no llevan agua ni mezcla, y por eso son la forma más rápida y limpia de renovar un techo, ocultar instalaciones, mejorar la aislación y dividir un ambiente sin los tiempos ni la suciedad de la obra húmeda.',
+      'Hacemos los tres tipos de cielo raso que se usan acá y los tabiques de placa de yeso para dividir ambientes, con la terminación prolija que hace que un techo se vea nuevo.',
     ],
     bloques: [
       {
-        h2: 'Qué incluye',
+        h2: 'Los tres tipos de cielo raso',
         lista: [
-          'Cielo raso desmontable de yeso/cartón "Durlock" con perfilería tipo "T".',
-          'Cielo raso de PVC, ideal para zonas húmedas y exteriores cubiertos.',
-          'Tabiques de yeso "Durlock" para dividir ambientes (construcción en seco).',
-          'Integración de spots e iluminación embutida.',
+          'Cielo raso de PVC: el más resistente a la humedad, ideal para baños, cocinas, lavaderos y galerías.',
+          'Cielo raso de yeso cerrado: placa de yeso tomada y masillada, queda una superficie lisa y continua, sin juntas a la vista.',
+          'Cielo raso desmontable: paneles de yeso apoyados sobre perfilería tipo "T" que se levantan cuando hace falta.',
         ],
       },
       {
-        h2: 'Por qué construcción en seco',
+        h2: 'Cuál te conviene',
         parrafos: [
-          'La construcción en seco es más rápida, más limpia y permite acceder a las instalaciones cuando hace falta (el cielo raso desmontable se levanta sin romper nada). Es la opción ideal para renovar oficinas, locales y viviendas sin las molestias de la obra tradicional.',
+          'El desmontable es el más práctico cuando arriba del techo hay cables, caños o aire acondicionado que se van a tocar: se levanta un panel, se trabaja y se vuelve a colocar, sin romper nada. El de yeso cerrado es el más prolijo a la vista y el que mejor queda en living, dormitorios y locales, porque no se le ven las juntas. Y el de PVC es el que va donde hay humedad. Contanos el ambiente y te decimos cuál corresponde.',
+        ],
+      },
+      {
+        h2: 'Tabiques y divisiones de drywall',
+        parrafos: [
+          'El tabique es la pared de construcción en seco: estructura metálica y placa de yeso a los dos lados, con la aislación que necesites adentro. Se levanta en días, no en semanas, y deja la pared lista para pintar. Es lo que más se usa para dividir oficinas, cerrar un ambiente grande o armar una habitación nueva.',
+        ],
+      },
+      {
+        h2: 'Iluminación embutida',
+        parrafos: [
+          'Dejamos previsto y montado el lugar para los spots y la iluminación embutida en el cielo raso. La instalación eléctrica la resuelve tu electricista, y nosotros le dejamos las indicaciones de dónde va cada punto.',
         ],
       },
     ],
     destacados: [
-      'Cielo raso desmontable de Durlock',
-      'Cielo raso de PVC para zonas húmedas',
-      'Tabiques de construcción en seco',
-      'Integración de iluminación embutida',
+      'Cielo raso de PVC, de yeso y desmontable',
+      'Tabiques y divisiones de drywall',
+      'Construcción en seco: sin agua ni mezcla',
+      'Lugar previsto para iluminación embutida',
     ],
     faqs: [
-      { q: '¿El cielo raso desmontable se puede levantar después?', a: 'Sí, esa es su gran ventaja: las placas se levantan para acceder a cables, caños o aire acondicionado, y se vuelven a colocar sin romper nada.' },
-      { q: '¿Sirve para baños y galerías?', a: 'Para zonas húmedas o semicubiertas recomendamos cielo raso de PVC, que resiste mejor la humedad que la placa de yeso común.' },
-      { q: '¿Hacen también la iluminación?', a: 'Dejamos previsto y montado el lugar para spots e iluminación embutida. La instalación eléctrica fina se coordina con tu electricista o con un profesional de confianza.' },
+      { q: '¿Cuántos tipos de cielo raso hay?', a: 'Tres, y hacemos los tres: el de PVC, el de yeso cerrado (una superficie lisa y continua) y el desmontable de paneles de yeso sobre perfilería tipo "T". Cada uno resuelve una situación distinta y te decimos cuál va en tu ambiente.' },
+      { q: '¿El cielo raso desmontable se puede levantar después?', a: 'Sí, esa es su gran ventaja: los paneles se levantan para acceder a cables, caños o aire acondicionado, y se vuelven a colocar sin romper nada.' },
+      { q: '¿Sirve para baños y galerías?', a: 'Para zonas húmedas o semicubiertas va el cielo raso de PVC, que es el que mejor aguanta la humedad.' },
+      { q: '¿Qué es la construcción en seco o drywall?', a: 'Es levantar techos y paredes con estructura metálica y placa de yeso, sin agua ni mezcla. Por eso es más rápida, más limpia y permite acceder después a las instalaciones. El cielo raso y los tabiques son las dos aplicaciones más comunes.' },
+      { q: '¿Hacen también la iluminación?', a: 'Dejamos previsto y montado el lugar para spots e iluminación embutida, y le pasamos las indicaciones a tu electricista para que haga la conexión.' },
+    ],
+    videos: [
+      { src: '/videos/video-tabique-drywall-masillado-obra.mp4', poster: '/videos/video-tabique-drywall-masillado-obra-poster.jpg', titulo: 'Tabique de drywall masillado y vano nuevo, en obra' },
     ],
   },
   {
@@ -314,15 +357,15 @@ export const servicios: Servicio[] = [
     nombre: 'Barandas vidriadas',
     categoria: 'Barandas de vidrio',
     icon: '<path d="M4 18V9M9 18V5M14 18v-7M19 18V8"/><path d="M3 21h18"/>',
-    foto: '/fotos/proyectos/muro-cortina-vidrio-fachada-edificio-ladrillo.jpg',
-    fotoAlt: 'Vidrio templado en altura sobre fachada de edificio · MÁS VIDRIOS',
+    foto: '/fotos/galeria/baranda-vidrio-aluminio-negro-terraza-panoramica.jpg',
+    fotoAlt: 'Baranda de vidrio con perfilería de aluminio negro en terraza panorámica sobre el río · MÁS VIDRIOS',
     metaTitle: 'Barandas de vidrio en San Lorenzo',
     titleTail: 'barandas vidriadas para escaleras, balcones y entrepisos cerca tuyo',
-    metaDesc: 'Barandas de vidrio templado combinadas con aluminio y acero inoxidable en San Lorenzo y Gran Asunción. Seguras, elegantes y a medida para escaleras, balcones y entrepisos. Presupuesto gratis.',
-    hero: 'Barandas de vidrio templado combinadas con aluminio y acero inoxidable: seguras y elegantes.',
+    metaDesc: 'Barandas con vidrio de seguridad combinadas con aluminio y acero inoxidable en San Lorenzo y Gran Asunción. Seguras, elegantes y a medida para escaleras, balcones y entrepisos. Presupuesto gratis.',
+    hero: 'Barandas con vidrio de seguridad combinadas con aluminio y acero inoxidable: seguras y elegantes.',
     intro: [
-      'Una baranda de vidrio resuelve la seguridad de una escalera, un balcón o un entrepiso sin tapar la vista ni cortar la luz. Es la opción más elegante y contemporánea, y cuando se hace bien, con vidrio templado de seguridad y herrajes correctos, es tan segura como cualquier baranda tradicional.',
-      'En MÁS VIDRIOS combinamos el vidrio templado con aluminio y acero inoxidable para lograr barandas firmes, prolijas y a medida de cada proyecto, tanto en viviendas como en obras comerciales.',
+      'Una baranda de vidrio resuelve la seguridad de una escalera, un balcón o un entrepiso sin tapar la vista ni cortar la luz. Es la opción más elegante y contemporánea, y cuando se hace bien, con vidrio de seguridad del espesor correcto y herrajes adecuados, es tan segura como cualquier baranda tradicional.',
+      'En MÁS VIDRIOS combinamos el vidrio de seguridad con aluminio y acero inoxidable para lograr barandas firmes, prolijas y a medida de cada proyecto, tanto en viviendas como en obras comerciales.',
     ],
     bloques: [
       {
@@ -330,8 +373,15 @@ export const servicios: Servicio[] = [
         lista: [
           'Escaleras interiores y exteriores.',
           'Balcones y terrazas.',
-          'Entrepisos y mezzanines.',
+          'Entrepisos.',
           'Bordes de piscina y desniveles de jardín.',
+        ],
+      },
+      {
+        h2: 'Templado o laminado, según dónde vaya',
+        parrafos: [
+          'Los dos son vidrios de seguridad y los dos se usan en barandas, pero no en el mismo lugar. En una escalera o un entrepiso interior va templado. Cuando la baranda está en altura y hay gente circulando abajo (un balcón sobre otro balcón, una terraza sobre la vereda) va laminado, porque la lámina intermedia sostiene el vidrio en su lugar aunque llegue a romperse.',
+          'Cuando vamos a tu obra miramos qué hay debajo de la baranda y te decimos cuál corresponde. Es la clase de detalle que no se ve en la foto y hace toda la diferencia.',
         ],
       },
       {
@@ -342,13 +392,14 @@ export const servicios: Servicio[] = [
       },
     ],
     destacados: [
-      'Vidrio templado de seguridad',
+      'Vidrio de seguridad, templado o laminado',
       'Combinado con aluminio y acero inox',
       'Escaleras, balcones y entrepisos',
       'A medida de cada proyecto',
     ],
     faqs: [
-      { q: '¿Una baranda de vidrio es segura?', a: 'Sí, siempre que se use vidrio templado (o laminado) del espesor correcto y herrajes adecuados. Cumplida esa condición, es tan segura como una baranda metálica y mucho más vistosa.' },
+      { q: '¿Una baranda de vidrio es segura?', a: 'Sí, siempre que se use vidrio de seguridad del espesor correcto y herrajes adecuados. Cumplida esa condición, es tan segura como una baranda metálica y mucho más vistosa.' },
+      { q: '¿Va templado o laminado en mi baranda?', a: 'Depende de dónde esté. En escaleras y entrepisos interiores usamos templado. Si la baranda está en altura con gente circulando abajo, corresponde laminado: la lámina intermedia sostiene el vidrio en su lugar. Lo definimos cuando vemos la obra.' },
       { q: '¿Lleva pasamanos arriba?', a: 'Puede llevarlo o no, según el diseño y el uso. El pasamanos de acero inoxidable aporta firmeza y un acabado prolijo; en algunos casos se deja el vidrio "limpio" sin perfil superior.' },
       { q: '¿Sirve para el borde de la piscina?', a: 'Sí, es una solución muy elegante para cercos de piscina, con herrajes resistentes a la intemperie y al cloro.' },
     ],
@@ -404,13 +455,13 @@ export const servicios: Servicio[] = [
     categoria: 'Mantenimiento de vidrios y aluminio',
     icon: '<circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1l2-1.6-2-3.4-2.4 1a7 7 0 0 0-1.7-1L14.5 3h-5L9 5a7 7 0 0 0-1.7 1l-2.4-1-2 3.4 2 1.6a7 7 0 0 0 0 2l-2 1.6 2 3.4 2.4-1a7 7 0 0 0 1.7 1l.5 2h5l.5-2a7 7 0 0 0 1.7-1l2.4 1 2-3.4-2-1.6a7 7 0 0 0 .1-1Z"/>',
     foto: '/fotos/proyectos/puerta-vidrio-aluminio-salida-emergencia-cierrapuertas.jpg',
-    fotoAlt: 'Puerta de vidrio con aluminio, manijón de acero y brazo cierrapuertas · MÁS VIDRIOS',
+    fotoAlt: 'Puerta de vidrio con aluminio, manijón de acero y freno aéreo · MÁS VIDRIOS',
     metaTitle: 'Mantenimiento de vidrios y aluminio en San Lorenzo',
     titleTail: 'reparación y service de puertas, ventanas, mamparas y herrajes cerca tuyo',
-    metaDesc: 'Mantenimiento y reparación de instalaciones de vidrio y aluminio en San Lorenzo y Gran Asunción: herrajes, ruedas, brazos cierrapuertas, sellos y cambio de vidrios. Presupuesto sin compromiso.',
+    metaDesc: 'Mantenimiento y reparación de instalaciones de vidrio y aluminio en San Lorenzo y Gran Asunción: herrajes, ruedas, frenos de puerta, felpas, gomas, silicona y cambio de vidrios. Presupuesto sin compromiso.',
     hero: 'Reparamos y damos service a tus puertas, ventanas, mamparas y cerramientos de vidrio y aluminio.',
     intro: [
-      'El vidrio y el aluminio duran décadas, pero los herrajes que los mueven (ruedas, cierres, brazos cierrapuertas, sellos) se desgastan con el uso. En MÁS VIDRIOS no solo instalamos: también mantenemos y reparamos lo que ya tenés, sea instalado por nosotros o por otros.',
+      'El vidrio y el aluminio duran décadas, pero lo que los mueve y los sella se gasta con el uso: las ruedas, las cerraduras, los frenos de las puertas, las felpas, las gomas y la silicona. En MÁS VIDRIOS no solo instalamos: también mantenemos y reparamos lo que ya tenés, sea instalado por nosotros o por otros.',
       'Un mantenimiento a tiempo evita que un problema chico (una puerta que cuesta correr, una mampara que filtra) se transforme en un cambio completo. Revisamos, ajustamos y reemplazamos lo justo para que todo vuelva a funcionar como el primer día.',
     ],
     bloques: [
@@ -419,22 +470,23 @@ export const servicios: Servicio[] = [
         lista: [
           'Cambio de ruedas y ajuste de puertas y ventanas corredizas.',
           'Reparación de herrajes, cerraduras y manijones.',
-          'Brazos cierrapuertas (puertas de vidrio comerciales).',
-          'Resellado de mamparas y cerramientos que filtran agua.',
+          'Frenos de puertas de vidrio: freno de piso y brazo hidráulico (freno aéreo).',
+          'Cambio de felpas y gomas en aberturas de aluminio.',
+          'Silicona nueva en mamparas y cerramientos que filtran agua.',
           'Reemplazo de vidrios rotos o rayados.',
         ],
       },
       {
         h2: 'Service para comercios y oficinas',
         parrafos: [
-          'Las puertas de vidrio de locales y oficinas son de alto tránsito y necesitan mantenimiento periódico de sus brazos cierrapuertas y herrajes para seguir funcionando seguras. Coordinamos visitas de service para que tu local nunca tenga una puerta fuera de uso.',
+          'Las puertas de vidrio de locales y oficinas son de alto tránsito y necesitan mantenimiento periódico de sus frenos y herrajes para seguir funcionando seguras. El freno es la pieza que más sufre: puede ser de piso, embutido bajo la puerta, o un brazo hidráulico aéreo, y los dos se regulan y se cambian. Coordinamos visitas de service para que tu local nunca tenga una puerta fuera de uso.',
         ],
       },
     ],
     destacados: [
       'Ajuste y cambio de herrajes y ruedas',
-      'Brazos cierrapuertas y cerraduras',
-      'Resellado contra filtraciones',
+      'Frenos de piso y brazos hidráulicos',
+      'Felpas, gomas y silicona nueva',
       'Reemplazo de vidrios rotos',
     ],
     faqs: [
@@ -452,18 +504,18 @@ export const servicios: Servicio[] = [
     fotoAlt: 'Espejo de forma orgánica sin marco sobre bacha en baño moderno · MÁS VIDRIOS',
     metaTitle: 'Espejos a medida en San Lorenzo',
     titleTail: 'espejos orgánicos, retroiluminados LED y a medida cerca tuyo',
-    metaDesc: 'Espejos a medida en San Lorenzo y Gran Asunción: formas orgánicas sin marco, espejos retroiluminados con LED y espejos clásicos para baños, vanitorys, dormitorios y pasillos. Corte, pulido e instalación incluidos.',
+    metaDesc: 'Espejos a medida en San Lorenzo y Gran Asunción: formas orgánicas sin marco, espejos retroiluminados con LED y espejos clásicos para baños, dormitorios y pasillos. Corte, pulido e instalación incluidos.',
     hero: 'Espejos a medida que transforman el ambiente: formas orgánicas sin marco, retroiluminados LED y clásicos.',
     intro: [
-      'El espejo dejó de ser un accesorio para convertirse en protagonista del diseño. Las formas orgánicas e irregulares sin marco, tan buscadas hoy en baños y vanitorys modernos, y los espejos retroiluminados con LED que suman una luz cálida y pareja, son de los trabajos que más nos piden últimamente. En MÁS VIDRIOS los cortamos, pulimos e instalamos a medida.',
-      'Trabajamos espejos para baños, dormitorios, pasillos, gimnasios y locales comerciales. Vos elegís la forma y el tamaño (o nos pasás la referencia que viste), y nosotros nos encargamos de que llegue a tu pared con el canto pulido, la fijación segura y la terminación prolija que un espejo necesita.',
+      'El espejo dejó de ser un accesorio para convertirse en protagonista del diseño. Las formas orgánicas e irregulares sin marco, tan buscadas hoy en los baños modernos, y los espejos retroiluminados con LED que suman una luz cálida y pareja, son de los trabajos que más nos piden últimamente. En MÁS VIDRIOS los cortamos, pulimos e instalamos a medida.',
+      'Trabajamos espejos para baños, dormitorios, pasillos, gimnasios y locales comerciales. Vos elegís la forma y el tamaño, y nosotros te asesoramos sobre lo que mejor funciona en tu ambiente y nos encargamos de que llegue a tu pared con el canto pulido, la fijación segura y la terminación prolija que un espejo necesita.',
     ],
     bloques: [
       {
         h2: 'Tipos de espejo que hacemos',
         lista: [
           'Espejos de formas orgánicas e irregulares, sin marco, cortados a medida.',
-          'Espejos retroiluminados con LED perimetral para baños y vanitorys.',
+          'Espejos retroiluminados con LED perimetral para baños.',
           'Espejos clásicos rectangulares o redondos, con o sin bisel.',
           'Espejos de gran formato para gimnasios, estudios de danza y locales.',
           'Reposición de espejos rotos o manchados.',
@@ -472,7 +524,7 @@ export const servicios: Servicio[] = [
       {
         h2: 'Instalación segura y prolija',
         parrafos: [
-          'Un espejo grande mal fijado es un riesgo. Usamos la fijación correcta para cada pared y cada peso (pegado estructural, grampas o perfiles ocultos), cuidamos el apoyo sobre mesadas y zócalos, y dejamos el canto pulido para que el espejo se pueda tocar sin peligro. Si lleva LED, dejamos la conexión prevista y coordinada con tu electricista.',
+          'Un espejo grande mal fijado es un riesgo. Usamos la fijación correcta para cada pared y cada peso (pegado estructural, grampas o perfiles ocultos), cuidamos el apoyo sobre mesadas y zócalos, y dejamos el canto pulido para que el espejo se pueda tocar sin peligro. Si lleva LED, dejamos las indicaciones para tu electricista.',
         ],
       },
     ],
@@ -480,11 +532,10 @@ export const servicios: Servicio[] = [
       'Formas orgánicas cortadas a medida',
       'Retroiluminación LED cálida o fría',
       'Canto pulido y fijación segura',
-      'Baños, vanitorys, gimnasios y locales',
+      'Baños, dormitorios, gimnasios y locales',
     ],
     faqs: [
-      { q: '¿Pueden copiar una forma de espejo que vi en Pinterest o Instagram?', a: 'Sí. Pasanos la foto de referencia y las medidas aproximadas del espacio: dibujamos la forma, la ajustamos con vos y la cortamos a medida.' },
-      { q: '¿El espejo retroiluminado necesita instalación eléctrica especial?', a: 'Necesita un punto de corriente detrás del espejo. Si tu baño ya lo tiene, lo conectamos ahí; si no, te indicamos exactamente qué dejarle previsto a tu electricista antes de la colocación.' },
+      { q: '¿El espejo retroiluminado necesita instalación eléctrica especial?', a: 'Necesita un punto de corriente detrás del espejo. Te indicamos exactamente qué dejar previsto y tu electricista lo resuelve antes de la colocación.' },
       { q: '¿Qué espejo conviene para un baño con mucha humedad?', a: 'Usamos espejos de calidad con respaldo protegido y evitamos apoyos que acumulen agua. Con ventilación razonable, el espejo se mantiene impecable por años.' },
     ],
   },
@@ -501,7 +552,7 @@ export const servicios: Servicio[] = [
     hero: 'Puertas corredizas automáticas de vidrio con sensor: la entrada que tu comercio necesita.',
     intro: [
       'La puerta automática es la carta de presentación de un comercio moderno: se abre sola al detectar a tu cliente, mantiene el aire acondicionado adentro y deja el frente completamente vidriado y luminoso. En MÁS VIDRIOS instalamos puertas corredizas automáticas de vidrio completas, con el operador, los sensores y el vidrio de seguridad que corresponde.',
-      'Las instalamos en locales comerciales, oficinas, sanatorios, farmacias y edificios de toda Gran Asunción. Nos encargamos del conjunto completo: el frente de vidrio templado, el mecanismo en el dintel, la puesta en marcha y la regulación fina para que abra y cierre suave, sin golpes.',
+      'Las instalamos en locales comerciales, oficinas, sanatorios, farmacias y edificios de toda Gran Asunción. Nos encargamos del conjunto completo: el frente de vidrio templado, el cabezal con el mecanismo arriba de la puerta, la puesta en marcha y la regulación fina para que abra y cierre suave, sin golpes.',
     ],
     bloques: [
       {
@@ -517,7 +568,7 @@ export const servicios: Servicio[] = [
       {
         h2: 'Instalación completa y service',
         parrafos: [
-          'Instalamos el sistema completo: paños fijos y hojas móviles de vidrio templado de seguridad, operador electromecánico oculto en el dintel, sensores de movimiento y presencia, y los modos de funcionamiento que necesites (apertura total, parcial, bloqueo nocturno). Después de la instalación hacemos el service periódico para que la puerta de tu negocio nunca quede fuera de uso.',
+          'Instalamos el sistema completo: paños fijos y hojas móviles de vidrio templado de seguridad, operador electromecánico dentro del cabezal de aluminio que va arriba de la puerta, sensores de movimiento y presencia, y los modos de funcionamiento que necesites (apertura total, parcial, bloqueo nocturno). Después de la instalación hacemos el service periódico para que la puerta de tu negocio nunca quede fuera de uso.',
         ],
       },
     ],
@@ -528,7 +579,7 @@ export const servicios: Servicio[] = [
       'Instalación completa y service',
     ],
     faqs: [
-      { q: '¿Qué pasa si se corta la luz?', a: 'La puerta se puede abrir manualmente y, según el modelo, puede llevar batería de respaldo que la mantiene funcionando durante el corte. Lo definimos según la necesidad de tu local.' },
+      { q: '¿Qué pasa si se corta la luz?', a: 'El automatismo funciona con corriente, así que durante el corte la puerta deja de abrir sola y se opera a mano hasta que vuelve la luz. Cuando la vuelve, retoma el funcionamiento normal sola. Si tu local necesita que siga abriendo durante los cortes, contanos y lo vemos al presupuestar.' },
       { q: '¿Sirve para un local que ya tiene el frente de vidrio?', a: 'Sí. Podemos automatizar la entrada aprovechando el frente existente o renovarlo completo, según el estado de la perfilería y el vidrio actual.' },
       { q: '¿Cada cuánto necesita mantenimiento?', a: 'Para un local de tránsito normal recomendamos un service cada 6 a 12 meses: limpieza de guías, chequeo de sensores y regulación del operador. Coordinamos las visitas para que no interrumpan tu atención.' },
     ],

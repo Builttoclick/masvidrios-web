@@ -159,3 +159,25 @@ footer.ft .muted{color:#7c8694}
 .ft-nap{font-size:14px;line-height:1.9;margin-bottom:12px}
 .ft-nap b{color:#fff}
 .ft-bot{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding-top:20px;font-size:12.5px;color:#7c8694;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+/* ---------- lightbox: todas las fotos del sitio se abren en grande ---------- */
+img.zoomable{cursor:zoom-in}
+.lbx{position:fixed;inset:0;z-index:9999;background:rgba(8,12,20,.94);display:none;align-items:center;justify-content:center}
+/* el fade va por animation y no por transition: si el navegador no la corre, el overlay igual queda visible en vez de invisible tapando la pagina */
+.lbx.on{display:flex;animation:lbxIn .18s ease}
+@keyframes lbxIn{from{opacity:0}to{opacity:1}}
+.lbx-fig{margin:0;max-width:94vw;max-height:92vh;display:flex;flex-direction:column;align-items:center;gap:12px}
+.lbx-fig img{max-width:94vw;max-height:82vh;width:auto;height:auto;border-radius:10px;box-shadow:0 24px 70px rgba(0,0,0,.6);background:#0b0f16}
+.lbx-cap{color:#e6ebf2;font-size:14.5px;line-height:1.5;text-align:center;max-width:760px;padding:0 12px}
+.lbx-cap .n{display:block;color:#8e99a8;font-size:12.5px;margin-top:5px;letter-spacing:.4px}
+.lbx button{position:absolute;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);color:#fff;border-radius:999px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s}
+.lbx button:hover{background:rgba(255,255,255,.22)}
+.lbx .lbx-x{top:18px;right:18px;width:44px;height:44px;font-size:24px;line-height:1}
+.lbx .lbx-p,.lbx .lbx-n{top:50%;transform:translateY(-50%);width:52px;height:52px;font-size:26px;line-height:1}
+.lbx .lbx-p{left:18px}
+.lbx .lbx-n{right:18px}
+@media(max-width:640px){
+  .lbx .lbx-p,.lbx .lbx-n{width:42px;height:42px;font-size:22px}
+  .lbx .lbx-p{left:8px}.lbx .lbx-n{right:8px}
+  .lbx-fig img{max-height:74vh}
+}

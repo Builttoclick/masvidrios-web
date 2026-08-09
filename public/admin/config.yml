@@ -37,7 +37,7 @@ collections:
         widget: select
         multiple: true
         required: false
-        options: ["Vidrio templado", "Cerramientos & galerías", "Mamparas de baño", "Divisorias de oficina", "Aberturas de aluminio", "Cielo raso & Durlock", "Barandas vidriadas", "Policarbonato"]
+        options: ["Vidrio templado", "Cerramientos & galerías", "Mamparas de baño", "Divisorias de oficina", "Aberturas de aluminio", "Cielo raso & tabiques", "Barandas vidriadas", "Policarbonato"]
 
       - name: materiales
         label: Materiales / terminaciones
