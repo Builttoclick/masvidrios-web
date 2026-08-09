@@ -21,7 +21,27 @@ export interface Servicio {
 
 const CIUDAD = 'San Lorenzo';
 
-export const servicios: Servicio[] = [
+// Orden de presentacion (home, /servicios/, interlinking): primero los TRES VIDRIOS con que se trabaja
+// (templado, laminado y DVH) y despues la carpinteria de aluminio, que es la que los aloja.
+// Pedido de Jose en la revision del 09-ago. Lo que no este aca queda al final, en el orden del catalogo.
+const ORDEN = [
+  'vidrio-templado',
+  'vidrio-laminado',
+  'dvh-doble-vidriado-hermetico',
+  'aberturas-de-aluminio',
+  'cerramientos-de-vidrio',
+  'mamparas-de-bano',
+  'divisorias-de-oficina',
+  'barandas-vidriadas',
+  'cielo-raso-durlock',
+  'policarbonato',
+  'espejos',
+  'puertas-automaticas',
+  'stampa-vidrio-impreso',
+  'mantenimientos',
+];
+
+const catalogo: Servicio[] = [
   {
     slug: 'vidrio-templado',
     nombre: 'Vidrio templado',
@@ -77,6 +97,112 @@ export const servicios: Servicio[] = [
     ],
     videos: [
       { src: '/videos/video-puerta-pivotante-vidrio-aluminio-negro.mp4', poster: '/videos/video-puerta-pivotante-vidrio-aluminio-negro-poster.jpg', titulo: 'Puerta pivotante de vidrio con marco de aluminio negro y manijón de acero' },
+    ],
+  },
+  {
+    slug: 'vidrio-laminado',
+    nombre: 'Vidrio laminado',
+    categoria: 'Vidrio laminado',
+    icon: '<path d="M4 5h16v5H4z"/><path d="M4 14h16v5H4z"/><path d="M2 12h20"/>',
+    foto: '/fotos/proyectos/muro-cortina-vidrio-fachada-edificio-ladrillo.jpg',
+    fotoAlt: 'Muro cortina de vidrio en la fachada de un edificio, donde corresponde vidrio laminado · MÁS VIDRIOS',
+    metaTitle: 'Vidrio laminado en San Lorenzo',
+    titleTail: 'fachadas, techos de vidrio y barandas en altura con vidrio laminado de seguridad cerca tuyo',
+    metaDesc: 'Vidrio laminado de seguridad en San Lorenzo y Gran Asunción: fachadas, techos de vidrio, barandas en altura y vidrieras. Dos vidrios unidos por una lámina que los sostiene en su lugar. Presupuesto sin compromiso.',
+    hero: 'El vidrio que se queda en su lugar aunque llegue a romperse: el que corresponde en fachadas, techos de vidrio y barandas en altura.',
+    intro: [
+      'El vidrio laminado son dos vidrios unidos por una lámina intermedia transparente que queda pegada a los dos. Si el paño recibe un golpe fuerte, los pedazos quedan adheridos a esa lámina y el vidrio se mantiene en su lugar en lugar de caer. Por eso es el vidrio de seguridad que corresponde cuando hay gente circulando abajo.',
+      'La diferencia se nota sobre todo en altura. En una fachada de varios pisos o en un techo de vidrio, el laminado es lo que hace que un vidrio golpeado siga siendo un vidrio golpeado dentro de su marco. En MÁS VIDRIOS lo usamos justamente ahí, y cuando vamos a tu obra te decimos en qué parte corresponde cada uno.',
+    ],
+    bloques: [
+      {
+        h2: 'Dónde va vidrio laminado',
+        lista: [
+          'Fachadas y muros cortina de edificios y locales.',
+          'Techos de vidrio y aberturas en el techo para iluminar ambientes interiores.',
+          'Barandas de balcones y terrazas con circulación abajo.',
+          'Escaleras y entrepisos vidriados.',
+          'Vidrieras y frentes comerciales de alto tránsito.',
+          'Paños grandes donde además se busca cortar el ruido de la calle.',
+        ],
+      },
+      {
+        h2: 'Laminado y templado: cuál va en cada lugar',
+        parrafos: [
+          'Los dos son vidrios de seguridad y muchas veces conviven en la misma obra. El templado es el más resistente al golpe y es el que va en puertas, ventanas, mamparas y tapas de mesa. El laminado es el que va cuando lo importante es que el vidrio se quede donde está: fachadas, techos y barandas en altura.',
+          'Cuando vamos a tu obra miramos qué hay arriba y qué hay abajo de cada paño y te decimos cuál corresponde. Es la parte del trabajo que no se ve en la foto terminada y es la que más importa.',
+        ],
+      },
+      {
+        h2: 'Además de la seguridad',
+        parrafos: [
+          'La lámina intermedia corta buena parte de los rayos UV, así que protege pisos, muebles y cortinas de la decoloración, y amortigua la vibración del vidrio, con lo cual entra menos ruido de la calle. En dormitorios y oficinas sobre avenida es una diferencia que se escucha.',
+        ],
+      },
+    ],
+    destacados: [
+      'Los pedazos quedan sostenidos por la lámina',
+      'Fachadas, techos de vidrio y barandas en altura',
+      'Filtra rayos UV y baja el ruido',
+      'Asesoramiento de espesor según el uso',
+    ],
+    faqs: [
+      { q: '¿Qué diferencia hay entre vidrio laminado y vidrio templado?', a: 'El templado es hasta cinco veces más resistente al golpe y, si se rompe, se deshace en pedazos chicos y sin filo. El laminado lleva una lámina intermedia que sostiene esos pedazos en su lugar, así que el paño no cae. Por eso el templado va en puertas, ventanas y mamparas, y el laminado en fachadas, techos y barandas en altura.' },
+      { q: '¿Por qué en una fachada corresponde laminado?', a: 'Porque está en altura y hay gente circulando abajo. Con laminado, un vidrio golpeado queda entero en su marco hasta que se lo reemplaza. Es la razón por la que lo pedimos en edificios y frentes de varios pisos.' },
+      { q: '¿Se puede usar laminado en una baranda?', a: 'Sí, y en muchos casos es lo que corresponde: cuando la baranda está sobre otro balcón, sobre la vereda o sobre un espacio por donde pasa gente. Lo definimos cuando vemos la obra.' },
+      { q: '¿El laminado sirve para bajar el ruido?', a: 'Ayuda bastante, porque la lámina intermedia amortigua la vibración del vidrio. Si lo que más te interesa es la aislación del ruido y del calor, mirá también el DVH, que es el que mejor rinde en eso.' },
+    ],
+  },
+  {
+    slug: 'dvh-doble-vidriado-hermetico',
+    nombre: 'DVH · doble vidriado',
+    categoria: 'DVH, doble vidriado hermético',
+    icon: '<rect x="3" y="4" width="6" height="16" rx="1"/><rect x="15" y="4" width="6" height="16" rx="1"/><path d="M12 9v6"/>',
+    foto: '/fotos/galeria/ventana-corrediza-aluminio-negro-ladrillo-visto.jpg',
+    fotoAlt: 'Ventana corrediza de aluminio negro, el tipo de abertura donde se coloca DVH · MÁS VIDRIOS',
+    metaTitle: 'DVH doble vidriado hermético en San Lorenzo',
+    titleTail: 'ventanas con doble vidrio hermético para aislar el calor y el ruido cerca tuyo',
+    metaDesc: 'DVH, doble vidriado hermético, en San Lorenzo y Gran Asunción: dos vidrios con cámara de aire sellada que aíslan el calor y el ruido. Para dormitorios, oficinas y ambientes con aire acondicionado. Presupuesto sin compromiso.',
+    hero: 'Dos vidrios con una cámara de aire sellada entre medio: el vidrio que aísla el calor y el ruido, cada vez más pedido en casas.',
+    intro: [
+      'El DVH, doble vidriado hermético, son dos vidrios separados por una cámara de aire que se sella de fábrica. Esa cámara es la que hace el trabajo: frena el paso del calor y amortigua el ruido de afuera. Como el conjunto va sellado, adentro no entra ni aire ni humedad, y el vidrio se mantiene transparente.',
+      'Es lo que más creció en los últimos años, sobre todo en viviendas. Con el calor de acá, un ambiente con aire acondicionado y ventanas comunes pelea contra la ventana todo el día. Con DVH el equipo enfría más rápido y después mantiene el ambiente con mucho menos esfuerzo.',
+    ],
+    bloques: [
+      {
+        h2: 'Qué resuelve el DVH',
+        lista: [
+          'Ambientes con aire acondicionado que cuesta mantener frescos.',
+          'Dormitorios y oficinas sobre calles con mucho movimiento.',
+          'Ventanales grandes que reciben sol directo buena parte del día.',
+          'Fachadas y frentes vidriados de casas y edificios.',
+          'Ambientes donde el vidrio se empaña con el cambio de temperatura.',
+        ],
+      },
+      {
+        h2: 'Va con la perfilería que le corresponde',
+        parrafos: [
+          'El DVH es más grueso y más pesado que un vidrio simple, así que necesita una línea de aluminio preparada para alojarlo. Cuando presupuestamos una abertura con DVH elegimos esa línea desde el principio, para que el paño calce y cierre como tiene que cerrar. Te entregamos la abertura completa, con el vidrio, la perfilería y los herrajes que van juntos.',
+        ],
+      },
+      {
+        h2: 'Cuándo conviene',
+        parrafos: [
+          'Donde mejor rinde cada guaraní es en ambientes climatizados y en frentes con sol directo o con ruido de calle. Para aberturas interiores o chicas, un vidrio templado o laminado resuelve igual de bien y sale menos. Contanos qué querés mejorar, si es el calor, el ruido o las dos cosas, y te decimos qué conviene en tu caso.',
+        ],
+      },
+    ],
+    destacados: [
+      'Dos vidrios con cámara de aire sellada',
+      'Aísla el calor y el ruido de la calle',
+      'El aire acondicionado rinde más',
+      'Con la línea de aluminio que le corresponde',
+    ],
+    faqs: [
+      { q: '¿Qué significa DVH?', a: 'Doble vidriado hermético. Son dos vidrios separados por una cámara de aire que se sella de fábrica, de manera que adentro no entre ni aire ni humedad. Es el mismo producto que mucha gente llama "doble vidrio".' },
+      { q: '¿Cuánto aísla realmente?', a: 'La diferencia se siente sobre todo en ambientes climatizados y en frentes con sol directo: el aire acondicionado enfría más rápido y después se mantiene con menos esfuerzo. Contra el ruido continuo de avenida también ayuda bastante.' },
+      { q: '¿Puedo poner DVH en las ventanas que ya tengo?', a: 'El DVH necesita una perfilería preparada para su espesor y su peso, así que lo habitual es hacer la abertura nueva completa. Vamos a tu casa u obra, medimos y te presupuestamos la ventana con el DVH ya incluido.' },
+      { q: '¿El DVH se empaña por dentro?', a: 'La cámara va sellada de fábrica justamente para que eso no pase, y bien colocado se mantiene transparente por años. Por eso importa que el sellado y la colocación los haga gente del rubro.' },
     ],
   },
   {
@@ -638,5 +764,12 @@ export const servicios: Servicio[] = [
     ],
   },
 ];
+
+const pos = (slug: string) => {
+  const i = ORDEN.indexOf(slug);
+  return i === -1 ? ORDEN.length : i;
+};
+
+export const servicios: Servicio[] = catalogo.slice().sort((a, b) => pos(a.slug) - pos(b.slug));
 
 export const getServicio = (slug: string) => servicios.find((s) => s.slug === slug);
