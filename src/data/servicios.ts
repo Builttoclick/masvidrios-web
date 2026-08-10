@@ -275,7 +275,7 @@ const catalogo: Servicio[] = [
         lista: [
           'Mamparas fijas (cubre ducha), la opción más limpia y económica.',
           'Mamparas con puerta de abrir o corrediza.',
-          'Vidrio transparente, esmerilado/arenado o con diseño para más privacidad.',
+          'Vidrio transparente, ploteado o arenado para más privacidad.',
           'Herrajes en acero inoxidable, negro mate o cromados.',
         ],
       },
@@ -290,7 +290,7 @@ const catalogo: Servicio[] = [
     destacados: [
       'Vidrio templado de seguridad a medida',
       'Sistemas fijos, de abrir o corredizos',
-      'Vidrio transparente, esmerilado o con diseño',
+      'Vidrio transparente, ploteado o con diseño',
       'Perfiles de aluminio en colores disponibles',
     ],
     faqs: [
@@ -333,7 +333,7 @@ const catalogo: Servicio[] = [
           'Puertas de vidrio con manijones de acero y cierres suaves.',
           'Divisiones combinadas: drywall o Eucatex abajo, vidrio arriba.',
           'Cabinas y divisiones de sanitarios en Eucatex para baños de empresa.',
-          'Vinilos o vidrio esmerilado para zonas que requieren reserva.',
+          'Vinilos o vidrio arenado para zonas que requieren reserva.',
         ],
       },
       {
@@ -358,7 +358,7 @@ const catalogo: Servicio[] = [
     faqs: [
       { q: '¿Con qué materiales se hace una divisoria de oficina?', a: 'Con tres: vidrio, drywall (placa de yeso) y Eucatex. Se pueden combinar, y de hecho la solución más pedida es drywall o Eucatex en la parte baja y vidrio arriba.' },
       { q: '¿Las divisiones de vidrio dejan pasar el ruido?', a: 'Bien instaladas, con el espesor y la silicona correctos, aíslan muy bien el ruido entre ambientes. Para salas que necesitan más reserva usamos vidrios de mayor espesor o doble vidrio.' },
-      { q: '¿Puedo tener privacidad sin perder la luz?', a: 'Sí. Se puede usar vidrio esmerilado/arenado, vinilos decorativos o un paño lleno de drywall o Eucatex en la parte baja, manteniendo la luz natural en la parte superior.' },
+      { q: '¿Puedo tener privacidad sin perder la luz?', a: 'Sí. Se puede usar vidrio arenado, vinilos decorativos o un paño lleno de drywall o Eucatex en la parte baja, manteniendo la luz natural en la parte superior.' },
       { q: '¿Trabajan en oficinas ya en funcionamiento?', a: 'Sí. Coordinamos la instalación para minimizar la interrupción, y de ser necesario trabajamos por etapas o fuera del horario laboral.' },
     ],
   },
