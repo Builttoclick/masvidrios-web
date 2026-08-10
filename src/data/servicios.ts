@@ -263,20 +263,27 @@ const catalogo: Servicio[] = [
     fotoAlt: 'Mampara de ducha esquinera de vidrio con puertas corredizas en baño de mármol · MÁS VIDRIOS',
     metaTitle: 'Mamparas de baño en San Lorenzo',
     titleTail: 'mamparas de ducha con vidrio templado a medida cerca tuyo',
-    metaDesc: 'Mamparas de baño con vidrio templado de seguridad en San Lorenzo y Gran Asunción. A medida, robustas y de durabilidad garantizada. Evitá salpicaduras con estilo. Presupuesto sin compromiso.',
+    metaDesc: 'Mamparas de baño en San Lorenzo y Gran Asunción: de ducha en vidrio templado de seguridad, y mamparas y divisiones de baño en Eucatex para locales y oficinas. A medida. Presupuesto sin compromiso.',
     hero: 'Mamparas de ducha con vidrio templado de seguridad: a medida, resistentes y fáciles de limpiar.',
     intro: [
-      'La mampara de ducha es uno de esos detalles que cambian por completo un baño. Evita las salpicaduras, mantiene el ambiente cálido durante el baño y le da una sensación de amplitud y prolijidad que ninguna cortina logra. En MÁS VIDRIOS las fabricamos a medida de tu baño, no con kits estándar que nunca terminan de calzar.',
-      'Apostamos sin dudas por el vidrio templado de seguridad: mucho más robusto y resistente que el acrílico, con una durabilidad garantizada y una transparencia que se mantiene en el tiempo. Vos elegís el sistema de apertura, los herrajes y el acabado; nosotros nos encargamos del resto.',
+      'La mampara de ducha es uno de esos detalles que cambian por completo un baño. Evita las salpicaduras, mantiene el ambiente cálido durante el baño y le da una sensación de amplitud y prolijidad que ninguna cortina logra. En MÁS VIDRIOS las fabricamos a medida de tu baño.',
+      'Apostamos por el vidrio templado de seguridad: mucho más robusto y resistente que el acrílico, con una durabilidad garantizada y una transparencia que se mantiene en el tiempo. Vos elegís el sistema de apertura, los herrajes y el acabado; nosotros nos encargamos del resto.',
     ],
     bloques: [
       {
         h2: 'Opciones de mampara', galeria: 'opciones-mampara',
         lista: [
-          'Mamparas fijas (paño único), la opción más limpia y económica.',
+          'Mamparas fijas (cubre ducha), la opción más limpia y económica.',
           'Mamparas con puerta de abrir o corrediza.',
           'Vidrio transparente, esmerilado/arenado o con diseño para más privacidad.',
           'Herrajes en acero inoxidable, negro mate o cromados.',
+        ],
+      },
+      {
+        h2: 'Mamparas de baño en Eucatex', galeria: 'eucatex-bano',
+        parrafos: [
+          'Además de la mampara de ducha en vidrio, hacemos mamparas y divisiones de baño en Eucatex: paneles con parantes y perfilería de aluminio que separan duchas, inodoros y lavatorios. Es lo que más nos piden en baños de locales, fábricas, colegios y oficinas, porque se monta rápido, aguanta el uso intenso y queda prolijo.',
+          'Se arman a la medida del baño, con la cantidad de cabinas que entren, el color de panel que elijas y las puertas con su herraje y su cierre. Van levantadas del piso para que se pueda limpiar por debajo.',
         ],
       },
       {
@@ -290,7 +297,7 @@ const catalogo: Servicio[] = [
       'Vidrio templado de seguridad a medida',
       'Sistemas fijos, de abrir o corredizos',
       'Vidrio transparente, esmerilado o con diseño',
-      'Herrajes en acero inox, negro o cromado',
+      'Perfiles de aluminio en colores disponibles',
     ],
     faqs: [
       { q: '¿La mampara se hace a la medida exacta de mi baño?', a: 'Sí. Vamos a tu baño, tomamos las medidas reales (incluyendo desniveles y fuera de escuadra) y fabricamos la mampara para que calce perfecto, sin filtraciones.' },
@@ -331,14 +338,14 @@ const catalogo: Servicio[] = [
           'Aislamiento acústico y térmico entre ambientes.',
           'Puertas de vidrio con manijones de acero y cierres suaves.',
           'Divisiones combinadas: drywall o Eucatex abajo, vidrio arriba.',
+          'Cabinas y divisiones de sanitarios en Eucatex para baños de empresa.',
           'Vinilos o vidrio esmerilado para zonas que requieren reserva.',
         ],
       },
       {
-        h2: 'Divisiones de sanitarios', galeria: 'sanitarios',
+        h2: 'Divisiones de sanitarios',
         parrafos: [
-          'El mismo sistema resuelve los baños de locales, fábricas, colegios y oficinas: cabinas de sanitario en paneles de Eucatex con parantes y perfilería de aluminio, puertas con herrajes y cierre, y todo levantado del piso para que se pueda limpiar por debajo. Se arman a la medida del baño, con la cantidad de cabinas que entren y el color de panel que elijas.',
-          'Es una de las cosas que más nos piden las empresas y las obras comerciales, porque se monta rápido, aguanta el uso intenso y queda prolijo.',
+          'El mismo sistema resuelve los baños de locales, fábricas, colegios y oficinas: cabinas de sanitario en paneles de Eucatex con parantes y perfilería de aluminio, puertas con herrajes y cierre, y todo levantado del piso para que se pueda limpiar por debajo. Las fotos de esos trabajos están en la página de mamparas de baño, que es donde agrupamos todo lo de sanitarios.',
         ],
       },
       {
@@ -350,7 +357,7 @@ const catalogo: Servicio[] = [
     ],
     destacados: [
       'Vidrio, drywall o Eucatex',
-      'Divisiones de sanitarios a medida',
+      'Cabinas de sanitarios en Eucatex',
       'Diseño y distribución a medida',
       'Aislamiento acústico y térmico',
     ],
