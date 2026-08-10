@@ -267,7 +267,7 @@ const catalogo: Servicio[] = [
     hero: 'Mamparas de ducha con vidrio templado de seguridad: a medida, resistentes y fáciles de limpiar.',
     intro: [
       'La mampara de ducha es uno de esos detalles que cambian por completo un baño. Evita las salpicaduras, mantiene el ambiente cálido durante el baño y le da una sensación de amplitud y prolijidad que ninguna cortina logra. En MÁS VIDRIOS las fabricamos a medida de tu baño.',
-      'Apostamos por el vidrio templado de seguridad: mucho más robusto y resistente que el acrílico, con una durabilidad garantizada y una transparencia que se mantiene en el tiempo. Vos elegís el sistema de apertura, los herrajes y el acabado; nosotros nos encargamos del resto.',
+      'Apostamos por el vidrio templado de seguridad: robusto, con una durabilidad garantizada y una transparencia que se mantiene en el tiempo. Vos elegís el sistema de apertura, los herrajes y el acabado; nosotros nos encargamos del resto.',
     ],
     bloques: [
       {
@@ -284,12 +284,6 @@ const catalogo: Servicio[] = [
         parrafos: [
           'Además de la mampara de ducha en vidrio, hacemos mamparas y divisiones de baño en Eucatex: paneles con parantes y perfilería de aluminio que separan duchas, inodoros y lavatorios. Es lo que más nos piden en baños de locales, fábricas, colegios y oficinas, porque se monta rápido, aguanta el uso intenso y queda prolijo.',
           'Se arman a la medida del baño, con la cantidad de cabinas que entren, el color de panel que elijas y las puertas con su herraje y su cierre. Van levantadas del piso para que se pueda limpiar por debajo.',
-        ],
-      },
-      {
-        h2: 'Vidrio templado vs. acrílico',
-        parrafos: [
-          'Las mamparas acrílicas son algo más baratas, pero se rayan, se opacan y se vuelven amarillentas con el tiempo. El vidrio templado de seguridad se mantiene impecable durante años, resiste golpes y es mucho más fácil de limpiar. Para algo que vas a usar todos los días, la diferencia se paga sola.',
         ],
       },
     ],
