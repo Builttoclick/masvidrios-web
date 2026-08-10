@@ -1,4 +1,5 @@
-export interface Bloque { h2: string; parrafos?: string[]; lista?: string[]; }
+// `galeria` = clave `sub` de galeria.ts: las fotos de ese grupo se muestran debajo de este bloque.
+export interface Bloque { h2: string; parrafos?: string[]; lista?: string[]; galeria?: string; }
 export interface Faq { q: string; a: string; }
 export interface VideoServicio { src: string; poster: string; titulo: string; }
 export interface Servicio {
@@ -59,7 +60,7 @@ const catalogo: Servicio[] = [
     ],
     bloques: [
       {
-        h2: '¿Para qué se usa el vidrio templado?',
+        h2: '¿Para qué se usa el vidrio templado?', galeria: 'usos-templado',
         lista: [
           'Puertas de vidrio templado (de abrir, corredizas o pivotantes) para viviendas y locales.',
           'Ventanas y paños fijos de gran formato que aprovechan la luz natural.',
@@ -222,7 +223,7 @@ const catalogo: Servicio[] = [
     ],
     bloques: [
       {
-        h2: 'Tipos de cerramiento que hacemos',
+        h2: 'Tipos de cerramiento que hacemos', galeria: 'tipos-cerr',
         lista: [
           'Cerramiento de galerías y corredores con vidrio templado.',
           'Cierre de quinchos y áreas de parrilla para usarlos en invierno.',
@@ -232,7 +233,7 @@ const catalogo: Servicio[] = [
         ],
       },
       {
-        h2: 'Aluminio negro, blanco o símil madera',
+        h2: 'Aluminio negro, blanco o símil madera', galeria: 'colores-cerr',
         parrafos: [
           'La perfilería define el carácter del cerramiento. El aluminio negro da un look moderno e industrial muy buscado; el blanco es clásico y luminoso; el símil madera aporta calidez sin el mantenimiento de la madera real. Te mostramos opciones y elegís la que combine con tu obra.',
         ],
@@ -258,8 +259,8 @@ const catalogo: Servicio[] = [
     nombre: 'Mamparas de baño',
     categoria: 'Mamparas de baño',
     icon: '<rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 4l9 8 9-8"/>',
-    foto: '/fotos/proyectos/puerta-bambu-marco-madera-bano-marmol.jpg',
-    fotoAlt: 'Baño revestido en mármol con carpintería a medida · MÁS VIDRIOS',
+    foto: '/fotos/galeria/mampara-ducha-esquinera-vidrio-corrediza.jpg',
+    fotoAlt: 'Mampara de ducha esquinera de vidrio con puertas corredizas en baño de mármol · MÁS VIDRIOS',
     metaTitle: 'Mamparas de baño en San Lorenzo',
     titleTail: 'mamparas de ducha con vidrio templado a medida cerca tuyo',
     metaDesc: 'Mamparas de baño con vidrio templado de seguridad en San Lorenzo y Gran Asunción. A medida, robustas y de durabilidad garantizada. Evitá salpicaduras con estilo. Presupuesto sin compromiso.',
@@ -270,7 +271,7 @@ const catalogo: Servicio[] = [
     ],
     bloques: [
       {
-        h2: 'Opciones de mampara',
+        h2: 'Opciones de mampara', galeria: 'opciones-mampara',
         lista: [
           'Mamparas fijas (paño único), la opción más limpia y económica.',
           'Mamparas con puerta de abrir o corrediza.',
@@ -317,7 +318,7 @@ const catalogo: Servicio[] = [
     ],
     bloques: [
       {
-        h2: 'Tres materiales para dividir una oficina',
+        h2: 'Tres materiales para dividir una oficina', galeria: 'materiales-div',
         parrafos: [
           'Dividir dos oficinas se puede resolver de tres maneras, y muchas veces se combinan en el mismo trabajo. En vidrio, cuando lo que se busca es luz y amplitud. En drywall (placa de yeso), cuando se necesita una pared llena, con aislación adentro y lista para pintar. Y en Eucatex, la opción más económica y rápida de montar para dividir un espacio de trabajo.',
           'La combinación que más nos piden es drywall en la parte baja y vidrio arriba: da privacidad a la altura del escritorio y deja pasar la luz por encima. Contanos cómo es tu oficina y armamos la mezcla que mejor funcione.',
@@ -334,7 +335,7 @@ const catalogo: Servicio[] = [
         ],
       },
       {
-        h2: 'Divisiones de sanitarios',
+        h2: 'Divisiones de sanitarios', galeria: 'sanitarios',
         parrafos: [
           'El mismo sistema resuelve los baños de locales, fábricas, colegios y oficinas: cabinas de sanitario en paneles de Eucatex con parantes y perfilería de aluminio, puertas con herrajes y cierre, y todo levantado del piso para que se pueda limpiar por debajo. Se arman a la medida del baño, con la cantidad de cabinas que entren y el color de panel que elijas.',
           'Es una de las cosas que más nos piden las empresas y las obras comerciales, porque se monta rápido, aguanta el uso intenso y queda prolijo.',
@@ -377,7 +378,7 @@ const catalogo: Servicio[] = [
     ],
     bloques: [
       {
-        h2: 'Líneas y productos',
+        h2: 'Líneas y productos', galeria: 'productos',
         lista: [
           'Ventanas corredizas, batientes y proyectantes en líneas Inova, Gold y Alpha.',
           'Puertas de aluminio con o sin vidrio para entradas y balcones.',
@@ -388,13 +389,13 @@ const catalogo: Servicio[] = [
         ],
       },
       {
-        h2: 'Aberturas sin vidrio',
+        h2: 'Aberturas sin vidrio', galeria: 'sinvidrio',
         parrafos: [
           'No toda la carpintería de aluminio lleva vidrio. Hacemos puertas ciegas de aluminio para lavaderos, depósitos, accesos de servicio y baños, puertas con tela mosquitera para el paso al patio, y tapas y cierres de aluminio a medida. Es el mismo trabajo de perfilería y herrajes, con el paño lleno en lugar del vidrio.',
         ],
       },
       {
-        h2: 'Distintos diseños y colores',
+        h2: 'Distintos diseños y colores', galeria: 'colores-alu',
         parrafos: [
           'El aluminio viene en distintos diseños y colores, del blanco y el negro al aluminio natural y el efecto madera. Te mostramos las muestras reales para que elijas viendo el material y no una pantalla. De la medida y del cierre nos encargamos nosotros: la abertura tiene que calzar y cerrar perfecto.',
         ],
@@ -423,8 +424,8 @@ const catalogo: Servicio[] = [
     nombre: 'Cielo raso & tabiques',
     categoria: 'Cielo raso y tabiques',
     icon: '<path d="M3 12h18"/><path d="M3 6h18M3 18h18"/>',
-    foto: '/fotos/proyectos/puerta-bambu-revestimiento-madera-detalle-marco.jpg',
-    fotoAlt: 'Detalle de revestimiento de madera en cielorraso con spots embutidos · MÁS VIDRIOS',
+    foto: '/fotos/galeria/cielo-raso-tabique-drywall-masillado-obra.jpg',
+    fotoAlt: 'Tabique de drywall masillado y cielo raso con spots embutidos, en obra · MÁS VIDRIOS',
     metaTitle: 'Cielo raso y tabiques en San Lorenzo',
     titleTail: 'cielo raso de PVC, de yeso y desmontable, y tabiques de drywall cerca tuyo',
     metaDesc: 'Cielo raso de PVC, de yeso y desmontable, y tabiques de drywall en San Lorenzo y Gran Asunción. Construcción en seco: prolijo, rápido y limpio. Presupuesto sin compromiso.',
@@ -449,7 +450,7 @@ const catalogo: Servicio[] = [
         ],
       },
       {
-        h2: 'Tabiques y divisiones de drywall',
+        h2: 'Tabiques y divisiones de drywall', galeria: 'tabiques',
         parrafos: [
           'El tabique es la pared de construcción en seco: estructura metálica y placa de yeso a los dos lados, con la aislación que necesites adentro. Se levanta en días, no en semanas, y deja la pared lista para pintar. Es lo que más se usa para dividir oficinas, cerrar un ambiente grande o armar una habitación nueva.',
         ],
@@ -495,7 +496,7 @@ const catalogo: Servicio[] = [
     ],
     bloques: [
       {
-        h2: 'Dónde se usan',
+        h2: 'Dónde se usan', galeria: 'escaleras',
         lista: [
           'Escaleras interiores y exteriores.',
           'Balcones y terrazas.',
@@ -504,14 +505,14 @@ const catalogo: Servicio[] = [
         ],
       },
       {
-        h2: 'Templado o laminado, según dónde vaya',
+        h2: 'Templado o laminado, según dónde vaya', galeria: 'altura',
         parrafos: [
           'Los dos son vidrios de seguridad y los dos se usan en barandas, pero no en el mismo lugar. En una escalera o un entrepiso interior va templado. Cuando la baranda está en altura y hay gente circulando abajo (un balcón sobre otro balcón, una terraza sobre la vereda) va laminado, porque la lámina intermedia sostiene el vidrio en su lugar aunque llegue a romperse.',
           'Cuando vamos a tu obra miramos qué hay debajo de la baranda y te decimos cuál corresponde. Es la clase de detalle que no se ve en la foto y hace toda la diferencia.',
         ],
       },
       {
-        h2: 'Sistemas de fijación',
+        h2: 'Sistemas de fijación', galeria: 'fijacion',
         parrafos: [
           'Según el diseño usamos perfilería de aluminio que toma el vidrio en la base, botones/separadores de acero inoxidable, o pasamanos superior combinado. Te recomendamos el sistema que mejor equilibre estética, seguridad y presupuesto.',
         ],
@@ -638,7 +639,7 @@ const catalogo: Servicio[] = [
     ],
     bloques: [
       {
-        h2: 'Tipos de espejo que hacemos',
+        h2: 'Tipos de espejo que hacemos', galeria: 'tipos-espejo',
         lista: [
           'Espejos de formas orgánicas e irregulares, sin marco, cortados a medida.',
           'Espejos retroiluminados con LED perimetral para baños.',
@@ -682,7 +683,7 @@ const catalogo: Servicio[] = [
     ],
     bloques: [
       {
-        h2: 'Dónde conviene una puerta automática',
+        h2: 'Dónde conviene una puerta automática', galeria: 'donde-automatica',
         lista: [
           'Locales comerciales y shoppings: entrada libre con las manos ocupadas.',
           'Farmacias, sanatorios y consultorios: acceso sin contacto, más higiénico.',
@@ -741,7 +742,7 @@ const catalogo: Servicio[] = [
         ],
       },
       {
-        h2: 'Diseños de muestrario o personalizados',
+        h2: 'Diseños de muestrario o personalizados', galeria: 'disenos-stampa',
         parrafos: [
           'Tenemos muestrarios con diseños listos: símil mármol blanco, negro o azul, símil madera, follajes, aves, paisajes y tramas geométricas. Y si tenés otra idea, se puede imprimir un diseño propio o una imagen en alta resolución. Te mostramos las muestras reales para que elijas viendo el material, no un catálogo en pantalla.',
         ],

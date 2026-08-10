@@ -15,11 +15,26 @@ const s = getServicio(slug!)!;
 // servicios relacionados (los demás, hasta 4) para interlinking
 const relacionados = servicios.filter((x) => x.slug !== s.slug).slice(0, 4);
 
-// mini galería del servicio: las fotos de ESTA categoría, hasta 8, con salida a /galeria/
+// Galerías del servicio. Cada bloque h2 con `galeria` muestra debajo las fotos de ese grupo (`sub`),
+// hasta MAX_BLOQUE. Lo que sobra cae en la galería de cierre, para que ninguna foto aparezca dos veces.
+const MAX_BLOQUE = 6;
 const MAX_MINI = 8;
 const fotosServicio = fotosGaleria.filter((f) => f.cat === s.slug);
-const mini = fotosServicio.slice(0, MAX_MINI);
-const restantes = fotosServicio.length - mini.length;
+
+const usadas = new Set<string>();
+const galeriaDe = (key?: string) => {
+  if (!key) return [];
+  const fotos = fotosServicio.filter((f) => f.sub === key).slice(0, MAX_BLOQUE);
+  fotos.forEach((f) => usadas.add(f.src));
+  return fotos;
+};
+// se resuelve antes del render para que `usadas` esté completo cuando se calcula el cierre
+const galeriasBloque = s.bloques.map((b) => galeriaDe(b.galeria));
+
+const hayGaleriasBloque = galeriasBloque.some((g) => g.length > 0);
+const sobrantes = fotosServicio.filter((f) => !usadas.has(f.src));
+const mini = sobrantes.slice(0, MAX_MINI);
+const restantes = sobrantes.length - mini.length;
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -57,11 +72,21 @@ const serviceSchema = {
     <div class="wrap svc-grid">
       <div class="prose">
         {s.intro.map((p) => <p>{p}</p>)}
-        {s.bloques.map((b) => (
+        {s.bloques.map((b, i) => (
           <>
             <h2>{b.h2}</h2>
             {b.parrafos?.map((p) => <p>{p}</p>)}
             {b.lista && <ul>{b.lista.map((li) => <li>{li}</li>)}</ul>}
+            {galeriasBloque[i].length > 0 && (
+              <div class="blk-gal">
+                {galeriasBloque[i].map((f) => (
+                  <figure>
+                    <img src={f.src} alt={f.alt} loading="lazy" decoding="async" />
+                    <figcaption>{f.cap}</figcaption>
+                  </figure>
+                ))}
+              </div>
+            )}
           </>
         ))}
 
@@ -84,7 +109,7 @@ const serviceSchema = {
     <section style="padding-top:0">
       <div class="wrap center">
         <span class="eyebrow">Trabajos nuestros</span>
-        <h2 class="sec">{s.nombre} que ya entregamos</h2>
+        <h2 class="sec">{hayGaleriasBloque ? `Más ${s.nombre.toLowerCase()} que ya entregamos` : `${s.nombre} que ya entregamos`}</h2>
         <p class="sec-sub">Fotos reales de obras en San Lorenzo y Gran Asunción. Tocá cualquiera para verla en grande.</p>
       </div>
       <div class="wrap">
@@ -101,6 +126,14 @@ const serviceSchema = {
             {restantes > 0 ? `Ver las otras ${restantes} fotos en la galería` : 'Ver la galería completa'}
           </a>
         </div>
+      </div>
+    </section>
+  )}
+
+  {mini.length === 0 && hayGaleriasBloque && (
+    <section style="padding-top:0">
+      <div class="wrap">
+        <div class="mini-mas"><a class="btn btn-ghost" href="/galeria/">Ver la galería completa</a></div>
       </div>
     </section>
   )}
@@ -172,6 +205,14 @@ const serviceSchema = {
 </Base>
 
 <style>
+  /* galería de subseccion: va dentro de la columna de texto, debajo del bloque h2 que le corresponde */
+  .blk-gal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0 34px}
+  @media(max-width:640px){.blk-gal{grid-template-columns:1fr 1fr;gap:10px}}
+  .blk-gal figure{margin:0;border-radius:12px;overflow:hidden;border:1px solid var(--linea);background:#fff;box-shadow:var(--shadow-sm)}
+  .blk-gal img{display:block;width:100%;height:135px;object-fit:cover;transition:transform .3s ease}
+  .blk-gal figure:hover img{transform:scale(1.05)}
+  .blk-gal figcaption{padding:7px 10px;font-size:11.5px;font-weight:600;color:var(--gris);line-height:1.3}
+
   /* mini galería del servicio: las fotos de esa categoría, con lightbox global */
   .mini-gal{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:38px}
   @media(max-width:900px){.mini-gal{grid-template-columns:repeat(3,1fr);gap:12px}}
