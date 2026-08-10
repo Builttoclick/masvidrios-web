@@ -9,7 +9,7 @@ const titleTail = 'fotos y videos reales de obras en San Lorenzo y Gran Asunció
 const desc = 'Galería de trabajos reales de MÁS VIDRIOS: barandas de vidrio, aberturas de aluminio, cerramientos, mamparas, espejos, vidrio impreso stampa y puertas automáticas en San Lorenzo y Gran Asunción.';
 
 // categorías en orden de muestra, con su página de servicio para interlinking
-const CATS: { cat: string; nombre: string; href: string }[] = [
+const CATS: { cat: string; nombre: string; href?: string }[] = [
   { cat: 'barandas-vidriadas', nombre: 'Barandas de vidrio e inox', href: '/servicios/barandas-vidriadas/' },
   { cat: 'aberturas-de-aluminio', nombre: 'Aberturas de aluminio', href: '/servicios/aberturas-de-aluminio/' },
   { cat: 'cerramientos-de-vidrio', nombre: 'Cerramientos y galerías', href: '/servicios/cerramientos-de-vidrio/' },
@@ -19,6 +19,10 @@ const CATS: { cat: string; nombre: string; href: string }[] = [
   { cat: 'stampa-vidrio-impreso', nombre: 'Stampa · vidrio impreso', href: '/servicios/stampa-vidrio-impreso/' },
   { cat: 'puertas-automaticas', nombre: 'Puertas automáticas', href: '/servicios/puertas-automaticas/' },
   { cat: 'divisorias-de-oficina', nombre: 'Divisorias y sanitarios', href: '/servicios/divisorias-de-oficina/' },
+  { cat: 'cielo-raso-durlock', nombre: 'Cielo raso y tabiques', href: '/servicios/cielo-raso-durlock/' },
+  { cat: 'policarbonato', nombre: 'Policarbonato', href: '/servicios/policarbonato/' },
+  { cat: 'vidrio-laminado', nombre: 'Vidrio laminado', href: '/servicios/vidrio-laminado/' },
+  { cat: 'varios', nombre: 'Fotos varias' },
 ];
 const grupos = CATS.map((c) => ({ ...c, fotos: fotosGaleria.filter((f) => f.cat === c.cat) })).filter((g) => g.fotos.length > 0);
 const total = grupos.reduce((n, g) => n + g.fotos.length, 0);
@@ -39,7 +43,7 @@ const videos = servicios.flatMap((s) => s.videos ?? []);
       <div class="wrap">
         <div class="gal-head">
           <h2>{g.nombre} <span class="cnt">{g.fotos.length}</span></h2>
-          <a class="btn btn-ghost btn-sm" href={g.href}>Ver servicio</a>
+          {g.href && <a class="btn btn-ghost btn-sm" href={g.href}>Ver servicio</a>}
         </div>
         <div class="grid-gal">
           {g.fotos.map((f, i) => (
