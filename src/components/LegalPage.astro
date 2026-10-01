@@ -1,0 +1,68 @@
+---
+// Páginas legales bilingües (ES/EN con el mismo selector de idioma que tenía la política vieja).
+// El texto NO se edita acá: vive en CLIENTES/MAS VIDRIOS/LEGALES/LEGALES.md (y LEGALES.en.md, su traducción).
+// Después de editarlos:
+//   python ../../../../ADMIN/WORKSPACE/LEGALES-WEB/legales_md.py json ../../LEGALES/LEGALES.md src/legales/legales.json
+//   python ../../../../ADMIN/WORKSPACE/LEGALES-WEB/legales_md.py json ../../LEGALES/LEGALES.en.md src/legales/legales.en.json
+import Base from '../layouts/Base.astro';
+import es from '../legales/legales.json';
+import en from '../legales/legales.en.json';
+
+interface Props { slug: string; miga: string; titleTail: string; description: string }
+const { slug, miga, titleTail, description } = Astro.props;
+type Pag = { title: string; lead: string; body: string };
+const E = (es as Record<string, Pag>)[slug];
+const N = (en as Record<string, Pag>)[slug];
+const sinP = (h: string) => h.replace(/^<p>/, '').replace(/<\/p>$/, '');
+---
+<Base title={E.title} titleTail={titleTail} description={description}>
+  <section class="phero">
+    <div class="wrap">
+      <div class="crumbs"><a href="/">Inicio</a> › <span>{miga}</span></div>
+      <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+        <button type="button" data-set-lang="es" class="is-active">Español</button>
+        <button type="button" data-set-lang="en">English</button>
+      </div>
+      <h1 data-lang="es">{E.title}</h1>
+      <h1 data-lang="en" hidden>{N.title}</h1>
+      <p data-lang="es" set:html={sinP(E.lead)} />
+      <p data-lang="en" hidden set:html={sinP(N.lead)} />
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap-narrow">
+      <div class="prose legal" data-lang="es" set:html={E.body} />
+      <div class="prose legal" data-lang="en" hidden set:html={N.body} />
+    </div>
+  </section>
+</Base>
+
+<style is:global>
+  .lang-toggle{display:inline-flex;gap:4px;background:#fff;border:1px solid var(--linea);border-radius:999px;padding:4px;margin:2px 0 18px}
+  .lang-toggle button{border:none;background:none;font-family:inherit;font-weight:700;font-size:14px;color:var(--gris);padding:8px 18px;border-radius:999px;cursor:pointer;transition:.18s}
+  .lang-toggle button:hover{color:var(--azul)}
+  .lang-toggle button.is-active{background:var(--azul);color:#fff}
+  .legal a{overflow-wrap:anywhere}
+  .legal h2:first-child{margin-top:0}
+</style>
+
+<script is:inline>
+  (function () {
+    var buttons = document.querySelectorAll('[data-set-lang]');
+    var blocks = document.querySelectorAll('[data-lang]');
+    function apply(lang) {
+      blocks.forEach(function (el) { el.hidden = el.getAttribute('data-lang') !== lang; });
+      buttons.forEach(function (b) { b.classList.toggle('is-active', b.getAttribute('data-set-lang') === lang); });
+      document.documentElement.lang = lang;
+      try { localStorage.setItem('pp-lang', lang); } catch (e) {}
+    }
+    var stored = null;
+    try { stored = localStorage.getItem('pp-lang'); } catch (e) {}
+    var initial = stored || ((navigator.language || 'es').toLowerCase().indexOf('en') === 0 ? 'en' : 'es');
+    apply(initial);
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { apply(b.getAttribute('data-set-lang')); });
+    });
+  })();
+</script>

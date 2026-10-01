@@ -37,6 +37,7 @@ export const GET: APIRoute = () => {
   L.push('- [Sobre nosotros](' + u + '/sobre-nosotros/)');
   L.push('- [Contacto](' + u + '/contacto/)');
   L.push('- [Política de privacidad](' + u + '/politica-de-privacidad/)');
+  L.push('- [Términos y condiciones](' + u + '/terminos/)');
   L.push('');
   L.push('## Full content');
   L.push('- [llms-full.txt](' + u + '/llms-full.txt): todas las descripciones de servicios, zonas y preguntas frecuentes en un solo archivo.');
