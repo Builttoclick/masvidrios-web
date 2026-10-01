@@ -15,7 +15,7 @@ const E = (es as Record<string, Pag>)[slug];
 const N = (en as Record<string, Pag>)[slug];
 const sinP = (h: string) => h.replace(/^<p>/, '').replace(/<\/p>$/, '');
 ---
-<Base title={E.title} titleTail={titleTail} description={description}>
+<Base title={E.title} titleTail={titleTail} description={description} noindex>
   <section class="phero">
     <div class="wrap">
       <div class="crumbs"><a href="/">Inicio</a> › <span>{miga}</span></div>

@@ -1,8 +1,11 @@
+# Paginas legales fuera de todos los rastreadores, incluidos los de IA (01-oct-2026).
 # robots.txt · MÁS VIDRIOS (https://masvidrios.com.py)
 # Vidriería y aluminio en San Lorenzo y Gran Asunción, Paraguay.
 
 User-agent: *
 Allow: /
+Disallow: /politica-de-privacidad/
+Disallow: /terminos/
 Disallow: /admin/
 
 # AI / LLM crawlers: explicitly welcome. We want MÁS VIDRIOS to show up
@@ -21,6 +24,8 @@ User-agent: Applebot-Extended
 User-agent: Bingbot
 User-agent: CCBot
 Allow: /
+Disallow: /politica-de-privacidad/
+Disallow: /terminos/
 Disallow: /admin/
 
 # LLM-friendly summaries of this site:

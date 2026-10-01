@@ -7,7 +7,7 @@ export default defineConfig({
   compressHTML: true,
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('/admin'),
+      filter: (page) => !page.includes('/admin') && !/\/(politica-de-privacidad|terminos)\/$/.test(page),
       // hreflang alternates for the ES home and the EN overview page.
       serialize(item) {
         const es = 'https://masvidrios.com.py/';
